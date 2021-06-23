@@ -3,4 +3,4 @@ project(Industrial_Training_cpp_project)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Industrial_Training_cpp_project blueprint.cpp)
+add_executable(Industrial_Training_cpp_project practice.cpp)
