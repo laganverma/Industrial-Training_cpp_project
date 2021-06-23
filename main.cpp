@@ -44,7 +44,9 @@ int main() {
 
     switch (main) {
         case 1:
+            gotoxy(25,15);
             cout << "BP CALCULATOR";
+
             break;
         case 2:
             cout << "OXYGEN CALCULATOR";
