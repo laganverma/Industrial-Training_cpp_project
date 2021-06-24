@@ -58,5 +58,5 @@ int main() {
             cout << "COVID HOSPITALS";
             break;
     }
-
+    return 0;
 }
