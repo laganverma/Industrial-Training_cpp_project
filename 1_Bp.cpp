@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 class BP {
@@ -12,7 +11,7 @@ public:
         cin >> b;
     }
 
-    void High() {
+    void High() const {
         if (a < 120) {
             cout << "YOUR BP IS IN NORMAL RANGE(HIGH)" << endl;
         } else if (a >= 120 && a <= 129) {
@@ -26,7 +25,7 @@ public:
         }
     }
 
-    void Low() {
+    void Low() const {
         if (b < 79) {
             cout << "YOUR BP IS IN NORMAL RANGE(LOW)" << endl;
         } else if (b < 80) {
@@ -43,7 +42,7 @@ public:
 
 int main() {
 
-    BP user_1;
+    BP user_1{};
     user_1.Input();
     user_1.High();
     user_1.Low();
