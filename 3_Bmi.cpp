@@ -1,11 +1,14 @@
 #include<iostream>
 #include <iomanip>
+
 using namespace std;
+
 int main() {
-    float bmi, w, h;
+    float bmi, w, h;//weight and height
     int s;
     cout << "Please Enter your weight in \n1.Kilogram(Kg) \n2.Pound(lbs) " << endl;
     cin >> s;
+    Jump:
     switch (s) {
         case 1: //Kg and cm (metric)
             cout << "Please Enter your Weight in Kg : ";
@@ -31,6 +34,13 @@ int main() {
     } else {
         cout << "Underweight";
     }
-        return 0;
+    return 0;
 }
+
+/* Pound to Kg
+ * kg to pound
+ * cm to inches
+ * feet to inches
+ * feet to cm
+ */
 
