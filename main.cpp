@@ -34,17 +34,19 @@ int main() {
     gotoxy(25, 10);
     cout << "2.OXYGEN CALCULATOR" << endl;
     gotoxy(25, 11);
-    cout << "3.COVID SYMPTOMS" << endl;
+    cout << "3.BMI" << endl;
     gotoxy(25, 12);
-    cout << "4.COVID HOSPITALS" << endl << endl;
+    cout << "4.COVID SYMPTOMS" << endl;
     gotoxy(25, 13);
+    cout << "5.COVID HOSPITALS" << endl << endl;
+    gotoxy(25, 14);
     cout << "ENTER YOUR CHOICE = ";
     cin >> main;
 
 
     switch (main) {
         case 1:
-            gotoxy(25,15);
+            gotoxy(25, 15);
             cout << "BP CALCULATOR";
 
             break;
@@ -52,9 +54,12 @@ int main() {
             cout << "OXYGEN CALCULATOR";
             break;
         case 3:
-            cout << "COVID SYMPTOMS";
+            cout << "BMI";
             break;
         case 4:
+            cout << "COVID SYMPTOMS";
+            break;
+        case 5:
             cout << "COVID HOSPITALS";
             break;
     }
