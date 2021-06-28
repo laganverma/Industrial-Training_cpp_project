@@ -21,7 +21,7 @@ int main() {
     int s_1, s_2;
     double convert_1;
     double convert_2;
-    double convert_3;200
+    double convert_3;
 
     gotoxy(20, 0);
     cout << "\n\n\n\n\n\t\t\t"
