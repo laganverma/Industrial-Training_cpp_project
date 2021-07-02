@@ -36,19 +36,20 @@ int main() {
         }
     }
     retry:
-    cout << endl << endl << endl << endl << endl;
+    gotoxy(25, 8);
+    cout << "1.BP CALCULATOR";
     gotoxy(25, 9);
-    cout << "1.BP CALCULATOR" << endl;
+    cout << "2.OXYGEN CALCULATOR";
     gotoxy(25, 10);
-    cout << "2.OXYGEN CALCULATOR" << endl;
+    cout << "3.BMI";
     gotoxy(25, 11);
-    cout << "3.BMI" << endl;
+    cout << "4.COVID SYMPTOMS";
     gotoxy(25, 12);
-    cout << "4.COVID SYMPTOMS" << endl;
+    cout << "5.COVID HOSPITALS";
     gotoxy(25, 13);
-    cout << "5.COVID HOSPITALS" << endl << endl;
+    cout << "6.INFORMATION REGARDING COVID-19 VACCINE IN INDIA";
     gotoxy(25, 14);
-    cout << "6.TRY AGAIN" << endl << endl;
+    cout << "7.TRY AGAIN";
     gotoxy(25, 15);
     cout << "ENTER YOUR CHOICE = ";
     cin >> main;
@@ -147,12 +148,49 @@ int main() {
             if (bmi > 25) {
                 gotoxy(25, 35);
                 cout << "_Overweight_";
+                int a;
+                gotoxy(25, 36);
+                cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN  BELOW";
+                gotoxy(25, 37);
+                cout << "1. DIET PLAN";
+                gotoxy(25, 38);
+                cout << "2. EXIT";
+                cin >> a;
+                switch (a) {
+                    case 1:
+                        gotoxy(25, 40);
+                        cout << "DIET PLAN";
+                        break;
+                    case 2:
+                        gotoxy(25, 40);
+                        cout << "EXIT";
+                        break;
+                }
             } else if (bmi < 25 && bmi > 18.5) {
                 gotoxy(25, 35);
                 cout << "_Optimal_";
             } else {
                 gotoxy(25, 35);
                 cout << "_Underweight_";
+                int a;
+                gotoxy(25, 36);
+                cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN  BELOW";
+                gotoxy(25, 37);
+                cout << "1. DIET PLAN";
+                gotoxy(25, 38);
+                cout << "2. EXIT";
+                cin >> a;
+                switch (a) {
+                    case 1:
+                        gotoxy(25, 40);
+                        cout << "DIET PLAN";
+                        break;
+                    case 2:
+                        gotoxy(25, 40);
+                        cout << "EXIT";
+                        break;
+                }
+
             }
             break;
         case 4:
@@ -164,6 +202,8 @@ int main() {
             cout << "COVID HOSPITALS";
             break;
         case 6:
+            break;
+        case 7:
             goto retry;
 
     }
