@@ -116,6 +116,7 @@ int main() {
                             cout << "Your BMI is : " << setprecision(4) << bmi << endl;
                             break;
                     }
+
                     break;
                 case 2:
                     gotoxy(25, 25);
