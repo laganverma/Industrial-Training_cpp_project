@@ -37,69 +37,73 @@ int main() {
         }
     }
     retry:
-    gotoxy(25, 7);
+    gotoxy(25, 6);
     cout << "1.BP CALCULATOR";
-    gotoxy(25, 8);
+    gotoxy(25, 7);
     cout << "2.OXYGEN CALCULATOR";
-    gotoxy(25, 9);
+    gotoxy(25, 8);
     cout << "3.BMI";
-    gotoxy(25, 10);
+    gotoxy(25, 9);
     cout << "4.COVID SYMPTOMS";
-    gotoxy(25, 11);
+    gotoxy(25, 10);
     cout << "5.COVID HOSPITALS";
-    gotoxy(25, 12);
+    gotoxy(25, 11);
     cout << "6.INFORMATION REGARDING COVID-19 VACCINE IN INDIA";
-    gotoxy(25, 13);
+    gotoxy(25, 12);
     cout << "7.TRY AGAIN";
-    gotoxy(25, 15);
+    gotoxy(25, 14);
     cout << "ENTER YOUR CHOICE = ";
     cin >> main;
 
 
     switch (main) {
         case 1:
-            gotoxy(25, 17);
+            gotoxy(25, 16);
             cout << "BP CALCULATOR";
             break;
         case 2:
-            gotoxy(25, 17);
+            gotoxy(25, 16);
             cout << "OXYGEN CALCULATOR";
             break;
         case 3:
             gotoxy(25, 17);
+            cout << "---------------------------------------------------------------------------";
+            gotoxy(60, 18);
             cout << "BMI";
             gotoxy(25, 19);
-            cout << "******Welcome to Bmi Calculator******";
+            cout << "---------------------------------------------------------------------------";
             gotoxy(25, 21);
-            cout << "Please Enter your weight in";
-            gotoxy(25, 22);
-            cout << "1.Kilogram(Kg)";
+            cout << "******Welcome to Bmi Calculator******";
             gotoxy(25, 23);
-            cout << "2.Pound(lbs)";
+            cout << "Please Enter your weight in";
             gotoxy(25, 24);
+            cout << "1.Kilogram(Kg)";
+            gotoxy(25, 25);
+            cout << "2.Pound(lbs)";
+            gotoxy(25, 27);
             cout << "Input = ";
             cin >> s;
             switch (s) {
                 case 1:
-                    gotoxy(25, 25);
+                    gotoxy(25, 29);
                     cout << "Please Enter your Weight in Kg : ";
                     cin >> w;
-                    gotoxy(25, 27);
-                    cout << "Enter Your Height in";
-                    gotoxy(25, 28);
-                    cout << "1.Cm";
-                    gotoxy(25, 29);
-                    cout << "2.Inches";
                     gotoxy(25, 30);
+                    cout << "Enter Your Height in";
+                    gotoxy(25, 31);
+                    cout << "1.Cm";
+                    gotoxy(25, 32);
+                    cout << "2.Inches";
+                    gotoxy(25, 34);
                     cout << "Input = ";
                     cin >> s_1;
                     switch (s_1) {
                         case 1://Kg and cm (metric)
-                            gotoxy(25, 31);
+                            gotoxy(25, 36);
                             cout << "Please Enter your Height in Cm : ";
                             cin >> h;
                             bmi = (w) / (h * h) * 10000;
-                            gotoxy(25, 33);
+                            gotoxy(25, 37);
                             cout << "Your BMI is : " << setprecision(4) << bmi << endl;
                             break;
                         case 2://Kg and Inches (Custom)
