@@ -19,13 +19,14 @@ int main() {
     float bmi, w, h;//weight and height
     int s;
     int s_1, s_2;
+    int h_1;
     double convert_1;
     double convert_2;
     double convert_3;
 
-    gotoxy(20, 0);
-    cout << "\n\n\n\n\n\t\t\t"
-            " Loading";
+    gotoxy(25, 0);
+    cout << "\n\n\n\t\t\t"
+            "Loading....\n\t\t\t";
     char x = 219;
 
     for (int i = 0; i < 50; i++) {
@@ -36,19 +37,19 @@ int main() {
         }
     }
     retry:
-    gotoxy(25, 8);
+    gotoxy(25, 7);
     cout << "1.BP CALCULATOR";
-    gotoxy(25, 9);
+    gotoxy(25, 8);
     cout << "2.OXYGEN CALCULATOR";
-    gotoxy(25, 10);
+    gotoxy(25, 9);
     cout << "3.BMI";
-    gotoxy(25, 11);
+    gotoxy(25, 10);
     cout << "4.COVID SYMPTOMS";
-    gotoxy(25, 12);
+    gotoxy(25, 11);
     cout << "5.COVID HOSPITALS";
-    gotoxy(25, 13);
+    gotoxy(25, 12);
     cout << "6.INFORMATION REGARDING COVID-19 VACCINE IN INDIA";
-    gotoxy(25, 14);
+    gotoxy(25, 13);
     cout << "7.TRY AGAIN";
     gotoxy(25, 15);
     cout << "ENTER YOUR CHOICE = ";
@@ -103,10 +104,13 @@ int main() {
                             break;
                         case 2://Kg and Inches (Custom)
                             gotoxy(25, 31);
-                            cout << "Please Enter your Height in Inches(add inches not feet) : ";
+                            cout << "Please Enter your Height in Feet: ";
                             cin >> h;
+                            gotoxy(25, 32);
+                            cout << "Please Enter your Height in inches: ";
+                            cin >> h_1;
+                            convert_2 = (h * 12) + h_1;
                             convert_1 = w * 2.20462;
-                            convert_2 = h;
                             bmi = (convert_1 * 703) / (convert_2 * convert_2);
                             gotoxy(25, 33);
                             cout << "Your BMI is : " << setprecision(4) << bmi << endl;
@@ -136,9 +140,13 @@ int main() {
                             break;
                         case 2://Pound and Inches (english)
                             gotoxy(25, 31);
-                            cout << "Please Enter your Height in Inches (add inches not feet) : ";
+                            cout << "Please Enter your Height in Feet: ";
                             cin >> h;
-                            bmi = (w * 703) / (h * h);
+                            gotoxy(25, 32);
+                            cout << "Please Enter your Height in inches: ";
+                            cin >> h_1;
+                            convert_2 = (h * 12) + h_1;
+                            bmi = (w * 703) / (convert_2 * convert_2);
                             gotoxy(25, 33);
                             cout << "Your BMI is : " << setprecision(4) << bmi << endl;
                             break;
@@ -160,6 +168,21 @@ int main() {
                     case 1:
                         gotoxy(25, 40);
                         cout << "DIET PLAN";
+                        gotoxy(25, 41);
+                        cout << "1.Vegetarian";
+                        gotoxy(25, 42);
+                        cout << "2.Non-Vegetarian";
+                        int veg;
+                        cin >> veg;
+                        if (veg == 1) {
+                            gotoxy(25, 45);
+                            cout << "Veg food";
+                        } else {
+                            gotoxy(25, 45);
+                            cout << "non veg food";
+                        }
+
+
                         break;
                     case 2:
                         gotoxy(25, 40);
@@ -184,13 +207,20 @@ int main() {
                     case 1:
                         gotoxy(25, 40);
                         cout << "DIET PLAN";
-                        break;
-                    case 2:
-                        gotoxy(25, 40);
-                        cout << "EXIT";
-                        break;
+                        gotoxy(25, 41);
+                        cout << "1.Vegetarian";
+                        gotoxy(25, 42);
+                        cout << "2.Non-Vegetarian";
+                        int veg;
+                        cin >> veg;
+                        if (veg == 1) {
+                            gotoxy(25, 45);
+                            cout << "Veg food";
+                        } else {
+                            gotoxy(25, 45);
+                            cout << "non veg food";
+                        }
                 }
-
             }
             break;
         case 4:
