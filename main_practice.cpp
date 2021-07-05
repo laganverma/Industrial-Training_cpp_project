@@ -27,7 +27,7 @@ int main() {
     gotoxy(25, 0);
     cout << "\n\n\n\t\t\t"
             "Loading....\n\t\t\t";
-    char x = 219;
+    char x = 2193;
 
     for (int i = 0; i < 50; i++) {
         {

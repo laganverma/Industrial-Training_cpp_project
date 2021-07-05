@@ -6,9 +6,9 @@ class BP {
     float a, b;
 public:
     void Input() {
-        cout << "ENTER YOUR HIGH BP VALUE'S = ";
+        cout << "ENTER SYSTOLIC PRESSURE VALUES (TOP NUMBER) = ";
         cin >> a;
-        cout << "\nENTER YOUR LOW BP VALUE'S = ";
+        cout << "\nENTER DIASTOLIC PRESSURE VALUES (BOTTOM NUMBER) = ";
         cin >> b;
     }
 
