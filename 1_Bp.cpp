@@ -43,7 +43,7 @@ public:
 
 int main() {
 
-    BP user_1{};
+    BP user_1;
     user_1.Input();
     user_1.High();
     user_1.Low();

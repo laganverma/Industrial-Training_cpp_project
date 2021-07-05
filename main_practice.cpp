@@ -12,6 +12,45 @@ void gotoxy(int x, int y) {
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
+class BP {
+    float a, b;
+public:
+    void Input() {
+        cout << "ENTER SYSTOLIC PRESSURE VALUES (TOP NUMBER) = ";
+        cin >> a;
+        cout << "\nENTER DIASTOLIC PRESSURE VALUES (BOTTOM NUMBER) = ";
+        cin >> b;
+    }
+
+    void High() const {
+        if (a < 120) {
+            cout << "YOUR BP IS IN NORMAL RANGE(HIGH)" << endl;
+        } else if (a >= 120 && a <= 129) {
+            cout << "YOUR BP IS ELEVATED(HIGH)" << endl;
+        } else if (a >= 130 && a <= 139) {
+            cout << "YOUR BP IS HIGH (HYPERTENSION STAGE 1)(HIGH)" << endl;
+        } else if (a >= 140 && a <= 179) {
+            cout << "YOUR BP IS HIGH (HYPERTENSION STAGE 2)(HIGH)" << endl;
+        } else if (a >= 180) {
+            cout << "YOUR BP IS VERY HIGH(HIGH)" << endl;
+        }
+    }
+
+    void Low() const {
+        if (b < 79) {
+            cout << "YOUR BP IS IN NORMAL RANGE(LOW)" << endl;
+        } else if (b < 80) {
+            cout << "YOUR BP IS ELEVATED(LOW)" << endl;
+        } else if (b >= 80 && b <= 89) {
+            cout << "YOUR BP IS HIGH (HYPERTENSION STAGE 1)(LOW)" << endl;
+        } else if (b >= 90 && b <= 119) {
+            cout << "YOUR BP IS HIGH (HYPERTENSION STAGE 2)(LOW)" << endl;
+        } else if (b >= 120) {
+            cout << "YOUR BP IS VERY HIGH(LOW)" << endl;
+        }
+    }
+};
+
 int main() {
 //    int age, contact;
 //    char name, medical_condition, address;
@@ -27,7 +66,7 @@ int main() {
     gotoxy(25, 0);
     cout << "\n\n\n\t\t\t"
             "Loading....\n\t\t\t";
-    char x = 2193;
+    char x = 219;
 
     for (int i = 0; i < 50; i++) {
         {
@@ -60,6 +99,10 @@ int main() {
         case 1:
             gotoxy(25, 16);
             cout << "BP CALCULATOR";
+            BP a;
+            a.Input();
+            a.High();
+            a.Low();
             break;
         case 2:
             gotoxy(25, 16);
