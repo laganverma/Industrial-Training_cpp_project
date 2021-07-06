@@ -115,7 +115,41 @@ int main() {
             }
             break;
     }
-    if (bmi > 25) {
+    if (bmi > 30) {
+        gotoxy(25, 37);
+        cout << "_Obese_";
+        int a;
+        gotoxy(25, 39);
+        cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN  BELOW";
+        gotoxy(25, 40);
+        cout << "1. DIET PLAN";
+        gotoxy(25, 41);
+        cout << "2. EXIT";
+        cin >> a;
+        switch (a) {
+            case 1:
+                gotoxy(25, 43);
+                cout << "DIET PLAN";
+                gotoxy(25, 44);
+                cout << "1.Vegetarian";
+                gotoxy(25, 45);
+                cout << "2.Non-Vegetarian";
+                int veg;
+                cin >> veg;
+                if (veg == 1) {
+                    gotoxy(25, 46);
+                    cout << "Plz Click On The Link For Vegetarian Diet Plan";
+                    gotoxy(25, 47);
+                    cout << "";
+                } else {
+                    gotoxy(25, 46);
+                    cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
+                    gotoxy(25, 47);
+                    cout << "";
+                }
+                break;
+        }
+    } else if (bmi < 30 && bmi > 25) {
         gotoxy(25, 37);
         cout << "_Overweight_";
         int a;
@@ -138,12 +172,15 @@ int main() {
                 cin >> veg;
                 if (veg == 1) {
                     gotoxy(25, 46);
-                    cout << "Veg food";
+                    cout << "Plz Click On The Link For Vegetarian Diet Plan";
+                    gotoxy(25, 47);
+                    cout << "https://www.mfine.co/guides/indian-weight-loss-diet-plan-chart/";
                 } else {
                     gotoxy(25, 46);
-                    cout << "non veg food";
+                    cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
+                    gotoxy(25, 47);
+                    cout << "https://www.mfine.co/guides/indian-weight-loss-diet-plan-chart/";
                 }
-
                 break;
             case 2:
                 gotoxy(25, 40);
@@ -153,6 +190,8 @@ int main() {
     } else if (bmi < 25 && bmi > 18.5) {
         gotoxy(25, 35);
         cout << "_Optimal_";
+
+
     } else {
         gotoxy(25, 37);
         cout << "_Underweight_";
@@ -176,10 +215,14 @@ int main() {
                 cin >> veg;
                 if (veg == 1) {
                     gotoxy(25, 46);
-                    cout << "https://www.mfine.co/guides/indian-weight-loss-diet-plan-chart/";
+                    cout << "Plz Click On The Link For Vegetarian Diet Plan";
+                    gotoxy(25, 47);
+                    cout << "https://bit.ly/3dPTsAH";
                 } else {
-                    gotoxy(25, 473);
-                    cout << "non veg food";
+                    gotoxy(25, 46);
+                    cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
+                    gotoxy(25, 47);
+                    cout << "https://www.mfine.co/guides/indian-weight-loss-diet-plan-chart/";
                 }
         }
     }
