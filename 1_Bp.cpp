@@ -11,7 +11,7 @@ public:
     }
 
     void High() const {
-        if (sys < 120 && dia < 80) {
+        if (sys <= 120 && dia <= 80) {
             cout << "YOUR BP IS IN NORMAL RANGE" << endl;
         } else if (sys <= 129 && dia < 80) {
             cout << "YOUR BP IS ELEVATED" << endl;
