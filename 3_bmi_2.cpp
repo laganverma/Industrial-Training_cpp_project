@@ -140,12 +140,12 @@ int main() {
                     gotoxy(25, 46);
                     cout << "Plz Click On The Link For Vegetarian Diet Plan";
                     gotoxy(25, 47);
-                    cout << "";
+                    cout << "https://bit.ly/3qP1lvH";
                 } else {
                     gotoxy(25, 46);
                     cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
                     gotoxy(25, 47);
-                    cout << "";
+                    cout << "https://bit.ly/3qP1lvH";
                 }
                 break;
         }
@@ -174,12 +174,14 @@ int main() {
                     gotoxy(25, 46);
                     cout << "Plz Click On The Link For Vegetarian Diet Plan";
                     gotoxy(25, 47);
-                    cout << "https://www.mfine.co/guides/indian-weight-loss-diet-plan-chart/";
+                    cout << "1. https://bit.ly/3hkpOWw ";
+                    gotoxy(25, 48);
+                    cout << "2. https://bit.ly/3k3d5th";
                 } else {
                     gotoxy(25, 46);
                     cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
                     gotoxy(25, 47);
-                    cout << "https://www.mfine.co/guides/indian-weight-loss-diet-plan-chart/";
+                    cout << "https://bit.ly/2VgfXsg ";
                 }
                 break;
             case 2:
@@ -190,7 +192,36 @@ int main() {
     } else if (bmi < 25 && bmi > 18.5) {
         gotoxy(25, 35);
         cout << "_Optimal_";
-
+        int a;
+        gotoxy(25, 39);
+        cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN  BELOW";
+        gotoxy(25, 40);
+        cout << "1. DIET PLAN";
+        gotoxy(25, 41);
+        cout << "2. EXIT";
+        cin >> a;
+        switch (a) {
+            case 1:
+                gotoxy(25, 43);
+                cout << "DIET PLAN";
+                gotoxy(25, 44);
+                cout << "1.Vegetarian";
+                gotoxy(25, 45);
+                cout << "2.Non-Vegetarian";
+                int veg;
+                cin >> veg;
+                if (veg == 1) {
+                    gotoxy(25, 46);
+                    cout << "Plz Click On The Link For Vegetarian Diet Plan";
+                    gotoxy(25, 47);
+                    cout << "We are just finding it";
+                } else {
+                    gotoxy(25, 46);
+                    cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
+                    gotoxy(25, 47);
+                    cout << "https://bit.ly/3wm38cK";
+                }
+        }
 
     } else {
         gotoxy(25, 37);
@@ -217,12 +248,12 @@ int main() {
                     gotoxy(25, 46);
                     cout << "Plz Click On The Link For Vegetarian Diet Plan";
                     gotoxy(25, 47);
-                    cout << "https://bit.ly/3dPTsAH";
+                    cout << "We are Finding it";
                 } else {
                     gotoxy(25, 46);
                     cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
                     gotoxy(25, 47);
-                    cout << "https://www.mfine.co/guides/indian-weight-loss-diet-plan-chart/";
+                    cout << "We are Finding it";
                 }
         }
     }
