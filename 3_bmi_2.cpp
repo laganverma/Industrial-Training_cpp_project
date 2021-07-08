@@ -248,12 +248,14 @@ int main() {
                     gotoxy(25, 46);
                     cout << "Plz Click On The Link For Vegetarian Diet Plan";
                     gotoxy(25, 47);
-                    cout << "We are Finding it";
+                    cout << "1. https://bit.ly/3jQL3Rl";
+                    gotoxy(25, 48);
+                    cout << "2. https://bit.ly/36mCSVc";
                 } else {
                     gotoxy(25, 46);
                     cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
                     gotoxy(25, 47);
-                    cout << "We are Finding it";
+                    cout << "https://bit.ly/36mCSVc";
                 }
         }
     }
