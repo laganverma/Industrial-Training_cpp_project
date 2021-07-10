@@ -115,6 +115,8 @@ int main() {
             }
             break;
     }
+
+    // OBESE
     if (bmi > 30) {
         gotoxy(25, 37);
         cout << "_Obese_";
@@ -151,10 +153,12 @@ int main() {
                 }
                 break;
             case 2:
-                gotoxy(25, 40);
+                gotoxy(25, 44);
                 cout << "EXIT";
                 break;
         }
+
+        //OVERWEIGHT
     } else if (bmi < 30 && bmi > 25) {
         gotoxy(25, 37);
         cout << "_Overweight_";
@@ -193,10 +197,12 @@ int main() {
                 }
                 break;
             case 2:
-                gotoxy(25, 40);
+                gotoxy(25, 44);
                 cout << "EXIT";
                 break;
         }
+
+        //OPTIMAL
     } else if (bmi < 25 && bmi > 18.5) {
         gotoxy(25, 35);
         cout << "_Optimal_";
@@ -207,6 +213,8 @@ int main() {
         cout << "1. DIET PLAN";
         gotoxy(25, 41);
         cout << "2. EXIT";
+        gotoxy(25, 42);
+        cout << "Choice = ";
         cin >> a;
         switch (a) {
             case 1:
@@ -230,10 +238,12 @@ int main() {
                     cout << "https://bit.ly/3wm38cK";
                 }
             case 2:
-                gotoxy(25, 40);
+                gotoxy(25, 44);
                 cout << "EXIT";
                 break;
         }
+
+        //UNDERWEIGHT
     } else {
         gotoxy(25, 37);
         cout << "_Underweight_";
@@ -244,6 +254,8 @@ int main() {
         cout << "1. DIET PLAN";
         gotoxy(25, 41);
         cout << "2. EXIT";
+        gotoxy(25, 42);
+        cout << "Choice = ";
         cin >> a;
         switch (a) {
             case 1:
@@ -269,7 +281,7 @@ int main() {
                     cout << "https://bit.ly/36mCSVc";
                 }
             case 2:
-                gotoxy(25, 40);
+                gotoxy(25, 44);
                 cout << "EXIT";
                 break;
         }
