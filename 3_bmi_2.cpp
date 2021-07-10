@@ -49,7 +49,7 @@ int main() {
             gotoxy(25, 30);
             cout << "1.Cm";
             gotoxy(25, 31);
-            cout << "2.Inches";
+            cout << "2.Feet and Inches";
             gotoxy(25, 32);
             cout << "Choice = ";
             cin >> s_1;
@@ -86,9 +86,9 @@ int main() {
             gotoxy(25, 30);
             cout << "1.Cm";
             gotoxy(25, 31);
-            cout << "2.Inches";
+            cout << "2.Feet and Inches";
             gotoxy(25, 32);
-            cout << "Input = ";
+            cout << "Choice = ";
             cin >> s_2;
             switch (s_2) {
                 case 1://Pound and Cm (Custom)
@@ -120,33 +120,39 @@ int main() {
         cout << "_Obese_";
         int a;
         gotoxy(25, 39);
-        cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN  BELOW";
+        cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN BELOW";
         gotoxy(25, 40);
         cout << "1. DIET PLAN";
         gotoxy(25, 41);
         cout << "2. EXIT";
+        gotoxy(25, 42);
+        cout << "Choice = ";
         cin >> a;
         switch (a) {
             case 1:
-                gotoxy(25, 43);
-                cout << "DIET PLAN";
                 gotoxy(25, 44);
-                cout << "1.Vegetarian";
+                cout << "DIET PLAN";
                 gotoxy(25, 45);
+                cout << "1.Vegetarian";
+                gotoxy(25, 46);
                 cout << "2.Non-Vegetarian";
                 int veg;
                 cin >> veg;
                 if (veg == 1) {
-                    gotoxy(25, 46);
+                    gotoxy(25, 47);
                     cout << "Plz Click On The Link For Vegetarian Diet Plan";
-                    gotoxy(25, 47);
-                    cout << "https://bit.ly/3qP1lvH";
+                    gotoxy(25, 48);
+                    cout << "https://bit.ly/3qP1lvH\n\n\n\n\n";
                 } else {
-                    gotoxy(25, 46);
-                    cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
                     gotoxy(25, 47);
-                    cout << "https://bit.ly/3qP1lvH";
+                    cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
+                    gotoxy(25, 48);
+                    cout << "https://bit.ly/3qP1lvH\n\n\n\n\n";
                 }
+                break;
+            case 2:
+                gotoxy(25, 40);
+                cout << "EXIT";
                 break;
         }
     } else if (bmi < 30 && bmi > 25) {
@@ -159,29 +165,31 @@ int main() {
         cout << "1. DIET PLAN";
         gotoxy(25, 41);
         cout << "2. EXIT";
+        gotoxy(25, 42);
+        cout << "Choice = ";
         cin >> a;
         switch (a) {
             case 1:
-                gotoxy(25, 43);
-                cout << "DIET PLAN";
                 gotoxy(25, 44);
-                cout << "1.Vegetarian";
+                cout << "DIET PLAN";
                 gotoxy(25, 45);
+                cout << "1.Vegetarian";
+                gotoxy(25, 46);
                 cout << "2.Non-Vegetarian";
                 int veg;
                 cin >> veg;
                 if (veg == 1) {
-                    gotoxy(25, 46);
+                    gotoxy(25, 47);
                     cout << "Plz Click On The Link For Vegetarian Diet Plan";
-                    gotoxy(25, 47);
-                    cout << "1. https://bit.ly/3hkpOWw ";
                     gotoxy(25, 48);
-                    cout << "2. https://bit.ly/3k3d5th";
+                    cout << "1. https://bit.ly/3hkpOWw \n\n\n\n\n";
+                    gotoxy(25, 49);
+                    cout << "2. https://bit.ly/3k3d5th \n\n\n\n\n";
                 } else {
-                    gotoxy(25, 46);
-                    cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
                     gotoxy(25, 47);
-                    cout << "https://bit.ly/2VgfXsg ";
+                    cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
+                    gotoxy(25, 48);
+                    cout << "https://bit.ly/2VgfXsg \n\n\n\n\n";
                 }
                 break;
             case 2:
@@ -221,8 +229,11 @@ int main() {
                     gotoxy(25, 47);
                     cout << "https://bit.ly/3wm38cK";
                 }
+            case 2:
+                gotoxy(25, 40);
+                cout << "EXIT";
+                break;
         }
-
     } else {
         gotoxy(25, 37);
         cout << "_Underweight_";
@@ -257,6 +268,10 @@ int main() {
                     gotoxy(25, 47);
                     cout << "https://bit.ly/36mCSVc";
                 }
+            case 2:
+                gotoxy(25, 40);
+                cout << "EXIT";
+                break;
         }
     }
 }
