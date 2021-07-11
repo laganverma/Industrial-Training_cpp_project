@@ -45,7 +45,7 @@ int main() {
             cout << "Please Enter your Weight in Kg : ";
             cin >> w;
             gotoxy(25, 29);
-            cout << "Enter Your Height in";
+            cout << "Enter Your Height in : ";
             gotoxy(25, 30);
             cout << "1.Cm";
             gotoxy(25, 31);
@@ -82,7 +82,7 @@ int main() {
             cout << "Please Enter your weight in Pounds : ";
             cin >> w;
             gotoxy(25, 29);
-            cout << "Enter Your Height in";
+            cout << "Enter Your Height in : ";
             gotoxy(25, 30);
             cout << "1.Cm";
             gotoxy(25, 31);
