@@ -3,4 +3,4 @@ project(Industrial_Training_cpp_project)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Industrial_Training_cpp_project "super_market.cpp")
+add_executable(Industrial_Training_cpp_project "RESEARCH_2.cpp")
