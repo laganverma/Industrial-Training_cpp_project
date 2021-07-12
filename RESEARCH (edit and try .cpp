@@ -313,16 +313,16 @@ int main() {
             }
         case 2:
             cout << endl << endl << endl << endl;
-            gotoxy(25, 26);
-            cout << "B.M.I" << "\t\t\t\t" << "WEIGHT STATUS" << endl << endl;
-            gotoxy(25, 27);
-            cout << "BELOW 18.5" << "\t\t\t" << "UNDER_WEIGHT" << endl;
+            gotoxy(28, 26);
+            cout << "B.M.I" << "\t\t\t\t\t" << "WEIGHT STATUS" << endl << endl;
             gotoxy(25, 28);
-            cout << "18.5 - 24.9" << "\t\t\t" << "NORMAL OR HEALTHY_WEIGHT" << endl;
-            gotoxy(25, 29);
-            cout << "25.0 - 29.9" << "\t\t\t" << "OVER_WEIGHT" << endl;
+            cout << "1. BELOW 18.5" << "\t\t" << " <---------------> " << "\t" << "UNDER_WEIGHT" << endl;
             gotoxy(25, 30);
-            cout << "30.0 AND ABOVE" << "\t\t\t" << "OBESE" << endl << endl;
+            cout << "2. 18.5 - 24.9" << "\t\t" << " <---------------> " << "\t" << "NORMAL OR HEALTHY_WEIGHT" << endl;
+            gotoxy(25, 32);
+            cout << "3. 25.0 - 29.9" << "\t\t" << " <---------------> " << "\t" << "OVER_WEIGHT" << endl;
+            gotoxy(25, 34);
+            cout << "4. 30.0 AND ABOVE" << "\t" << " <---------------> " << "\t" << "OBESE" << endl << endl;
             break;
     }
 
