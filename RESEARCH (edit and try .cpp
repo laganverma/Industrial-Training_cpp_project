@@ -176,11 +176,10 @@ int main() {
                                 {
                                     switch (exit) {
                                         case 1:
-                                            gotoxy(25, 66);
+                                            gotoxy(25, 71);
                                             cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                             break;
                                         case 2:
-                                            gotoxy(25, 67);
                                             goto run;
                                     }
                                 }
@@ -200,11 +199,10 @@ int main() {
                                 {
                                     switch (exit) {
                                         case 1:
-                                            gotoxy(25, 66);
+                                            gotoxy(25, 71);
                                             cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                             break;
                                         case 2:
-                                            gotoxy(25, 67);
                                             goto run;
                                     }
                                 }
@@ -261,11 +259,10 @@ int main() {
                                 {
                                     switch (exit) {
                                         case 1:
-                                            gotoxy(25, 66);
+                                            gotoxy(25, 71);
                                             cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                             break;
                                         case 2:
-                                            gotoxy(25, 67);
                                             goto run;
                                     }
                                 }
@@ -285,11 +282,10 @@ int main() {
                                 {
                                     switch (exit) {
                                         case 1:
-                                            gotoxy(25, 66);
+                                            gotoxy(25, 71);
                                             cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                             break;
                                         case 2:
-                                            gotoxy(25, 67);
                                             goto run;
                                     }
                                 }
@@ -346,11 +342,10 @@ int main() {
                                 {
                                     switch (exit) {
                                         case 1:
-                                            gotoxy(25, 66);
+                                            gotoxy(25, 71);
                                             cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                             break;
                                         case 2:
-                                            gotoxy(25, 67);
                                             goto run;
                                     }
                                 }
@@ -370,11 +365,10 @@ int main() {
                                 {
                                     switch (exit) {
                                         case 1:
-                                            gotoxy(25, 66);
+                                            gotoxy(25, 71);
                                             cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                             break;
                                         case 2:
-                                            gotoxy(25, 67);
                                             goto run;
                                     }
                                 }
@@ -434,11 +428,10 @@ int main() {
                                 {
                                     switch (exit) {
                                         case 1:
-                                            gotoxy(25, 66);
+                                            gotoxy(25, 71);
                                             cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                             break;
                                         case 2:
-                                            gotoxy(25, 67);
                                             goto run;
                                     }
                                 }
@@ -458,11 +451,10 @@ int main() {
                                 {
                                     switch (exit) {
                                         case 1:
-                                            gotoxy(25, 66);
+                                            gotoxy(25, 71);
                                             cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                             break;
                                         case 2:
-                                            gotoxy(25, 67);
                                             goto run;
                                     }
                                 }
