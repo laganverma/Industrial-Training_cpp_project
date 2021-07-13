@@ -1,8 +1,4 @@
-
-
 // BMI EDIT AND MAKE IT FINAL
-
-
 
 #include <iostream>
 #include <windows.h>
