@@ -25,31 +25,13 @@ public:
             cout << "YOUR BP IS VERY HIGH" << endl;
         }
     }
-
-    void show() {
-        int a;
-        cout << "\n\ndekh pradhan\n in my life you are so valuable that "
-                "i cant even think about losing you.\n so i give you 365 days to fell in love with me\n\n";
-        cout << "1. thik hai\n 2. nahi\n\n";
-        cout << "enter your choice = ";
-        cin >> a;
-        switch (a) {
-            case 1:
-                cout << "love you\n signal par bata diyo.";
-                break;
-
-            case 2:
-                cout << "nautanki nahi , sach bol raha hun\n\n\n";
-                break;
-        }
-
-    }
 };
 
 
 int main() {
     BP user{};
-    user.show();
+    user.Input();
+    user.High();
     return 0;
 }
 
