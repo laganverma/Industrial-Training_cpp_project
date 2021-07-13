@@ -35,25 +35,26 @@ int main() {
     cout << "BMI (BODY MASS INDEX) - CALCULATOR";
     gotoxy(25, 19);
     cout << "---------------------------------------------------------------------------";
-    gotoxy(25, 21);
+    gotoxy(44, 21);
     cout << "******Welcome to Bmi Calculator******";
-    gotoxy(25, 22);
-    cout << "1. CALCULATE YOUR BMI";
-    gotoxy(25, 23);
-    cout << "2. BMI TABLE";
     gotoxy(25, 24);
+    cout << "1. CALCULATE YOUR BMI";
+    gotoxy(25, 25);
+    cout << "2. BMI REFERENCE TABLE";
+    gotoxy(25, 27);
     cout << "ENTER YOUR CHOICE : ";
     cin >> x;
     switch (x) {
         case 1:
-
-            gotoxy(25, 23);
+            gotoxy(53, 30);
+            cout << "CALCULATE YOUR BMI";
+            gotoxy(25, 32);
             cout << "Enter your weight in : ";
-            gotoxy(25, 24);
+            gotoxy(25, 33);
             cout << "1.Kilogram(Kg)";
-            gotoxy(25, 25);
+            gotoxy(25, 34);
             cout << "2.Pound(lbs)";
-            gotoxy(25, 26);
+            gotoxy(25, 36);
             cout << "Choice = ";
             cin >> s;
             switch (s) {
@@ -87,7 +88,7 @@ int main() {
                             cout << "Please Enter your Height in inches: ";
                             cin >> h_1;
                             convert_2 = (h * 12) + h_1;
-                            convert_1 = w * 2.20462;
+                            convert_1 = w * 2.20462; //kg to pound  1 kg = 2.20462
                             bmi = (convert_1 * 703) / (convert_2 * convert_2);
                             gotoxy(25, 35);
                             cout << "Your BMI is : " << setprecision(4) << bmi << endl;
@@ -112,7 +113,7 @@ int main() {
                             gotoxy(25, 33);
                             cout << "Please Enter your Height in Cm : ";
                             cin >> h;
-                            convert_3 = w / 2.20462;
+                            convert_3 = w / 2.20462;//pound to kg
                             bmi = (convert_3) / (h * h) * 10000;
                             gotoxy(25, 34);
                             cout << "Your BMI is : " << setprecision(4) << bmi << endl;
@@ -312,16 +313,18 @@ int main() {
                 }
             }
         case 2:
-            cout << endl << endl << endl << endl;
-            gotoxy(28, 26);
-            cout << "B.M.I" << "\t\t\t\t\t" << "WEIGHT STATUS" << endl << endl;
-            gotoxy(25, 28);
-            cout << "1. BELOW 18.5" << "\t\t" << " <---------------> " << "\t" << "UNDER_WEIGHT" << endl;
-            gotoxy(25, 30);
-            cout << "2. 18.5 - 24.9" << "\t\t" << " <---------------> " << "\t" << "NORMAL OR HEALTHY_WEIGHT" << endl;
-            gotoxy(25, 32);
-            cout << "3. 25.0 - 29.9" << "\t\t" << " <---------------> " << "\t" << "OVER_WEIGHT" << endl;
+            gotoxy(48, 30);
+            cout << "BMI REFERENCE TABLE";
+            gotoxy(28, 32);
+            cout << "_B.M.I_" << "\t\t\t\t\t" << "_WEIGHT STATUS_" << endl << endl;
             gotoxy(25, 34);
+            cout << "1. BELOW 18.5     " << "\t" << " <---------------> " << "\t" << "UNDER_WEIGHT" << endl;
+            gotoxy(25, 35);
+            cout << "2. 18.5 - 24.9     " << "\t" << " <---------------> " << "\t" << "NORMAL OR HEALTHY_WEIGHT"
+                 << endl;
+            gotoxy(25, 36);
+            cout << "3. 25.0 - 29.9     " << "\t" << " <---------------> " << "\t" << "OVER_WEIGHT" << endl;
+            gotoxy(25, 37);
             cout << "4. 30.0 AND ABOVE" << "\t" << " <---------------> " << "\t" << "OBESE" << endl << endl;
             break;
     }
