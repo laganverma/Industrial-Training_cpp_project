@@ -25,7 +25,7 @@ int main() {
     double convert_1;
     double convert_2;
     double convert_3;
-    int x;
+    int x, p;
     int ex;
     gotoxy(25, 17);
     cout << "---------------------------------------------------------------------------";
@@ -483,6 +483,7 @@ int main() {
             break;
 
         case 2:
+        rerunbmi:
             gotoxy(48, 30);
             cout << "BMI REFERENCE TABLE";
             gotoxy(28, 32);
@@ -496,6 +497,23 @@ int main() {
             cout << "3. 25.0 - 29.9     " << "\t" << " <---------------> " << "\t" << "OVER_WEIGHT" << endl;
             gotoxy(25, 37);
             cout << "4. 30.0 AND ABOVE" << "\t" << " <---------------> " << "\t" << "OBESE" << endl << endl;
+            gotoxy(25, 40);
+            cout << "1. RUN AGAIN";
+            gotoxy(25, 41);
+            cout << "2. EXIT";
+            gotoxy(25, 43);
+            cout << "CHOICE : ";
+            cin >> p;
+            switch (p) {
+                case 1:
+                    goto rerunbmi;
+                    break;
+                case 2:
+                    gotoxy(25, 46);
+                    cout << "THANK YOU\n\n\n\n\n\n\n";
+                    exit(0);
+            }
+
             break;
         case 3:
             gotoxy(25, 30);
