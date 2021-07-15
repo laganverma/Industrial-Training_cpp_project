@@ -228,8 +228,8 @@ int main() {
                         }
                         break;
                     case 3:
-                        gotoxy(25, 57);
-                        cout << "EXIT\n\n\n\n\n";
+                        cout << "THANK YOU\n\n\n\n\n\n\n";
+                        exit(0);
                         break;
                 }
             }
@@ -311,8 +311,8 @@ int main() {
                         }
                         break;
                     case 3:
-                        gotoxy(25, 57);
-                        cout << "EXIT";
+                        cout << "THANK YOU\n\n\n\n\n\n\n";
+                        exit(0);
                         break;
                 }
             }
@@ -392,8 +392,8 @@ int main() {
                         }
                         break;
                     case 3:
-                        gotoxy(25, 57);
-                        cout << "EXIT";
+                        cout << "THANK YOU\n\n\n\n\n\n\n";
+                        exit(0);
                         break;
                 }
             }
@@ -474,9 +474,14 @@ int main() {
                                 break;
                         }
                         break;
+                    case 3:
+                        cout << "THANK YOU\n\n\n\n\n\n\n";
+                        exit(0);
+                        break;
                 }
             }
             break;
+
         case 2:
             gotoxy(48, 30);
             cout << "BMI REFERENCE TABLE";
