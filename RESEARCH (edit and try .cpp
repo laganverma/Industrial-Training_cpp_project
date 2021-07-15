@@ -51,9 +51,11 @@ int main() {
             gotoxy(25, 32);
             cout << "Enter your weight in : ";
             gotoxy(25, 33);
-            cout << "1.Kilogram(Kg)";
+            cout << "1. Kilogram(Kg)";
             gotoxy(25, 34);
-            cout << "2.Pound(lbs)";
+            cout << "2. Pound(lbs)";
+            gotoxy(25, 35);
+            cout << "3. Exit";
             gotoxy(25, 36);
             cout << "Choice = ";
             cin >> s;
@@ -68,6 +70,8 @@ int main() {
                     cout << "1.Cm";
                     gotoxy(25, 41);
                     cout << "2.Feet and Inches";
+                    gotoxy(25, 42);
+                    cout << "3. Exit";
                     gotoxy(25, 43);
                     cout << "Choice = ";
                     cin >> s_1;
@@ -93,6 +97,10 @@ int main() {
                             gotoxy(25, 47);
                             cout << "Your BMI is : " << setprecision(4) << bmi << endl;
                             break;
+                        case 3:
+                            cout << "THANK YOU\n\n\n\n\n\n\n";
+                            exit(0);
+                            break;
                     }
                     break;
                 case 2:
@@ -105,6 +113,8 @@ int main() {
                     cout << "1.Cm";
                     gotoxy(25, 41);
                     cout << "2.Feet and Inches";
+                    gotoxy(25, 42);
+                    cout << "3. Exit";
                     gotoxy(25, 43);
                     cout << "Choice = ";
                     cin >> s_2;
@@ -131,10 +141,17 @@ int main() {
                             cout << "Your BMI is : " << setprecision(4) << bmi << endl;
                             break;
                         case 3:
+                            cout << "THANK YOU\n\n\n\n\n\n\n";
                             exit(0);
                             break;
                     }
+                case 3:
+                    cout << "THANK YOU\n\n\n\n\n\n\n";
+                    exit(0);
+                    break;
             }
+
+
             // OBESE
             if (bmi > 30) {
                 gotoxy(25, 49);
