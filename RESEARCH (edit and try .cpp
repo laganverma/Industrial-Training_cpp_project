@@ -151,7 +151,6 @@ int main() {
                     break;
             }
 
-
                 // OBESE
             if (bmi > 30) {
                 gotoxy(25, 49);
