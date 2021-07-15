@@ -1,5 +1,3 @@
-// BMI EDIT AND MAKE IT FINAL
-
 #include <iostream>
 #include <windows.h>
 #include <iomanip>
@@ -25,6 +23,7 @@ int main() {
     double convert_2;
     double convert_3;
     int x;
+    int exit;
     gotoxy(25, 17);
     cout << "---------------------------------------------------------------------------";
     gotoxy(45, 18);
@@ -128,6 +127,7 @@ int main() {
                             break;
                     }
                     break;
+
             }
 
             // OBESE
@@ -164,12 +164,46 @@ int main() {
                                 cout << "Plz Click On The Link For Vegetarian Diet Plan";
                                 gotoxy(25, 64);
                                 cout << "https://bit.ly/3qP1lvH";
+                                gotoxy(25, 66);
+                                cout << "1. EXIT";
+                                gotoxy(25, 67);
+                                cout << "2. CALCULATE AGAIN";
+                                gotoxy(25, 69);
+                                cout << "Choice = ";
+                                cin >> exit;
+                                {
+                                    switch (exit) {
+                                        case 1:
+                                            gotoxy(25, 71);
+                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                            break;
+                                        case 2:
+                                            goto run;
+                                    }
+                                }
                                 break;
                             case 2:
                                 gotoxy(25, 63);
                                 cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
                                 gotoxy(25, 64);
                                 cout << "https://bit.ly/3qP1lvH";
+                                gotoxy(25, 66);
+                                cout << "1. EXIT";
+                                gotoxy(25, 67);
+                                cout << "2. CALCULATE AGAIN";
+                                gotoxy(25, 69);
+                                cout << "Choice = ";
+                                cin >> exit;
+                                {
+                                    switch (exit) {
+                                        case 1:
+                                            gotoxy(25, 71);
+                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                            break;
+                                        case 2:
+                                            goto run;
+                                    }
+                                }
                                 break;
                         }
                 }
@@ -178,15 +212,12 @@ int main() {
                     gotoxy(25, 57);
                 cout << "EXIT\n\n\n\n\n";
                 break;
-            }
-
-                //OVERWEIGHT
-            else if (bmi < 30 && bmi > 25) {
+            } else if (bmi < 30 && bmi > 25) {
                 gotoxy(25, 49);
                 cout << "_Overweight_";
                 int a;
                 gotoxy(25, 51);
-                cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN  BELOW:";
+                cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN BELOW:";
                 gotoxy(25, 52);
                 cout << "1. DIET PLAN";
                 gotoxy(25, 53);
@@ -212,16 +243,50 @@ int main() {
                             case 1:
                                 gotoxy(25, 63);
                                 cout << "Plz Click On The Link For Vegetarian Diet Plan";
-                                gotoxy(25, 64);
-                                cout << "1. https://bit.ly/3hkpOWw ";
                                 gotoxy(25, 65);
+                                cout << "1. https://bit.ly/3hkpOWw ";
+                                gotoxy(25, 66);
                                 cout << "2. https://bit.ly/3k3d5th ";
+                                gotoxy(25, 66);
+                                cout << "1. EXIT";
+                                gotoxy(25, 67);
+                                cout << "2. CALCULATE AGAIN";
+                                gotoxy(25, 69);
+                                cout << "Choice = ";
+                                cin >> exit;
+                                {
+                                    switch (exit) {
+                                        case 1:
+                                            gotoxy(25, 71);
+                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                            break;
+                                        case 2:
+                                            goto run;
+                                    }
+                                }
                                 break;
                             case 2:
                                 gotoxy(25, 63);
                                 cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
                                 gotoxy(25, 64);
                                 cout << "https://bit.ly/2VgfXsg ";
+                                gotoxy(25, 66);
+                                cout << "1. EXIT";
+                                gotoxy(25, 67);
+                                cout << "2. CALCULATE AGAIN";
+                                gotoxy(25, 69);
+                                cout << "Choice = ";
+                                cin >> exit;
+                                {
+                                    switch (exit) {
+                                        case 1:
+                                            gotoxy(25, 71);
+                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                            break;
+                                        case 2:
+                                            goto run;
+                                    }
+                                }
                                 break;
                         }
                         break;
@@ -236,7 +301,7 @@ int main() {
                 cout << "_Optimal_";
                 int a;
                 gotoxy(25, 51);
-                cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN  BELOW:";
+                cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN BELOW:";
                 gotoxy(25, 52);
                 cout << "1. DIET PLAN";
                 gotoxy(25, 53);
@@ -265,14 +330,49 @@ int main() {
                                 cout << "Plz Click On The Link For Vegetarian Diet Plan";
                                 gotoxy(25, 64);
                                 cout << "We are just finding it";
+                                gotoxy(25, 66);
+                                cout << "1. EXIT";
+                                gotoxy(25, 67);
+                                cout << "2. CALCULATE AGAIN";
+                                gotoxy(25, 69);
+                                cout << "Choice = ";
+                                cin >> exit;
+                                {
+                                    switch (exit) {
+                                        case 1:
+                                            gotoxy(25, 71);
+                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                            break;
+                                        case 2:
+                                            goto run;
+                                    }
+                                }
                                 break;
                             case 2:
                                 gotoxy(25, 63);
                                 cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
                                 gotoxy(25, 64);
                                 cout << "https://bit.ly/3wm38cK";
+                                gotoxy(25, 66);
+                                cout << "1. EXIT";
+                                gotoxy(25, 67);
+                                cout << "2. CALCULATE AGAIN";
+                                gotoxy(25, 69);
+                                cout << "Choice = ";
+                                cin >> exit;
+                                {
+                                    switch (exit) {
+                                        case 1:
+                                            gotoxy(25, 71);
+                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                            break;
+                                        case 2:
+                                            goto run;
+                                    }
+                                }
                                 break;
                         }
+                        break;
                     case 3:
                         gotoxy(25, 57);
                         cout << "EXIT";
@@ -285,13 +385,13 @@ int main() {
                 cout << "_Underweight_";
                 int a;
                 gotoxy(25, 51);
-                cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN  BELOW:";
+                cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN BELOW:";
                 gotoxy(25, 52);
                 cout << "1. DIET PLAN";
                 gotoxy(25, 53);
-                cout << "2. RUN AGAIN";
+                cout << "2. EXIT";
                 gotoxy(25, 54);
-                cout << "3. EXIT";
+                cout << "3. RUN AGAIN";
                 gotoxy(25, 56);
                 cout << "Choice = ";
                 cin >> a;
@@ -316,20 +416,52 @@ int main() {
                                 cout << "1. https://bit.ly/3jQL3Rl";
                                 gotoxy(25, 65);
                                 cout << "2. https://bit.ly/36mCSVc";
+                                gotoxy(25, 66);
+                                cout << "1. EXIT";
+                                gotoxy(25, 67);
+                                cout << "2. CALCULATE AGAIN";
+                                gotoxy(25, 69);
+                                cout << "Choice = ";
+                                cin >> exit;
+                                {
+                                    switch (exit) {
+                                        case 1:
+                                            gotoxy(25, 71);
+                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                            break;
+                                        case 2:
+                                            goto run;
+                                    }
+                                }
                                 break;
                             case 2:
                                 gotoxy(25, 63);
                                 cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
                                 gotoxy(25, 64);
                                 cout << "https://bit.ly/36mCSVc";
+                                gotoxy(25, 66);
+                                cout << "1. EXIT";
+                                gotoxy(25, 67);
+                                cout << "2. CALCULATE AGAIN";
+                                gotoxy(25, 69);
+                                cout << "Choice = ";
+                                cin >> exit;
+                                {
+                                    switch (exit) {
+                                        case 1:
+                                            gotoxy(25, 71);
+                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                            break;
+                                        case 2:
+                                            goto run;
+                                    }
+                                }
                                 break;
                         }
-                    case 3:
-                        gotoxy(25, 57);
-                        cout << "EXIT\n\n\n\n\n";
                         break;
                 }
             }
+            break;
         case 2:
             gotoxy(48, 30);
             cout << "BMI REFERENCE TABLE";
@@ -347,5 +479,4 @@ int main() {
             break;
 
     }
-
 }
