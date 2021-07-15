@@ -152,7 +152,7 @@ int main() {
             }
 
 
-            // OBESE
+                // OBESE
             if (bmi > 30) {
                 gotoxy(25, 49);
                 cout << "_Obese_";
