@@ -39,6 +39,8 @@ int main() {
     cout << "1. CALCULATE YOUR BMI";
     gotoxy(25, 25);
     cout << "2. BMI REFERENCE TABLE";
+    gotoxy(25, 26);
+    cout << "3. EXIT";
     gotoxy(25, 27);
     cout << "ENTER YOUR CHOICE : ";
     cin >> x;
@@ -128,14 +130,11 @@ int main() {
                             gotoxy(25, 47);
                             cout << "Your BMI is : " << setprecision(4) << bmi << endl;
                             break;
+                        case 3:
+                            exit(0);
+                            break;
                     }
-                    break;
-                case 3:
-                    exit(0);
-                    break;
-
             }
-
             // OBESE
             if (bmi > 30) {
                 gotoxy(25, 49);
@@ -177,15 +176,14 @@ int main() {
                                 gotoxy(25, 69);
                                 cout << "Choice = ";
                                 cin >> ex;
-                                {
-                                    switch (ex) {
-                                        case 1:
-                                            gotoxy(25, 71);
-                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
-                                            break;
-                                        case 2:
-                                            goto run;
-                                    }
+                                switch (ex) {
+                                    case 1:
+                                        gotoxy(25, 71);
+                                        cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                        break;
+                                    case 2:
+                                        goto run;
+                                        break;
                                 }
                                 break;
                             case 2:
@@ -200,26 +198,25 @@ int main() {
                                 gotoxy(25, 69);
                                 cout << "Choice = ";
                                 cin >> ex;
-                                {
-                                    switch (ex) {
-                                        case 1:
-                                            gotoxy(25, 71);
-                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
-                                            break;
-                                        case 2:
-                                            goto run;
-                                    }
+                                switch (ex) {
+                                    case 1:
+                                        gotoxy(25, 71);
+                                        cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                        break;
+                                    case 2:
+                                        goto run;
+                                        break;
                                 }
                                 break;
                         }
+                        break;
+                    case 3:
+                        gotoxy(25, 57);
+                        cout << "EXIT\n\n\n\n\n";
+                        break;
                 }
-                break;
-                case 3:
-                    gotoxy(25, 57);
-                cout << "EXIT\n\n\n\n\n";
-                break;
             }
-            // overweight
+                // OVERWEIGHT
             else if (bmi < 30 && bmi > 25) {
                 gotoxy(25, 49);
                 cout << "_Overweight_";
@@ -262,15 +259,14 @@ int main() {
                                 gotoxy(25, 69);
                                 cout << "Choice = ";
                                 cin >> ex;
-                                {
-                                    switch (ex) {
-                                        case 1:
-                                            gotoxy(25, 71);
-                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
-                                            break;
-                                        case 2:
-                                            goto run;
-                                    }
+                                switch (ex) {
+                                    case 1:
+                                        gotoxy(25, 71);
+                                        cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                        break;
+                                    case 2:
+                                        goto run;
+                                        break;
                                 }
                                 break;
                             case 2:
@@ -285,15 +281,14 @@ int main() {
                                 gotoxy(25, 69);
                                 cout << "Choice = ";
                                 cin >> ex;
-                                {
-                                    switch (ex) {
-                                        case 1:
-                                            gotoxy(25, 71);
-                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
-                                            break;
-                                        case 2:
-                                            goto run;
-                                    }
+                                switch (ex) {
+                                    case 1:
+                                        gotoxy(25, 71);
+                                        cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                        break;
+                                    case 2:
+                                        goto run;
+                                        break;
                                 }
                                 break;
                         }
@@ -303,9 +298,8 @@ int main() {
                         cout << "EXIT";
                         break;
                 }
-                //OPTIMAL
             }
-            // optimal
+                // OPTIMAL
             else if (bmi < 25 && bmi > 18.5) {
                 gotoxy(25, 49);
                 cout << "_Optimal_";
@@ -335,7 +329,6 @@ int main() {
                         cin >> veg;
                         switch (veg) {
                             case 1:
-
                                 gotoxy(25, 63);
                                 cout << "Plz Click On The Link For Vegetarian Diet Plan";
                                 gotoxy(25, 64);
@@ -347,15 +340,14 @@ int main() {
                                 gotoxy(25, 69);
                                 cout << "Choice = ";
                                 cin >> ex;
-                                {
-                                    switch (ex) {
-                                        case 1:
-                                            gotoxy(25, 71);
-                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
-                                            break;
-                                        case 2:
-                                            goto run;
-                                    }
+                                switch (ex) {
+                                    case 1:
+                                        gotoxy(25, 71);
+                                        cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                        break;
+                                    case 2:
+                                        goto run;
+                                        break;
                                 }
                                 break;
                             case 2:
@@ -370,15 +362,14 @@ int main() {
                                 gotoxy(25, 69);
                                 cout << "Choice = ";
                                 cin >> ex;
-                                {
-                                    switch (ex) {
-                                        case 1:
-                                            gotoxy(25, 71);
-                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
-                                            break;
-                                        case 2:
-                                            goto run;
-                                    }
+                                switch (ex) {
+                                    case 1:
+                                        gotoxy(25, 71);
+                                        cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                        break;
+                                    case 2:
+                                        goto run;
+                                        break;
                                 }
                                 break;
                         }
@@ -388,10 +379,8 @@ int main() {
                         cout << "EXIT";
                         break;
                 }
-
-                //UNDERWEIGHT
             }
-            // underweight
+                // UNDERWEIGHT
             else {
                 gotoxy(25, 49);
                 cout << "_Underweight_";
@@ -434,15 +423,14 @@ int main() {
                                 gotoxy(25, 69);
                                 cout << "Choice = ";
                                 cin >> ex;
-                                {
-                                    switch (ex) {
-                                        case 1:
-                                            gotoxy(25, 71);
-                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
-                                            break;
-                                        case 2:
-                                            goto run;
-                                    }
+                                switch (ex) {
+                                    case 1:
+                                        gotoxy(25, 71);
+                                        cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                        break;
+                                    case 2:
+                                        goto run;
+                                        break;
                                 }
                                 break;
                             case 2:
@@ -457,15 +445,14 @@ int main() {
                                 gotoxy(25, 69);
                                 cout << "Choice = ";
                                 cin >> ex;
-                                {
-                                    switch (ex) {
-                                        case 1:
-                                            gotoxy(25, 71);
-                                            cout << "THANK YOU!!\n\n\n\n\n\n\n";
-                                            break;
-                                        case 2:
-                                            goto run;
-                                    }
+                                switch (ex) {
+                                    case 1:
+                                        gotoxy(25, 71);
+                                        cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                        break;
+                                    case 2:
+                                        goto run;
+                                        break;
                                 }
                                 break;
                         }
@@ -487,6 +474,11 @@ int main() {
             cout << "3. 25.0 - 29.9     " << "\t" << " <---------------> " << "\t" << "OVER_WEIGHT" << endl;
             gotoxy(25, 37);
             cout << "4. 30.0 AND ABOVE" << "\t" << " <---------------> " << "\t" << "OBESE" << endl << endl;
+            break;
+        case 3:
+            gotoxy(25, 30);
+            cout << "THANK YOU\n\n\n\n\n\n\n";
+            exit(0);
             break;
 
     }
