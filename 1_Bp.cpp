@@ -41,7 +41,6 @@ public:
     }
 };
 
-
 int main() {
     BP user{};
     user.Input();
