@@ -13,42 +13,16 @@ void gotoxy(int x, int y) {
 
 int main() {
     int states;
-    int Andaman_and_Nicobar_Islands;
-    int Andhra_Pradesh;
-    int Arunachal_Pradesh;
-    int Assam;
-    int Bihar;
-    int Chandigarh;
-    int Chhattisgarh;
-    int Dadra_and_Nagar_Haveli_and_Daman_and_Diu;
-    int Delhi;
-    int Goa;
-    int Gujarat;
-    int Haryana;
-    int Himachal_Pradesh;
-    int Jammu_and_Kashmir;
-    int Jharkhand;
-    int Karnataka;
-    int Kerala;
-    int Ladakh;
-    int Lakshadweep;
-    int Madhya_Pradesh;
     int Maharashtra;
-    int Manipur;
-    int Meghalaya;
-    int Mizoram;
-    int Nagaland;
-    int Odisha;
-    int Puducherry;
+    int Kerala;
+    int Karnataka;
+    int Tamil_Nadu;
+    int Andhra_Pradesh;
+    int Uttar_Pradesh;
+    int West_Bengal;
+    int Delhi;
     int Punjab;
     int Rajasthan;
-    int Sikkim;
-    int Tamil_Nadu;
-    int Telangana;
-    int Tripura;
-    int Uttar_Pradesh;
-    int Uttarakhand;
-    int West_Bengal;
 
     gotoxy(25, 17);
     cout << "---------------------------------------------------------------------------";
@@ -61,422 +35,30 @@ int main() {
     gotoxy(25, 24);
     cout << "Choose Your State";
     gotoxy(25, 26);
-    cout << "1.  ANDHRA PRADESH";
+    cout << "1. MAHARASHTRA";
     gotoxy(25, 27);
-    cout << "2.  ARUNANCHAL PRADESH";
+    cout << "2. KERALA";
     gotoxy(25, 28);
-    cout << "3.  ASSAM";
+    cout << "3. KARNATAKA";
     gotoxy(25, 29);
-    cout << "4.  BIHAR";
+    cout << "4. TAMIL NADU";
     gotoxy(25, 30);
-    cout << "5.  CHHATTISGARH";
+    cout << "5. ANDHRA PRADESH";
     gotoxy(25, 31);
-    cout << "6.  GOA";
+    cout << "6. UTTAR PRADESH";
     gotoxy(25, 32);
-    cout << "7.  GUJARAT";
+    cout << "7. WEST BENGAL";
     gotoxy(25, 33);
-    cout << "8.  HARYANA";
+    cout << "8. DELHI";
     gotoxy(25, 34);
-    cout << "9.  HIMACHAL PRADESH";
+    cout << "9. PUNJAB";
     gotoxy(25, 35);
-    cout << "10. JHARKHAND";
-    gotoxy(25, 36);
-    cout << "11. KARNATAKA";
+    cout << "10. RAJASTHAN";
     gotoxy(25, 37);
-    cout << "12. KERALA";
-    gotoxy(25, 38);
-    cout << "13. MADHYA PRADESH";
-    gotoxy(25, 39);
-    cout << "14. MAHARASHTRA";
-    gotoxy(25, 40);
-    cout << "15. MANIPUR";
-    gotoxy(25, 41);
-    cout << "16. MEGHALAYA";
-    gotoxy(25, 42);
-    cout << "17. MIZORAM";
-    gotoxy(25, 43);
-    cout << "18. NAGALAND";
-    gotoxy(25, 44);
-    cout << "19. ODISHA";
-    gotoxy(25, 45);
-    cout << "20. PUNJAB";
-    gotoxy(25, 46);
-    cout << "21. RAJASTHAN";
-    gotoxy(25, 47);
-    cout << "22. SIKKIM";
-    gotoxy(25, 48);
-    cout << "23. TAMIL NADU";
-    gotoxy(25, 49);
-    cout << "24. TELANGANA";
-    gotoxy(25, 50);
-    cout << "25. TRIPURA";
-    gotoxy(25, 51);
-    cout << "26. UTTAR PRADESH";
-    gotoxy(25, 52);
-    cout << "27. UTTARAKHAND";
-    gotoxy(25, 53);
-    cout << "28. WEST BENGAL";
-    gotoxy(25, 55);
-    cout << "UNION TERRITORIES";
-    gotoxy(25, 57);
-    cout << "29. ANDAMAN AND NICOBAR ISLANDS";
-    gotoxy(25, 58);
-    cout << "30. CHANDIGARH";
-    gotoxy(25, 59);
-    cout << "31. DADRA AND NAGAR HAVELI AND DAMAN AND DIU";
-    gotoxy(25, 60);
-    cout << "32. DELHI";
-    gotoxy(25, 61);
-    cout << "33. JAMMU AND KASHMIR";
-    gotoxy(25, 62);
-    cout << "34. LADAKH";
-    gotoxy(25, 63);
-    cout << "35. LAKSHADWEEP";
-    gotoxy(25, 64);
-    cout << "36. PUDUCHERRY";
-    gotoxy(25, 66);
     cout << "ENTER YOUR CHOICE : ";
     cin >> states;
     switch (states) {
         case 1:
-            gotoxy(25, 68);
-            cout << "ANDHRA PRADESH";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. VISAKHAPATNAM";
-            gotoxy(25, 71);
-            cout << "2. VIJAYAWADA";
-            gotoxy(25, 72);
-            cout << "3. GUNTUR";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Andhra_Pradesh;
-            switch (Andhra_Pradesh) {
-                case 1:
-                    gotoxy(25, 75);
-                    cout << "1. Mahatma Gandhi Cancer Hospital & Research Institute";
-                    gotoxy(25, 76);
-                    cout << "Plot Number -1, Sector:7, Mvp Colony, MVP Colony Beside Rythu Bazar"
-                            "Mvp Colony, Visakhapatnam";
-                    gotoxy(25, 77);
-                    cout << "Contact : +91-891- 287 8787, +91-891- 255 1811";
-                    gotoxy(25, 79);
-                    cout << "2. KIIMS HOSPITALS";
-                    gotoxy(25, 80);
-                    cout << "Sheela Nagar, BHPV Post, Visakhapatnam, AP 530026";
-                    gotoxy(25, 81);
-                    cout << "Contact : +91-0891-3536379";
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 2:
-            gotoxy(25, 68);
-            cout << "ARUNACHAL PRADESH";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. ITANAGAR";
-            gotoxy(25, 71);
-            cout << "2. PAMPUMPARE";
-            gotoxy(25, 72);
-            cout << "3. CHANGLANG";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Arunachal_Pradesh;
-            switch (Arunachal_Pradesh) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 3:
-            gotoxy(25, 68);
-            cout << "ASSAM";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. DISPUR";
-            gotoxy(25, 71);
-            cout << "2. GUWAHATI";
-            gotoxy(25, 72);
-            cout << "3. SILCHAR";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Assam;
-            switch (Assam) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 4:
-            gotoxy(25, 68);
-            cout << "BIHAR";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. PATNA";
-            gotoxy(25, 71);
-            cout << "2. MUZAFFARPUR";
-            gotoxy(25, 72);
-            cout << "3. PURBI CHAMPARAN";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Bihar;
-            switch (Bihar) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 5:
-            gotoxy(25, 68);
-            cout << "CHHATTISGARH";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. RAIPUR";
-            gotoxy(25, 71);
-            cout << "2. BHILAI";
-            gotoxy(25, 72);
-            cout << "3. BILASPUR";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Chhattisgarh;
-            switch (Chhattisgarh) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 6:
-            gotoxy(25, 68);
-            cout << "GOA";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. PANAJI";
-//            gotoxy(25, 71);
-//            cout << "2. BHILAI";
-//            gotoxy(25, 72);
-//            cout << "3. BILASPUR";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Goa;
-            switch (Goa) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 7:
-            gotoxy(25, 68);
-            cout << "GUJARAT";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. VADODARA";
-            gotoxy(25, 71);
-            cout << "2. SURAT";
-            gotoxy(25, 72);
-            cout << "3. AHMEDABAD";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Gujarat;
-            switch (Gujarat) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 8:
-            gotoxy(25, 68);
-            cout << "HARYANA";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. PANCHUKLA";
-            gotoxy(25, 71);
-            cout << "2. KARNAL";
-            gotoxy(25, 72);
-            cout << "3. FARIDABAD";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Haryana;
-            switch (Haryana) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 9:
-            gotoxy(25, 68);
-            cout << "HIMACHAL PRADESH";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. SHIMLA";
-            gotoxy(25, 71);
-            cout << "2. SOLAN";
-            gotoxy(25, 72);
-            cout << "3. DHARAMSHALA";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Himachal_Pradesh;
-            switch (Himachal_Pradesh) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 10:
-            gotoxy(25, 68);
-            cout << "JHARKHAND";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. JAMSHEDPUR";
-            gotoxy(25, 71);
-            cout << "2. RANCHI";
-            gotoxy(25, 72);
-            cout << "3. DEOGHAR";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Jharkhand;
-            switch (Jharkhand) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 11:
-            gotoxy(25, 68);
-            cout << "KARNATAKA";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. BANGLORE";
-            gotoxy(25, 71);
-            cout << "2. MYSORE";
-            gotoxy(25, 72);
-            cout << "3.MANGALORE";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Karnataka;
-            switch (Karnataka) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 12:
-            gotoxy(25, 68);
-            cout << "KERALA";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. THIRUVANANTHAPURAM";
-            gotoxy(25, 71);
-            cout << "2. KOZHIKODE";
-            gotoxy(25, 72);
-            cout << "3. ERNAKULAM";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Kerala;
-            switch (Kerala) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 13:
-            gotoxy(25, 68);
-            cout << "MADHYA PRADESH";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. INDORE";
-            gotoxy(25, 71);
-            cout << "2. GWALIOR";
-            gotoxy(25, 72);
-            cout << "3. BHOPAL";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Madhya_Pradesh;
-            switch (Madhya_Pradesh) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 14:
             gotoxy(25, 68);
             cout << "MAHARASHTRA";
             gotoxy(25, 69);
@@ -501,21 +83,21 @@ int main() {
                     break;
             }
             break;
-        case 15:
+        case 2:
             gotoxy(25, 68);
-            cout << "MANIPUR";
+            cout << "KERALA";
             gotoxy(25, 69);
             cout << "Choose Your City:";
             gotoxy(25, 70);
-            cout << "1. BISHNUPUR";
+            cout << "1. THIRUVANANTHAPURAM";
             gotoxy(25, 71);
-            cout << "2. THOUBAL";
+            cout << "2. KOZHIKODE";
             gotoxy(25, 72);
-            cout << "3. IMPHAL";
+            cout << "3. ERNAKULAM";
             gotoxy(25, 74);
             cout << "Choice : ";
-            cin >> Manipur;
-            switch (Manipur) {
+            cin >> Kerala;
+            switch (Kerala) {
                 case 1:
                     break;
                 case 2:
@@ -526,96 +108,21 @@ int main() {
                     break;
             }
             break;
-        case 16:
+        case 3:
             gotoxy(25, 68);
-            cout << "MEGHALAYA";
+            cout << "KARNATAKA";
             gotoxy(25, 69);
             cout << "Choose Your City:";
             gotoxy(25, 70);
-            cout << "1. SHILLONG";
-//            gotoxy(25, 71);
-//            cout << "2. THOUBAL";
-//            gotoxy(25, 72);
-//            cout << "3. IMPHAL";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Meghalaya;
-            switch (Meghalaya) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 17:
-            gotoxy(25, 68);
-            cout << "MIZORAM";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. AIZAWL";
-//            gotoxy(25, 71);
-//            cout << "2. THOUBAL";
-//            gotoxy(25, 72);
-//            cout << "3. IMPHAL";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Mizoram;
-            switch (Mizoram) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 18:
-            gotoxy(25, 68);
-            cout << "NAGALAND";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. KOHIMA";
-//            gotoxy(25, 71);
-//            cout << "2. THOUBAL";
-//            gotoxy(25, 72);
-//            cout << "3. IMPHAL";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Nagaland;
-            switch (Nagaland) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 19:
-            gotoxy(25, 68);
-            cout << "ODISHA";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. BHUBANESWAR";
+            cout << "1. BANGLORE";
             gotoxy(25, 71);
-            cout << "2. CUTTACK";
+            cout << "2. MYSORE";
             gotoxy(25, 72);
-            cout << "3. BERHAMPUR";
+            cout << "3.MANGALORE";
             gotoxy(25, 74);
             cout << "Choice : ";
-            cin >> Odisha;
-            switch (Odisha) {
+            cin >> Karnataka;
+            switch (Karnataka) {
                 case 1:
                     break;
                 case 2:
@@ -626,82 +133,7 @@ int main() {
                     break;
             }
             break;
-        case 20:
-            gotoxy(25, 68);
-            cout << "PUNJAB";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. PATIALA";
-            gotoxy(25, 71);
-            cout << "2. LUDHIANA";
-            gotoxy(25, 72);
-            cout << "3. JALANDHAR";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Punjab;
-            switch (Punjab) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 21:
-            gotoxy(25, 68);
-            cout << "RAJASTHAN";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. JAIPUR";
-            gotoxy(25, 71);
-            cout << "2. JODHPUR";
-            gotoxy(25, 72);
-            cout << "3. KOTA";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Rajasthan;
-            switch (Rajasthan) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 22:
-            gotoxy(25, 68);
-            cout << "SIKKIM";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1.GANGTOK";
-//            gotoxy(25, 71);
-//            cout << "2. JODHPUR";
-//            gotoxy(25, 72);
-//            cout << "3. KOTA";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Sikkim;
-            switch (Sikkim) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 23:
+        case 4:
             gotoxy(25, 68);
             cout << "TAMIL NADU";
             gotoxy(25, 69);
@@ -726,57 +158,55 @@ int main() {
                     break;
             }
             break;
-        case 24:
+        case 5:
             gotoxy(25, 68);
-            cout << "TELANGANA";
+            cout << "ANDHRA PRADESH";
             gotoxy(25, 69);
             cout << "Choose Your City:";
             gotoxy(25, 70);
-            cout << "1. HYDERABAD";
+            cout << "1. VISAKHAPATNAM";
             gotoxy(25, 71);
-            cout << "2. WARANGAL";
+            cout << "2. VIJAYAWADA";
             gotoxy(25, 72);
-            cout << "3. NIZAMABAD";
+            cout << "3. GUNTUR";
             gotoxy(25, 74);
             cout << "Choice : ";
-            cin >> Telangana;
-            switch (Telangana) {
+            cin >> Andhra_Pradesh;
+            switch (Andhra_Pradesh) {
                 case 1:
+                    gotoxy(25, 75);
+                    cout << "1. MAHATMA GANDHI CANCER HOSPITAL & RESEARCH INSTITUTE";
+                    gotoxy(25, 76);
+                    cout << "   Plot Number -1, Sector:7, Mvp Colony, MVP Colony Beside Rythu Bazar"
+                            "Mvp Colony, Visakhapatnam";
+                    gotoxy(25, 77);
+                    cout << "    Contact : +91-891-2878787, +91-891-2551811";
+                    gotoxy(25, 79);
+                    cout << "2. KIIMS HOSPITALS";
+                    gotoxy(25, 80);
+                    cout << "   Sheela Nagar, BHPV Post, Visakhapatnam, AP 530026";
+                    gotoxy(25, 81);
+                    cout << "   Contact : +91-0891-3536379";
+                    gotoxy(25, 83);
+                    cout << "3. APOLLO HOSPITALS";
+                    gotoxy(25, 84);
+                    cout << "   Door No 10, Executive Court, 50-80, Waltair Main Rd, Opp. Daspalla, Ram Nagar";
+                    gotoxy(25, 85);
+                    cout << "   Visakhapatnam, AP 530002 ";
+                    gotoxy(25, 86);
+                    cout << "   Contact : +91-891-2727272";
                     break;
                 case 2:
                     break;
                 case 3:
                     break;
                 default:
+                    gotoxy(25, 75);
+                    cout << "WE ARE EXPANDING";
                     break;
             }
             break;
-        case 25:
-            gotoxy(25, 68);
-            cout << "TRIPURA";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. AGARTALA";
-            gotoxy(25, 71);
-            cout << "2. DHARMANAGAR";
-            gotoxy(25, 72);
-            cout << "3. UDAIPUR";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Tripura;
-            switch (Tripura) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 26:
+        case 6:
             gotoxy(25, 68);
             cout << "UTTAR PRADESH";
             gotoxy(25, 69);
@@ -801,32 +231,7 @@ int main() {
                     break;
             }
             break;
-        case 27:
-            gotoxy(25, 68);
-            cout << "UTTARAKHAND";
-            gotoxy(25, 69);
-            cout << "Choose Your City:";
-            gotoxy(25, 70);
-            cout << "1. DEHRADUN";
-            gotoxy(25, 71);
-            cout << "2. HARIDWAR";
-            gotoxy(25, 72);
-            cout << "3. ROORKEE";
-            gotoxy(25, 74);
-            cout << "Choice : ";
-            cin >> Uttarakhand;
-            switch (Uttarakhand) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                default:
-                    break;
-            }
-            break;
-        case 28:
+        case 7:
             gotoxy(25, 68);
             cout << "WEST BENGAL";
             gotoxy(25, 69);
@@ -851,40 +256,59 @@ int main() {
                     break;
             }
             break;
-        case 29:
-            gotoxy(25, 68);
-            cout << "ANDAMAN AND NICOBAR ISLANDS";
-            break;
-        case 30:
-            gotoxy(25, 68);
-            cout << "CHANDIGARH";
-            break;
-        case 31:
-            gotoxy(25, 68);
-            cout << "DADRA AND NAGAR HAVELI AND DAMAN AND DIU";
-            break;
-        case 32:
+        case 8:
             gotoxy(25, 68);
             cout << "DELHI";
             break;
-        case 33:
+        case 9:
             gotoxy(25, 68);
-            cout << "JAMMU AND KASHMIR";
+            cout << "PUNJAB";
+            gotoxy(25, 69);
+            cout << "Choose Your City:";
+            gotoxy(25, 70);
+            cout << "1. PATIALA";
+            gotoxy(25, 71);
+            cout << "2. LUDHIANA";
+            gotoxy(25, 72);
+            cout << "3. JALANDHAR";
+            gotoxy(25, 74);
+            cout << "Choice : ";
+            cin >> Punjab;
+            switch (Punjab) {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                default:
+                    break;
+            }
             break;
-        case 34:
+        case 10:
             gotoxy(25, 68);
-            cout << "LADAKH";
+            cout << "RAJASTHAN";
+            gotoxy(25, 69);
+            cout << "Choose Your City:";
+            gotoxy(25, 70);
+            cout << "1. JAIPUR";
+            gotoxy(25, 71);
+            cout << "2. JODHPUR";
+            gotoxy(25, 72);
+            cout << "3. KOTA";
+            gotoxy(25, 74);
+            cout << "Choice : ";
+            cin >> Rajasthan;
+            switch (Rajasthan) {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                default:
+                    break;
+            }
             break;
-        case 35:
-            gotoxy(25, 68);
-            cout << "LAKSHADWEEP";
-            break;
-        case 36:
-            gotoxy(25, 68);
-            cout << "PUDUCHERRY";
-            break;
-        default:
-            break;
-
     }
 }
