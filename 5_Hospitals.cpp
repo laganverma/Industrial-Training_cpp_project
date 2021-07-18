@@ -59,23 +59,63 @@ int main() {
     cin >> states;
     switch (states) {
         case 1:
-            gotoxy(25, 68);
+            gotoxy(25, 39);
             cout << "MAHARASHTRA";
-            gotoxy(25, 69);
+            gotoxy(25, 41);
             cout << "Choose Your City:";
-            gotoxy(25, 70);
+            gotoxy(25, 42);
             cout << "1. MUMBAI";
-            gotoxy(25, 71);
+            gotoxy(25, 43);
             cout << "2. PUNE";
-            gotoxy(25, 72);
+            gotoxy(25, 44);
             cout << "3. NASHIK";
-            gotoxy(25, 74);
+            gotoxy(25, 45);
             cout << "Choice : ";
             cin >> Maharashtra;
             switch (Maharashtra) {
                 case 1:
+                    gotoxy(25, 47);
+                    cout << "A)MUMBAI";
+                    gotoxy(25, 49);
+                    cout << "(i)Hospital - Nanavati Super Speciality Hospital";
+                    gotoxy(25, 50);
+                    cout << "Address  - S.V. Road, Opposite Pavan Hans & Juhu Beach,Vileparle West, Mumbai";
+                    gotoxy(25, 51);
+                    cout << "Contact  - +91 22 2626 7500 , +91 22 2626 7777";
+                    gotoxy(25, 53);
+                    cout << "(ii)Hospital - Fortis Hospital Mulund";
+                    gotoxy(25, 54);
+                    cout << "Address  - Mulund Goregaon Link Road, Industrial Area,Mulund West, Mumbai";
+                    gotoxy(25, 55);
+                    cout << "Contact  - +91 22 4111 4111, +91 9606 047 050";
+                    gotoxy(25, 57);
+                    cout << "(iii)Hospital - Tata Memorial Hospital(govt.)";
+                    gotoxy(25, 58);
+                    cout << "Address  - Dr. E Borges Road, Parel, Mumbai 400012";
+                    gotoxy(25, 59);
+                    cout << "Contact  - +91-22- 24177000, +91-22-24146750";
                     break;
                 case 2:
+                    gotoxy(25, 47);
+                    cout << "B)PUNE";
+                    gotoxy(25, 49);
+                    cout << "(i) Hospital - Columbia Asia Hospital Pune";
+                    gotoxy(25, 50);
+                    cout<< "    Address  - 22, 2A, Mundhwa - Kharadi Rd, Near Nyati Empire, Santipur, Thite Nagar, Kharadi,";
+                    gotoxy(25, 51);
+                    cout << "               Pune, Maharashtra 411001";
+                    gotoxy(25, 52);
+                    cout << "    Contact  - +91 20 6165 6666, +91 20 7129 0129";
+                    gotoxy(25, 54);
+                    cout << "(ii)Hospital - Jehangir Hospital";
+                    gotoxy(25, 55);
+                    cout << "    Address  - 32, Sasoon Rd, Opposite Railway Station, Central Excise Colony, ";
+                    gotoxy(25, 56);
+                    cout << "               Sangamvadi, Pune, Maharashtra 411001";
+                    gotoxy(25, 57);
+                    cout << "    Contact  - +91 20 6681 9999, +91 20 6681 9966";
+
+
                     break;
                 case 3:
                     break;
