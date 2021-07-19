@@ -101,7 +101,8 @@ int main() {
                     gotoxy(25, 49);
                     cout << "(i)  Hospital - Columbia Asia Hospital Pune";
                     gotoxy(25, 50);
-                    cout << "     Address  - 22, 2A, Mundhwa - Kharadi Rd, Near Nyati Empire, Santipur, Thite Nagar, Kharadi,";
+                    cout
+                            << "     Address  - 22, 2A, Mundhwa - Kharadi Rd, Near Nyati Empire, Santipur, Thite Nagar, Kharadi,";
                     gotoxy(25, 51);
                     cout << "                Pune, Maharashtra 411001";
                     gotoxy(25, 52);
@@ -117,7 +118,8 @@ int main() {
                     gotoxy(25, 59);
                     cout << "(iii)Hospital - Pune Adventist Hospital";
                     gotoxy(25, 60);
-                    cout << "     Address  - Salisbury Park, Post Box 1405, Market Yard, Gultekdi, Pune, Maharashtra 411037";
+                    cout
+                            << "     Address  - Salisbury Park, Post Box 1405, Market Yard, Gultekdi, Pune, Maharashtra 411037";
                     gotoxy(25, 61);
                     cout << "     Contact  - +91-020 2452 6771";
                     break;
@@ -127,13 +129,15 @@ int main() {
                     gotoxy(25, 49);
                     cout << "(i)  Hospital - Sahyadri Super Speciality Hospital Nashik";
                     gotoxy(25, 50);
-                    cout << "     Address  - Mumbai-Agra Road, Wadala Rd, near Nashik, Dwarka Circle, Maharashtra 422001";
+                    cout
+                            << "     Address  - Mumbai-Agra Road, Wadala Rd, near Nashik, Dwarka Circle, Maharashtra 422001";
                     gotoxy(25, 51);
                     cout << "     Contact  - +91 253 669 1666";
                     gotoxy(25, 53);
                     cout << "(ii) Hospital - Wockhardt Hospital, Nashik";
                     gotoxy(25, 54);
-                    cout << "     Address  - Wani House, Mumbai - Agra National Hwy, Wadala Naka, Nashik, Maharashtra 422001";
+                    cout
+                            << "     Address  - Wani House, Mumbai - Agra National Hwy, Wadala Naka, Nashik, Maharashtra 422001";
                     gotoxy(25, 55);
                     cout << "     Contact  - +91 253 662 4444, +91 253 662 4100";
                     gotoxy(25, 57);
@@ -168,7 +172,8 @@ int main() {
                     gotoxy(25, 49);
                     cout << "(i)  Hospital - Kerala Institute Of Medical Sciences (Kims)";
                     gotoxy(25, 50);
-                    cout << "     Address  - P B No 1 Kumarapuram Poonthi Road Anamukham, Thiruvananthapuram, Kerala - 695024";
+                    cout
+                            << "     Address  - P B No 1 Kumarapuram Poonthi Road Anamukham, Thiruvananthapuram, Kerala - 695024";
                     gotoxy(25, 51);
                     cout << "     Contact  - +91 0471 244 7575, +91 0471 244 7676";
                     gotoxy(25, 53);
@@ -176,7 +181,7 @@ int main() {
                     gotoxy(25, 54);
                     cout << "     Address  - NH bypass 66, Airport Rd, near Courtyard Garden, Chackai";
                     gotoxy(25, 55);
-                    cout<<"                Thiruvananthapuram, Kerala 695024";
+                    cout << "                Thiruvananthapuram, Kerala 695024";
                     gotoxy(25, 56);
                     cout << "     Contact  - +91 0471 250 7575, +91 0471 257 9900";
                     gotoxy(25, 58);
@@ -204,7 +209,8 @@ int main() {
                     gotoxy(25, 57);
                     cout << "(iii)Hospital - PVS Hospital";
                     gotoxy(25, 58);
-                    cout << "     Address  - Railway Station Rd, near Railway Station, Palayam, Kozhikode, Kerala 673002";
+                    cout
+                            << "     Address  - Railway Station Rd, near Railway Station, Palayam, Kozhikode, Kerala 673002";
                     gotoxy(25, 59);
                     cout << "     Contact  - +91 0495 270 7222, +91 0495 270 7333";
                     break;
@@ -257,7 +263,8 @@ int main() {
                     gotoxy(25, 49);
                     cout << "(i)  Hospital - Apollo Hospitals";
                     gotoxy(25, 50);
-                    cout << "     Address  - 154/11,Bannerghatta Road, Amalodbhavi Nagar, Panduranga Nagar,Bangalore 560076";
+                    cout
+                            << "     Address  - 154/11,Bannerghatta Road, Amalodbhavi Nagar, Panduranga Nagar,Bangalore 560076";
                     gotoxy(25, 51);
                     cout << "     Contact  - +91-80-2630 4050";
                     gotoxy(25, 53);
@@ -289,7 +296,8 @@ int main() {
                     gotoxy(25, 54);
                     cout << "(ii) Hospital - Narayana Multispeciality Hospital";
                     gotoxy(25, 55);
-                    cout << "     Address  - CAH/1, 3rd Phase, Devanur, 2nd Stage, R.S.Naidu Nagar, Mysuru, Karnataka 570019";
+                    cout
+                            << "     Address  - CAH/1, 3rd Phase, Devanur, 2nd Stage, R.S.Naidu Nagar, Mysuru, Karnataka 570019";
                     gotoxy(25, 56);
                     cout << "     Contact  - +91 80675 06870";
                     gotoxy(25, 58);
@@ -350,7 +358,8 @@ int main() {
                     gotoxy(25, 49);
                     cout << "(i)  Hospital - Be Well Hospitals";
                     gotoxy(25, 50);
-                    cout << "     Address  - 5A, Vijaya Raghava Rd, Drivers Colony, T. Nagar, Chennai, Tamil Nadu 600017";
+                    cout
+                            << "     Address  - 5A, Vijaya Raghava Rd, Drivers Colony, T. Nagar, Chennai, Tamil Nadu 600017";
                     gotoxy(25, 51);
                     cout << "     Contact  - +91 444 211 3010";
                     gotoxy(25, 53);
@@ -380,7 +389,8 @@ int main() {
                     gotoxy(25, 54);
                     cout << "(ii) Hospital - SPT Hospitals";
                     gotoxy(25, 55);
-                    cout << "     Address  - 50, Vivekananda Rd, Peranaidu Layout, Ram Nagar, Coimbatore, Tamil Nadu 641009";
+                    cout
+                            << "     Address  - 50, Vivekananda Rd, Peranaidu Layout, Ram Nagar, Coimbatore, Tamil Nadu 641009";
                     gotoxy(25, 56);
                     cout << "     Contact  - +91 422 223 2525";
                     gotoxy(25, 58);
@@ -396,7 +406,8 @@ int main() {
                     gotoxy(25, 49);
                     cout << "(i)  Hospital - SARAVANA MULTISPECIALITY HOSPITAL";
                     gotoxy(25, 50);
-                    cout << "     Address  - 7-A, Maruthupandiar, Nagar, Fourth Main Rd, Narimedu, Madurai,Tamil Nadu 625002";
+                    cout
+                            << "     Address  - 7-A, Maruthupandiar, Nagar, Fourth Main Rd, Narimedu, Madurai,Tamil Nadu 625002";
                     gotoxy(25, 51);
                     cout << "     Contact  - +91 452 2446004";
                     gotoxy(25, 53);
@@ -439,7 +450,7 @@ int main() {
                     gotoxy(25, 50);
                     cout << "     Address  - Plot Number -1, Sector:7, Mvp Colony, MVP Colony Beside Rythu Bazar";
                     gotoxy(25, 51);
-                    cout<< "                Mvp Colony, Visakhapatnam";
+                    cout << "                Mvp Colony, Visakhapatnam";
                     gotoxy(25, 52);
                     cout << "     Contact  - +91-891-2878787, +91-891-2551811";
                     gotoxy(25, 54);
@@ -451,7 +462,8 @@ int main() {
                     gotoxy(25, 58);
                     cout << "(iii)Hospital - APOLLO HOSPITALS";
                     gotoxy(25, 59);
-                    cout << "     Address  - Door No 10, Executive Court, 50-80, Waltair Main Rd, Opp. Daspalla, Ram Nagar";
+                    cout
+                            << "     Address  - Door No 10, Executive Court, 50-80, Waltair Main Rd, Opp. Daspalla, Ram Nagar";
                     gotoxy(25, 60);
                     cout << "                Visakhapatnam, AP 530002 ";
                     gotoxy(25, 61);
@@ -465,7 +477,7 @@ int main() {
                     gotoxy(25, 50);
                     cout << "     Address  - 100 Feet New Autonagar Road, Main, Road, Tadigadapa, Vijayawada,";
                     gotoxy(25, 51);
-                    cout<< "                Andhra Pradesh 521137";
+                    cout << "                Andhra Pradesh 521137";
                     gotoxy(25, 52);
                     cout << "     Contact  - +91 866 246 3333";
                     gotoxy(25, 54);
@@ -473,7 +485,7 @@ int main() {
                     gotoxy(25, 55);
                     cout << "     Address  - MG Rd, Opposite Indira Gandhi Municipal Stadium, Labbipet, Vijayawada,";
                     gotoxy(25, 56);
-                    cout<< "                Andhra Pradesh 520010";
+                    cout << "                Andhra Pradesh 520010";
                     gotoxy(25, 57);
                     cout << "     Contact  - +91 866 247 2000";
                     gotoxy(25, 59);
@@ -481,7 +493,7 @@ int main() {
                     gotoxy(25, 60);
                     cout << "     Address  - ZP High School, Moulangar Masjid Rd Opp, Bhavanipuram, Gollapudi,";
                     gotoxy(25, 61);
-                    cout<< "                Vijayawada, Andhra Pradesh 521225";
+                    cout << "                Vijayawada, Andhra Pradesh 521225";
                     gotoxy(25, 62);
                     cout << "     Contact  - +91 866 241 7577";
                     break;
@@ -493,7 +505,7 @@ int main() {
                     gotoxy(25, 50);
                     cout << "     Address  - Bus Stand, Besides Manipuram Fly Over, near R.T.C,";
                     gotoxy(25, 51);
-                    cout<< "                Guntur, Andhra Pradesh 522001";
+                    cout << "                Guntur, Andhra Pradesh 522001";
                     gotoxy(25, 52);
                     cout << "     Contact  - +91 863 222 7000";
                     gotoxy(25, 54);
@@ -501,7 +513,7 @@ int main() {
                     gotoxy(25, 55);
                     cout << "     Address  - 5th Lane, GV Thota, Gunturvari Thota, Christian Pet, Kothapeta,";
                     gotoxy(25, 56);
-                    cout<< "                Guntur, Andhra Pradesh 522001";
+                    cout << "                Guntur, Andhra Pradesh 522001";
                     gotoxy(25, 57);
                     cout << "     Contact  - +91 863 232 3235";
                     gotoxy(25, 59);
@@ -538,7 +550,8 @@ int main() {
                     gotoxy(25, 49);
                     cout << "(i)  Hospital - New Lakhanpur Hospital And Trauma Center";
                     gotoxy(25, 50);
-                    cout << "     Address  - 6-A, G.T. Road Near Gurudev Palace, Lakhanpur, Kanpur, Uttar Pradesh 208024";
+                    cout
+                            << "     Address  - 6-A, G.T. Road Near Gurudev Palace, Lakhanpur, Kanpur, Uttar Pradesh 208024";
                     gotoxy(25, 51);
                     cout << "     Contact  - +91 73884 26666";
                     gotoxy(25, 53);
@@ -568,7 +581,8 @@ int main() {
                     gotoxy(25, 54);
                     cout << "(ii) Hospital - Shalimar hospital ";
                     gotoxy(25, 55);
-                    cout << "     Address  - Block A A-989 Captain Aditya Mishra Marg, near Shalimar Chauraha, Lucknow,";
+                    cout
+                            << "     Address  - Block A A-989 Captain Aditya Mishra Marg, near Shalimar Chauraha, Lucknow,";
                     gotoxy(25, 56);
                     cout << "                Uttar Pradesh 226016";
                     gotoxy(25, 57);
@@ -631,9 +645,10 @@ int main() {
                     gotoxy(25, 49);
                     cout << "(i)  Hospital - AMRI HOSPITAL";
                     gotoxy(25, 50);
-                    cout << "     Address  - 16 17, JC Block Lane, Central Park Road Broadway Road, stadium gate number 3,";
+                    cout
+                            << "     Address  - 16 17, JC Block Lane, Central Park Road Broadway Road, stadium gate number 3,";
                     gotoxy(25, 51);
-                    cout<< "                opposite salt lake, Sector III, Bidhannagar, Kolkata, West Bengal 700098";
+                    cout << "                opposite salt lake, Sector III, Bidhannagar, Kolkata, West Bengal 700098";
                     gotoxy(25, 52);
                     cout << "     Contact  - +91 33 6606 3800";
                     gotoxy(25, 54);
@@ -649,7 +664,7 @@ int main() {
                     gotoxy(25, 60);
                     cout << "     Address  - 360, Pancha Sayar Rd, Sahid Smirity Colony, Pancha Sayar, Kolkata,";
                     gotoxy(25, 61);
-                    cout<<  "                West Bengal 700094";
+                    cout << "                West Bengal 700094";
                     gotoxy(25, 62);
                     cout << "     Contact  - +91 33 4011 1222";
                     break;
@@ -753,7 +768,7 @@ int main() {
                     gotoxy(25, 50);
                     cout << "     Address  - Kumbha Marg, Rana Sanga Marg, Sector 28, Sanganer, Pratap Nagar, Jaipur,";
                     gotoxy(25, 51);
-                    cout<<"                Rajasthan 302033";
+                    cout << "                Rajasthan 302033";
                     gotoxy(25, 52);
                     cout << "     Contact  - +91 80675 06880";
                     gotoxy(25, 54);
@@ -761,7 +776,7 @@ int main() {
                     gotoxy(25, 55);
                     cout << "     Address  - Calgiri Marg, near Police Station, Jhalana Gram, Malviya Nagar,";
                     gotoxy(25, 56);
-                    cout<<"                Jaipur, Rajasthan 302017";
+                    cout << "                Jaipur, Rajasthan 302017";
                     gotoxy(25, 57);
                     cout << "     Contact  - +91 89550 00333";
                     gotoxy(25, 59);
@@ -769,7 +784,7 @@ int main() {
                     gotoxy(25, 60);
                     cout << "     Address  - SP-4 & 6, Central Road, Malviya Nagar Industrial Area, Malviya Nagar,";
                     gotoxy(25, 61);
-                    cout<<"                Jaipur, Rajasthan 302017";
+                    cout << "                Jaipur, Rajasthan 302017";
                     gotoxy(25, 62);
                     cout << "     Contact  - +91 141 410 1111";
                     break;
@@ -780,7 +795,8 @@ int main() {
                     gotoxy(25, 49);
                     cout << "(i)  Hospital - Medipulse Hospital";
                     gotoxy(25, 50);
-                    cout << "     Address  - E4, MIA , Basni II Phase,Opposite, AIIMS Link Rd, Jodhpur, Rajasthan 342005";
+                    cout
+                            << "     Address  - E4, MIA , Basni II Phase,Opposite, AIIMS Link Rd, Jodhpur, Rajasthan 342005";
                     gotoxy(25, 51);
                     cout << "     Contact  - +91 82393 45635";
                     gotoxy(25, 53);
@@ -804,7 +820,7 @@ int main() {
                     gotoxy(25, 50);
                     cout << "     Address  - 2-A, Commerce College Rd, New Rajeev Gandhi Nagar, Sector - A, Talwandi,";
                     gotoxy(25, 51);
-                    cout<<"                Kota, Rajasthan 324001";
+                    cout << "                Kota, Rajasthan 324001";
                     gotoxy(25, 52);
                     cout << "     Contact  - +91 96940 94659";
                     gotoxy(25, 54);
@@ -812,7 +828,7 @@ int main() {
                     gotoxy(25, 55);
                     cout << "     Address  - Plot No:- 9-10, Car Bazar Ke Pass, Subhash Nagar First, Transport Nagar,";
                     gotoxy(25, 56);
-                    cout<<"                Rangbari, Kota, Rajasthan 324010";
+                    cout << "                Rangbari, Kota, Rajasthan 324010";
                     gotoxy(25, 57);
                     cout << "     Contact  - +91 744 242 9122";
                     gotoxy(25, 59);
