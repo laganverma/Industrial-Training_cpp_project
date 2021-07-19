@@ -101,7 +101,7 @@ int main() {
                     gotoxy(25, 49);
                     cout << "(i) Hospital - Columbia Asia Hospital Pune";
                     gotoxy(25, 50);
-                    cout<< "    Address  - 22, 2A, Mundhwa - Kharadi Rd, Near Nyati Empire, Santipur, Thite Nagar, Kharadi,";
+                    cout << "    Address  - 22, 2A, Mundhwa - Kharadi Rd, Near Nyati Empire, Santipur, Thite Nagar, Kharadi,";
                     gotoxy(25, 51);
                     cout << "               Pune, Maharashtra 411001";
                     gotoxy(25, 52);
