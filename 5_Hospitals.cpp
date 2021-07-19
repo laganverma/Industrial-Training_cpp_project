@@ -222,7 +222,7 @@ int main() {
                     gotoxy(25, 54);
                     cout << "     Address  - Mahatma Gandhi Rd, Pallimukku, Kochi, Kerala 682016";
                     gotoxy(25, 55);
-                    cout << "     Contact  - +91 0484 235 8001";
+                    cout << "     Contact  - +91 0484 235 8001 ";
                     gotoxy(25, 57);
                     cout << "(iii)Hospital - Lourdes Hospital";
                     gotoxy(25, 58);
