@@ -25,6 +25,7 @@ int main() {
     int Punjab;
     int Rajasthan;
 
+    hospital_rerun:
     gotoxy(25, 17);
     cout << "---------------------------------------------------------------------------";
     gotoxy(55, 18);
@@ -1014,13 +1015,8 @@ int main() {
             exit(0);
             break;
         case 12:
-
-
-//            cout << "11. OTHERS";
-//            gotoxy(25, 37);
-//            cout << "12. RERUN";
-//            gotoxy(25, 38);
-//            cout << "13. EXIT";
+            cout<<"\n\n\n\n\t\t\t\t ENTER THE STATE FROM ABOVE";
+            goto hospital_rerun;
             break;
         case 13:
             gotoxy(25, 43);
