@@ -20,7 +20,6 @@ int main() {
     int Andhra_Pradesh;
     int Uttar_Pradesh;
     int West_Bengal;
-    int Delhi;
     int Punjab;
     int Rajasthan;
 
