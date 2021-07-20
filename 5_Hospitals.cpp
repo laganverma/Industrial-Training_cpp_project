@@ -1,3 +1,5 @@
+
+
 #include <iostream>
 #include <windows.h>
 
@@ -1003,6 +1005,27 @@ int main() {
                     cout << "THANK YOU\n\n\n\n\n\n\n";
                     exit(0);
             }
+            break;
+        case 11:
+            gotoxy(25, 43);
+            cout << "SORRY FOR THE INCONVENIENCE,WE ARE EXPANDING.";
+            gotoxy(25, 44);
+            cout << "THANK YOU\n\n\n\n\n\n\n";
+            exit(0);
+            break;
+        case 12:
+
+
+//            cout << "11. OTHERS";
+//            gotoxy(25, 37);
+//            cout << "12. RERUN";
+//            gotoxy(25, 38);
+//            cout << "13. EXIT";
+            break;
+        case 13:
+            gotoxy(25, 43);
+            cout << "THANK YOU\n\n\n\n\n\n\n";
+            exit(0);
             break;
     }
 }
