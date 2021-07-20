@@ -156,132 +156,99 @@ int main() {
                     exit(0);
             }
             break;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         case 2:
-            gotoxy(25, 39);
-            cout << "KERALA";
-            gotoxy(25, 41);
-            cout << "Choose Your City:";
-            gotoxy(25, 42);
-            cout << "1. THIRUVANANTHAPURAM";
             gotoxy(25, 43);
-            cout << "2. KOZHIKODE";
-            gotoxy(25, 44);
-            cout << "3. KOCHI";
+            cout << "KERALA";
             gotoxy(25, 45);
+            cout << "Choose Your City:";
+            gotoxy(25, 46);
+            cout << "1. THIRUVANANTHAPURAM";
+            gotoxy(25, 47);
+            cout << "2. KOZHIKODE";
+            gotoxy(25, 48);
+            cout << "3. KOCHI";
+            gotoxy(25, 49);
+            cout << "4. OTHERS";
+            gotoxy(25, 51);
             cout << "Choice : ";
             cin >> Kerala;
             switch (Kerala) {
                 case 1:
-                    gotoxy(25, 47);
+                    gotoxy(25, 53);
                     cout << "A)THIRUVANANTHAPURAM";
-                    gotoxy(25, 49);
+                    gotoxy(25, 55);
                     cout << "(i)  Hospital - Kerala Institute Of Medical Sciences (Kims)";
-                    gotoxy(25, 50);
+                    gotoxy(25, 56);
                     cout
                             << "     Address  - P B No 1 Kumarapuram Poonthi Road Anamukham, Thiruvananthapuram, Kerala - 695024";
-                    gotoxy(25, 51);
+                    gotoxy(25, 57);
                     cout << "     Contact  - +91 0471 244 7575, +91 0471 244 7676";
-                    gotoxy(25, 53);
-                    cout << "(ii) Hospital - Ananthapuri Hospitals and Research Institute (AHRI)";
-                    gotoxy(25, 54);
-                    cout << "     Address  - NH bypass 66, Airport Rd, near Courtyard Garden, Chackai";
-                    gotoxy(25, 55);
-                    cout << "                Thiruvananthapuram, Kerala 695024";
-                    gotoxy(25, 56);
-                    cout << "     Contact  - +91 0471 250 7575, +91 0471 257 9900";
-                    gotoxy(25, 58);
-                    cout << "(iii)Hospital - Sree uthradom thirunal hospital(SUT)";
                     gotoxy(25, 59);
-                    cout << "     Address  - Pattom Palace , P. O, Thiruvananthapuram, Kerala - 695004";
+                    cout << "(ii) Hospital - Ananthapuri Hospitals and Research Institute (AHRI)";
                     gotoxy(25, 60);
+                    cout << "     Address  - NH bypass 66, Airport Rd, near Courtyard Garden, Chackai";
+                    gotoxy(25, 61);
+                    cout << "                Thiruvananthapuram, Kerala 695024";
+                    gotoxy(25, 62);
+                    cout << "     Contact  - +91 0471 250 7575, +91 0471 257 9900";
+                    gotoxy(25, 64);
+                    cout << "(iii)Hospital - Sree uthradom thirunal hospital(SUT)";
+                    gotoxy(25, 65);
+                    cout << "     Address  - Pattom Palace , P. O, Thiruvananthapuram, Kerala - 695004";
+                    gotoxy(25, 66);
                     cout << "     Contact  - +91 0471 407 7777, +91 0471 407 7888";
                     break;
                 case 2:
-                    gotoxy(25, 47);
-                    cout << "B)KOZHIKODE";
-                    gotoxy(25, 49);
-                    cout << "(i)  Hospital - Aster Malabar Institute of Medical Sciences (MIMS Hospital)";
-                    gotoxy(25, 50);
-                    cout << "     Address  - Mini Bypass Rd, Govindapuram, Kozhikode, Kerala 673016";
-                    gotoxy(25, 51);
-                    cout << "     Contact  - +91 0495 248 8000,+ 91-495- 3911 400";
                     gotoxy(25, 53);
-                    cout << "(ii) Hospital - Baby Memorial Hospital";
-                    gotoxy(25, 54);
-                    cout << "     Address  - Indira Gandhi Rd, Arayidathupalam, Kozhikode, Kerala 673004";
+                    cout << "B)KOZHIKODE";
                     gotoxy(25, 55);
-                    cout << "     Contact  - +91 495 272 3272 , +91 495 277 7777";
+                    cout << "(i)  Hospital - Aster Malabar Institute of Medical Sciences (MIMS Hospital)";
+                    gotoxy(25, 56);
+                    cout << "     Address  - Mini Bypass Rd, Govindapuram, Kozhikode, Kerala 673016";
                     gotoxy(25, 57);
+                    cout << "     Contact  - +91 0495 248 8000,+ 91-495- 3911 400";
+                    gotoxy(25, 59);
+                    cout << "(ii) Hospital - Baby Memorial Hospital";
+                    gotoxy(25, 60);
+                    cout << "     Address  - Indira Gandhi Rd, Arayidathupalam, Kozhikode, Kerala 673004";
+                    gotoxy(25, 61);
+                    cout << "     Contact  - +91 495 272 3272 , +91 495 277 7777";
+                    gotoxy(25, 63);
                     cout << "(iii)Hospital - PVS Hospital";
-                    gotoxy(25, 58);
+                    gotoxy(25, 64);
                     cout
                             << "     Address  - Railway Station Rd, near Railway Station, Palayam, Kozhikode, Kerala 673002";
-                    gotoxy(25, 59);
+                    gotoxy(25, 65);
                     cout << "     Contact  - +91 0495 270 7222, +91 0495 270 7333";
                     break;
                 case 3:
-                    gotoxy(25, 47);
-                    cout << "C)KOCHI";
-                    gotoxy(25, 49);
-                    cout << "(i)  Hospital - Rajagiri Hospital";
-                    gotoxy(25, 50);
-                    cout << "     Address  - Near GTN Junction, Chunangamvely Aluva, Kochi, Kerala 683112";
-                    gotoxy(25, 51);
-                    cout << "     Contact  - +91 0484 290 5000";
                     gotoxy(25, 53);
-                    cout << "(ii) Hospital - Medical Trust Hospital ";
-                    gotoxy(25, 54);
-                    cout << "     Address  - Mahatma Gandhi Rd, Pallimukku, Kochi, Kerala 682016";
+                    cout << "C)KOCHI";
                     gotoxy(25, 55);
-                    cout << "     Contact  - +91 0484 235 8001 ";
+                    cout << "(i)  Hospital - Rajagiri Hospital";
+                    gotoxy(25, 56);
+                    cout << "     Address  - Near GTN Junction, Chunangamvely Aluva, Kochi, Kerala 683112";
                     gotoxy(25, 57);
-                    cout << "(iii)Hospital - Lourdes Hospital";
-                    gotoxy(25, 58);
-                    cout << "     Address  - Lourdes hospital Road Near Ernakulam Town Railway station Pachalam";
+                    cout << "     Contact  - +91 0484 290 5000";
                     gotoxy(25, 59);
-                    cout << "                Kochi, Kerala 682012";
+                    cout << "(ii) Hospital - Medical Trust Hospital ";
                     gotoxy(25, 60);
+                    cout << "     Address  - Mahatma Gandhi Rd, Pallimukku, Kochi, Kerala 682016";
+                    gotoxy(25, 61);
+                    cout << "     Contact  - +91 0484 235 8001 ";
+                    gotoxy(25, 63);
+                    cout << "(iii)Hospital - Lourdes Hospital";
+                    gotoxy(25, 64);
+                    cout << "     Address  - Lourdes hospital Road Near Ernakulam Town Railway station Pachalam";
+                    gotoxy(25, 65);
+                    cout << "                Kochi, Kerala 682012";
+                    gotoxy(25, 66);
                     cout << "     Contact  - +91 0484 4125555, +91 0484 4121101";
                     break;
                 case 4:
-                    gotoxy(25, 49);
+                    gotoxy(25, 53);
                     cout<<"SORRY FOR THE INCONVENIENCE,WE ARE EXPANDING.";
-                    gotoxy(25, 50);
+                    gotoxy(25, 54);
                     cout << "THANK YOU\n\n\n\n\n\n\n";
                     exit(0);
             }
