@@ -536,6 +536,7 @@ int main() {
                                                 break;
                                         }
                                         break;
+
                                     case 2:
                                         gotoxy(25, 63);
                                         cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
