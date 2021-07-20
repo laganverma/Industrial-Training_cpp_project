@@ -591,10 +591,20 @@ int main() {
                     break;
             }
         case 4:
-            gotoxy(25, 16);
-            cout << "COVID SYMPTOMS";
+            gotoxy(25, 17);
+            cout << "---------------------------------------------------------------------------";
+            gotoxy(45, 18);
+            cout << "COVID-19 SYMPTOMS";
+            gotoxy(25, 19);
+            cout << "---------------------------------------------------------------------------";
+
+//            if (n == 1)
+//                goto label1;
+//            else
+//                exit(0);
             break;
         case 5:
+            label1:
             gotoxy(25, 16);
             cout << "COVID HOSPITALS";
             int states;
