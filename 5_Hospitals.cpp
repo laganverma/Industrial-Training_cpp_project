@@ -69,87 +69,128 @@ int main() {
             gotoxy(25, 44);
             cout << "3. NASHIK";
             gotoxy(25, 45);
+            cout << "4. OTHERS";
+            gotoxy(25, 47);
             cout << "Choice : ";
             cin >> Maharashtra;
             switch (Maharashtra) {
                 case 1:
-                    gotoxy(25, 47);
-                    cout << "A)MUMBAI";
                     gotoxy(25, 49);
-                    cout << "(i)  Hospital - Nanavati Super Speciality Hospital";
-                    gotoxy(25, 50);
-                    cout << "     Address  - S.V. Road, Opposite Pavan Hans & Juhu Beach,Vileparle West, Mumbai";
+                    cout << "A)MUMBAI";
                     gotoxy(25, 51);
-                    cout << "     Contact  - +91 22 2626 7500 , +91 22 2626 7777";
+                    cout << "(i)  Hospital - Nanavati Super Speciality Hospital";
+                    gotoxy(25, 52);
+                    cout << "     Address  - S.V. Road, Opposite Pavan Hans & Juhu Beach,Vileparle West, Mumbai";
                     gotoxy(25, 53);
-                    cout << "(ii) Hospital - Fortis Hospital Mulund";
-                    gotoxy(25, 54);
-                    cout << "     Address  - Mulund Goregaon Link Road, Industrial Area,Mulund West, Mumbai";
+                    cout << "     Contact  - +91 22 2626 7500 , +91 22 2626 7777";
                     gotoxy(25, 55);
-                    cout << "     Contact  - +91 22 4111 4111, +91 9606 047 050";
+                    cout << "(ii) Hospital - Fortis Hospital Mulund";
+                    gotoxy(25, 56);
+                    cout << "     Address  - Mulund Goregaon Link Road, Industrial Area,Mulund West, Mumbai";
                     gotoxy(25, 57);
-                    cout << "(iii)Hospital - Tata Memorial Hospital(govt.)";
-                    gotoxy(25, 58);
-                    cout << "     Address  - Dr. E Borges Road, Parel, Mumbai 400012";
+                    cout << "     Contact  - +91 22 4111 4111, +91 9606 047 050";
                     gotoxy(25, 59);
+                    cout << "(iii)Hospital - Tata Memorial Hospital(govt.)";
+                    gotoxy(25, 60);
+                    cout << "     Address  - Dr. E Borges Road, Parel, Mumbai 400012";
+                    gotoxy(25, 61);
                     cout << "     Contact  - +91-22- 24177000, +91-22-24146750";
                     break;
                 case 2:
-                    gotoxy(25, 47);
-                    cout << "B)PUNE";
                     gotoxy(25, 49);
+                    cout << "B)PUNE";
+                    gotoxy(25, 51);
                     cout << "(i)  Hospital - Columbia Asia Hospital Pune";
-                    gotoxy(25, 50);
+                    gotoxy(25, 52);
                     cout
                             << "     Address  - 22, 2A, Mundhwa - Kharadi Rd, Near Nyati Empire, Santipur, Thite Nagar, Kharadi,";
-                    gotoxy(25, 51);
+                    gotoxy(25, 53);
                     cout << "                Pune, Maharashtra 411001";
-                    gotoxy(25, 52);
-                    cout << "     Contact  - +91 20 6165 6666, +91 20 7129 0129";
                     gotoxy(25, 54);
-                    cout << "(ii) Hospital - Jehangir Hospital";
-                    gotoxy(25, 55);
-                    cout << "     Address  - 32, Sasoon Rd, Opposite Railway Station, Central Excise Colony, ";
+                    cout << "     Contact  - +91 20 6165 6666, +91 20 7129 0129";
                     gotoxy(25, 56);
-                    cout << "                Sangamvadi, Pune, Maharashtra 411001";
+                    cout << "(ii) Hospital - Jehangir Hospital";
                     gotoxy(25, 57);
-                    cout << "     Contact  - +91 20 6681 9999, +91 20 6681 9966";
+                    cout << "     Address  - 32, Sasoon Rd, Opposite Railway Station, Central Excise Colony, ";
+                    gotoxy(25, 58);
+                    cout << "                Sangamvadi, Pune, Maharashtra 411001";
                     gotoxy(25, 59);
+                    cout << "     Contact  - +91 20 6681 9999, +91 20 6681 9966";
+                    gotoxy(25, 61);
                     cout << "(iii)Hospital - Pune Adventist Hospital";
-                    gotoxy(25, 60);
+                    gotoxy(25, 62);
                     cout
                             << "     Address  - Salisbury Park, Post Box 1405, Market Yard, Gultekdi, Pune, Maharashtra 411037";
-                    gotoxy(25, 61);
+                    gotoxy(25, 63);
                     cout << "     Contact  - +91-020 2452 6771";
                     break;
                 case 3:
-                    gotoxy(25, 47);
-                    cout << "C)NASHIK";
                     gotoxy(25, 49);
+                    cout << "C)NASHIK";
+                    gotoxy(25, 51);
                     cout << "(i)  Hospital - Sahyadri Super Speciality Hospital Nashik";
-                    gotoxy(25, 50);
+                    gotoxy(25, 52);
                     cout
                             << "     Address  - Mumbai-Agra Road, Wadala Rd, near Nashik, Dwarka Circle, Maharashtra 422001";
-                    gotoxy(25, 51);
-                    cout << "     Contact  - +91 253 669 1666";
                     gotoxy(25, 53);
+                    cout << "     Contact  - +91 253 669 1666";
+                    gotoxy(25, 55);
                     cout << "(ii) Hospital - Wockhardt Hospital, Nashik";
-                    gotoxy(25, 54);
+                    gotoxy(25, 56);
                     cout
                             << "     Address  - Wani House, Mumbai - Agra National Hwy, Wadala Naka, Nashik, Maharashtra 422001";
-                    gotoxy(25, 55);
-                    cout << "     Contact  - +91 253 662 4444, +91 253 662 4100";
                     gotoxy(25, 57);
-                    cout << "(iii)Hospital - NIMS Hospital";
-                    gotoxy(25, 58);
-                    cout << "     Address  - Gangapur Rd, Thatte Nagar, Nashik, Maharashtra 422005";
+                    cout << "     Contact  - +91 253 662 4444, +91 253 662 4100";
                     gotoxy(25, 59);
+                    cout << "(iii)Hospital - NIMS Hospital";
+                    gotoxy(25, 60);
+                    cout << "     Address  - Gangapur Rd, Thatte Nagar, Nashik, Maharashtra 422005";
+                    gotoxy(25, 61);
                     cout << "     Contact  - +91 253 231 5050";
                     break;
-                default:
-                    break;
+                case 4:
+                    gotoxy(25, 49);
+                    cout<<"SORRY FOR THE INCONVENIENCE,WE ARE EXPANDING.";
+                    gotoxy(25, 50);
+                    cout << "THANK YOU\n\n\n\n\n\n\n";
+                    exit(0);
             }
             break;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         case 2:
             gotoxy(25, 39);
             cout << "KERALA";
@@ -237,8 +278,12 @@ int main() {
                     gotoxy(25, 60);
                     cout << "     Contact  - +91 0484 4125555, +91 0484 4121101";
                     break;
-                default:
-                    break;
+                case 4:
+                    gotoxy(25, 49);
+                    cout<<"SORRY FOR THE INCONVENIENCE,WE ARE EXPANDING.";
+                    gotoxy(25, 50);
+                    cout << "THANK YOU\n\n\n\n\n\n\n";
+                    exit(0);
             }
             break;
         case 3:
@@ -332,8 +377,12 @@ int main() {
                     gotoxy(25, 60);
                     cout << "     Contact  - +91 824 2222 227";
                     break;
-                default:
-                    break;
+                case 4:
+                    gotoxy(25, 49);
+                    cout<<"SORRY FOR THE INCONVENIENCE,WE ARE EXPANDING.";
+                    gotoxy(25, 50);
+                    cout << "THANK YOU\n\n\n\n\n\n\n";
+                    exit(0);
             }
             break;
         case 4:
@@ -422,8 +471,12 @@ int main() {
                     gotoxy(25, 59);
                     cout << "     Contact  - +91 452 258 0892";
                     break;
-                default:
-                    break;
+                case 4:
+                    gotoxy(25, 49);
+                    cout<<"SORRY FOR THE INCONVENIENCE,WE ARE EXPANDING.";
+                    gotoxy(25, 50);
+                    cout << "THANK YOU\n\n\n\n\n\n\n";
+                    exit(0);
             }
             break;
         case 5:
@@ -522,10 +575,12 @@ int main() {
                     gotoxy(25, 61);
                     cout << "     Contact  - +91 863 223 1564";
                     break;
-                default:
-                    gotoxy(25, 75);
-                    cout << "WE ARE EXPANDING";
-                    break;
+                case 4:
+                    gotoxy(25, 49);
+                    cout<<"SORRY FOR THE INCONVENIENCE,WE ARE EXPANDING.";
+                    gotoxy(25, 50);
+                    cout << "THANK YOU\n\n\n\n\n\n\n";
+                    exit(0);
             }
             break;
         case 6:
@@ -619,8 +674,12 @@ int main() {
                     gotoxy(25, 60);
                     cout << "     Contact  - +91 542 258 5380";
                     break;
-                default:
-                    break;
+                case 4:
+                    gotoxy(25, 49);
+                    cout<<"SORRY FOR THE INCONVENIENCE,WE ARE EXPANDING.";
+                    gotoxy(25, 50);
+                    cout << "THANK YOU\n\n\n\n\n\n\n";
+                    exit(0);
             }
             break;
         case 7:
@@ -711,8 +770,12 @@ int main() {
                     gotoxy(25, 59);
                     cout << "     Contact  - 1800 212 111 222";
                     break;
-                default:
-                    break;
+                case 4:
+                    gotoxy(25, 49);
+                    cout<<"SORRY FOR THE INCONVENIENCE,WE ARE EXPANDING.";
+                    gotoxy(25, 50);
+                    cout << "THANK YOU\n\n\n\n\n\n\n";
+                    exit(0);
             }
             break;
         case 8:
@@ -844,8 +907,12 @@ int main() {
                     gotoxy(25, 61);
                     cout << "     Contact  - +91 161 255 3095";
                     break;
-                default:
-                    break;
+                case 4:
+                    gotoxy(25, 49);
+                    cout<<"SORRY FOR THE INCONVENIENCE,WE ARE EXPANDING.";
+                    gotoxy(25, 50);
+                    cout << "THANK YOU\n\n\n\n\n\n\n";
+                    exit(0);
             }
             break;
         case 10:
@@ -941,8 +1008,12 @@ int main() {
                     gotoxy(25, 61);
                     cout << "     Contact  - +91 744 250 4501 ";
                     break;
-                default:
-                    break;
+                case 4:
+                    gotoxy(25, 49);
+                    cout<<"SORRY FOR THE INCONVENIENCE,WE ARE EXPANDING.";
+                    gotoxy(25, 50);
+                    cout << "THANK YOU\n\n\n\n\n\n\n";
+                    exit(0);
             }
             break;
     }
