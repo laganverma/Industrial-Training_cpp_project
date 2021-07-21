@@ -26,28 +26,34 @@ public:
         }
     }
 
-    void Facts() {
-        cout << "\n\n\nWhy High Blood Pressure is a \"Silent Killer\"?";
-        cout << "\n\n\n Most of the time, high blood pressure (HBP, or hypertension) has no obvious symptoms \n"
-                "to indicate that something is wrong. The best ways to protect yourself are being aware of \n "
-                "the risks and making changes that matter.\n"
-                "\n"
-                "         A few facts to be aware of:\n"
-                "* Many people with high blood pressure don’t even know they have it. Often the signs and symptoms are misunderstood.\n"
-                "* High blood pressure develops slowly over time and can be related to many causes.\n"
-                "* High blood pressure cannot be cured. But it can be managed effectively through \n"
-                "lifestyle changes and, when needed, medication.";
+    void show() {
+        int a;
+        cout << "\n\ndekh pradhan\n in my life you are so valuable that "
+                "i cant even think about losing you.\n so i give you 365 days to fell in love with me\n\n";
+        cout << "1. thik hai\n 2. nahi\n\n";
+        cout << "enter your choice = ";
+        cin >> a;
+        switch (a) {
+            case 1:
+                cout << "love you\n signal par bata diyo.";
+                break;
+
+            case 2:
+                cout << "nautanki nahi , sach bol raha hun\n\n\n";
+                break;
+        }
 
     }
 };
 
+
 int main() {
     BP user{};
-    user.Input();
-    user.High();
-    user.Facts();
+    user.show();
     return 0;
 }
+
+
 
 
 
