@@ -145,14 +145,14 @@ int main() {
                             << "     Address  - Mumbai-Agra Road, Wadala Rd, near Nashik, Dwarka Circle, Maharashtra 422001";
                     cout << "\n\t\t\t";
                     cout << "     Contact  - +91 253 669 1666";
-                    cout << "\n\t\t\t";
+                    cout << "\n\n\t\t\t";
                     cout << "(ii) Hospital - Wockhardt Hospital, Nashik";
                     cout << "\n\t\t\t";
                     cout
                             << "     Address  - Wani House, Mumbai - Agra National Hwy, Wadala Naka, Nashik, Maharashtra 422001";
                     cout << "\n\t\t\t";
                     cout << "     Contact  - +91 253 662 4444, +91 253 662 4100";
-                    cout << "\n\t\t\t";
+                    cout << "\n\n\t\t\t";
                     cout << "(iii)Hospital - NIMS Hospital";
                     cout << "\n\t\t\t";
                     cout << "     Address  - Gangapur Rd, Thatte Nagar, Nashik, Maharashtra 422005";
