@@ -191,7 +191,10 @@ int main() {
                     cout << "(i)  Hospital - Kerala Institute Of Medical Sciences (Kims)";
                     cout << "\n\t\t\t";
                     cout
-                            << "     Address  - P B No 1 Kumarapuram Poonthi Road Anamukham, Thiruvananthapuram, Kerala - 695024";
+                            << "     Address  - P B No 1 Kumarapuram Poonthi Road Anamukham, Thiruvananthapuram,";
+                    cout << "\n\t\t\t";
+                    cout
+                            << "                Kerala - 695024";
                     cout << "\n\t\t\t";
                     cout << "     Contact  - +91 0471 244 7575, +91 0471 244 7676";
                     cout << "\n\n\t\t\t";
@@ -259,8 +262,7 @@ int main() {
                 case 4:
                     cout << "\n\n\n\t\t\t";
                     cout << "SORRY FOR THE INCONVENIENCE,WE ARE EXPANDING.";
-                    cout << "\n\n2"
-                            "\t\t\t";
+                    cout << "\n\n\t\t\t";
                     cout << "THANK YOU\n\n\n\n\n\n\n";
                     exit(0);
             }
