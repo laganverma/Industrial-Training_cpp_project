@@ -314,9 +314,9 @@ int main() {
                     cout << "\n\n\t\t\t";
                     cout << "(i)  Hospital - Columbia Asia Hospital Mysore";
                     cout << "\n\t\t\t";
-                    cout << "     Address  -  No. 85-86, Bangalore-Mysore Ring Road Junction Bannimantapa 'A' Layout,";
+                    cout << "     Address  - No. 85-86, Bangalore-Mysore Ring Road Junction Bannimantapa 'A' Layout,";
                     cout << "\n\t\t\t";
-                    cout << "                 Siddique Nagar, Mandi Mohalla, Mysuru, Karnataka 570015";
+                    cout << "                Siddique Nagar, Mandi Mohalla, Mysuru, Karnataka 570015";
                     cout << "\n\t\t\t";
                     cout << "     Contact  - +91 821 255 5000";
                     cout << "\n\n\t\t\t";
