@@ -114,10 +114,9 @@ int main() {
                     cout << "\n\n\t\t\t";
                     cout << "(i)  Hospital - Columbia Asia Hospital Pune";
                     cout << "\n\t\t\t";
-                    cout
-                            << "     Address  - 22, 2A, Mundhwa - Kharadi Rd, Near Nyati Empire, Santipur, Thite Nagar, Kharadi,";
+                    cout << "     Address  - 22, 2A, Mundhwa - Kharadi Rd, Near Nyati Empire, Santipur, Thite Nagar,";
                     cout << "\n\t\t\t";
-                    cout << "                Pune, Maharashtra 411001";
+                    cout << "                Kharadi, Pune, Maharashtra 411001";
                     cout << "\n\t\t\t";
                     cout << "     Contact  - +91 20 6165 6666, +91 20 7129 0129";
                     cout << "\n\n\t\t\t";
@@ -133,7 +132,7 @@ int main() {
                     cout << "\n\t\t\t";
                     cout
                             << "     Address  - Salisbury Park, Post Box 1405, Market Yard, Gultekdi, Pune, Maharashtra 411037";
-                    cout << "\n\n\t\t\t";
+                    cout << "\n\t\t\t";
                     cout << "     Contact  - +91-020 2452 6771";
                     break;
                 case 3:
