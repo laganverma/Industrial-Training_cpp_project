@@ -77,7 +77,7 @@ int main() {
     gotoxy(25, 12);
     cout << "7.TRY AGAIN";
     gotoxy(25, 13);
-    cout << "8.7EXIT";
+    cout << "8.EXIT";
     gotoxy(25, 15);
     cout << "ENTER YOUR CHOICE = ";
     cin >> main;
@@ -591,33 +591,32 @@ int main() {
                     break;
             }
         case 4:
-//            gotoxy(25, );
-//            cout << "---------------------------------------------------------------------------";
-//            gotoxy(45, );
-//            cout << "COVID-19 SYMPTOMS";
-//            gotoxy(25, );
-//            cout << "---------------------------------------------------------------------------";
-            gotoxy(25, 14);
-            cout << "Most common symptoms:"
-                    "fever"
-                    "dry cough"
-                    "tiredness"
-                    "Less common symptoms:"
-                    "aches and pains"
-                    "sore throat"
-                    "diarrhoea"
-                    "conjunctivitis"
-                    "headache"
-                    "loss of taste or smell"
-                    "a rash on skin, or discolouration of fingers or toes"
-                    "Serious symptoms:"
-                    "difficulty breathing or shortness of breath"
-                    "chest pain or pressure"
-                    "loss of speech or movement";
+            gotoxy(25, 17);
+            cout << "---------------------------------------------------------------------------";
+            gotoxy(50,18);
+            cout << "COVID-19 SYMPTOMS";
+            gotoxy(25,19);
+            cout << "---------------------------------------------------------------------------";
+            gotoxy(25, 21);
+            cout << "\n\t\t\tMost common symptoms:";
+            cout << "\n\t\t\t . FEVER";
+            cout << "\n\t\t\t . DRY COUGH";
+            cout << "\n\t\t\t . TIREDNESS";
+            cout << "\n\n\t\t\tLESS COMMON SYMPTOMS:";
+            cout << "\n\t\t\t . ACHES AND PAINS";
+            cout << "\n\t\t\t . SORE THROAT";
+            cout << "\n\t\t\t . DIARRHOEA";
+            cout << "\n\t\t\t . CONJUNCTIVITIS";
+            cout << "\n\t\t\t . HEADACHE";
+            cout << "\n\t\t\t . LOSS OF TASTE AND OR SMELL";
+            cout << "\n\t\t\t . A RASH ON SKIN, OR DISCOLOURATION OF FINGERS OR TOES ";
+            cout << "\n\n\t\t\tSERIOUS SYMPTOMS:";
+            cout << "\n\t\t\t . DIFFICULTY BREATHING OR SHORTNESS OF BREATH";
+            cout << "\n\t\t\t . CHEST PAIN OR PRESSURE";
+            cout << "\n\t\t\t . LOSS OF SPEECH OR MOVEMENT";
             int n;
-            cout << "value";
+            cout << "value=\n";
             cin >> n;
-
             if (n == 1)
                 goto label1;
             else
@@ -1247,8 +1246,7 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(ii) Hospital - Shalimar hospital ";
                             cout << "\n\t\t\t";
-                            cout
-                                    << "     2Address  - Block A A-989 Captain Aditya Mishra Marg, near Shalimar Chauraha, Lucknow,";
+                            cout<<  "     Address  - Block A A-989 Captain Aditya Mishra Marg, near Shalimar Chauraha, Lucknow,";
                             cout << "\n\t\t\t";
                             cout << "                Uttar Pradesh 226016";
                             cout << "\n\t\t\t";
