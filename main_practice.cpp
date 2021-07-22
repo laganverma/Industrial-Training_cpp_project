@@ -640,26 +640,26 @@ int main() {
             gotoxy(25, 49);
             cout << "show,4 however it can take up to 14 days.";
             gotoxy(25, 52);
-        tryy:
-            cout << "IF YOU WANT TO LOCATE A COVID-19 HOSPITAL NEAR YOU I CAN HELP YOU.(Y/N)";
+            tryyes_no:
+            cout << "IF YOU WANT TO LOCATE A COVID-19 HOSPITAL NEAR YOU I CAN HELP YOU.";
             gotoxy(25, 53);
             cout << "1. YES";
             gotoxy(25, 54);
             cout << "2. NO";
-            gotoxy(25, 55);
-            cout << "3. EXIT";
-            gotoxy(25, 57);
+            gotoxy(25, 56);
             cout << "CHOICE = ";
             int yes_no;
+            cin>>yes_no;
             switch (yes_no) {
                 case 1:
+                    goto label1;
                     break;
                 case 2:
-                    break;
-                case 3:
-                    break;
+                    cout << "\n\t\t\t";
+                    cout << "THANK YOU\n\n\n\n\n\n\n";
+                    exit(0);
             }
-
+            break;
         case 5:
         label1:
             int states;
