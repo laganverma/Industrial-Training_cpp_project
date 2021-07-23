@@ -76,7 +76,7 @@ int main() {
     cout << "6.INFORMATION REGARDING COVID-19 VACCINE IN INDIA";
     gotoxy(25, 12);
     cout << "7.EXIT";
-    gotoxy(25, 13);
+    gotoxy(25, 14);
     cout << "ENTER YOUR CHOICE = ";
     cin >> main;
 
