@@ -566,7 +566,6 @@ int main() {
                         }
                     }
                     break;
-
                 case 2:
                     gotoxy(48, 30);
                     cout << "BMI REFERENCE TABLE";
@@ -588,6 +587,7 @@ int main() {
                     exit(0);
                     break;
             }
+            break;
         case 4:
             gotoxy(25, 17);
             cout << "---------------------------------------------------------------------------";
