@@ -639,17 +639,17 @@ int main() {
             cout << "On average it takes 5 to 6 days from when someone is infected with the virus for symptoms to";
             gotoxy(25, 49);
             cout << "show,4 however it can take up to 14 days.";
-            gotoxy(25, 52);
-            tryyes_no:
+        tryyes_no:
+            cout << "\n\n\n\t\t\t";
             cout << "IF YOU WANT TO LOCATE A COVID-19 HOSPITAL NEAR YOU I CAN HELP YOU.";
-            gotoxy(25, 53);
+            cout << "\n\t\t\t";
             cout << "1. YES";
-            gotoxy(25, 54);
+            cout << "\n\t\t\t";
             cout << "2. NO";
-            gotoxy(25, 56);
+            cout << "\n\n\t\t\t";
             cout << "CHOICE = ";
             int yes_no;
-            cin>>yes_no;
+            cin >> yes_no;
             switch (yes_no) {
                 case 1:
                     goto label1;
@@ -658,6 +658,14 @@ int main() {
                     cout << "\n\t\t\t";
                     cout << "THANK YOU\n\n\n\n\n\n\n";
                     exit(0);
+                    break;
+                default:
+                    cout << "\n\n\t\t\t";
+                    cout << "INVALID INPUT ";
+                    cout << "\n\t\t\t";
+                    cout << "TRY AGAIN";
+                    goto tryyes_no;
+                    break;
             }
             break;
         case 5:
