@@ -75,10 +75,8 @@ int main() {
     gotoxy(25, 11);
     cout << "6.INFORMATION REGARDING COVID-19 VACCINE IN INDIA";
     gotoxy(25, 12);
-    cout << "7.TRY AGAIN";
+    cout << "7.EXIT";
     gotoxy(25, 13);
-    cout << "8.EXIT";
-    gotoxy(25, 15);
     cout << "ENTER YOUR CHOICE = ";
     cin >> main;
 
@@ -661,7 +659,7 @@ int main() {
                     break;
                 default:
                     cout << "\n\n\t\t\t";
-                    cout << "INVALID INPUT ";
+                    cout << "I2NVALID INPUT ";
                     cout << "\n\t\t\t";
                     cout << "TRY AGAIN";
                     goto tryyes_no;
@@ -1718,8 +1716,6 @@ int main() {
         case 6:
             break;
         case 7:
-            goto retry;
-        case 8:
             gotoxy(25, 17);
             cout << "THANK YOU\n\n\n\n\n\n\n";
             exit(0);
