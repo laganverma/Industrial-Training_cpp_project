@@ -14,7 +14,7 @@ COORD coord = {0, 0};
 HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
 
 int main() {
-    run:
+    rerun_bmi:
     int main;
     float bmi, w, h;//weight and height
     int s;
@@ -189,7 +189,7 @@ int main() {
                                         cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                         break;
                                     case 2:
-                                        goto run;
+                                        goto rerun_bmi;
                                         break;
                                 }
                                 break;
@@ -211,11 +211,14 @@ int main() {
                                         cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                         break;
                                     case 2:
-                                        goto run;
+                                        goto rerun_bmi;
                                         break;
                                 }
                                 break;
                         }
+                        break;
+                    case 2:
+                        goto rerun_bmi;
                         break;
                     case 3:
                         cout << "\n\n\t\t\t";
@@ -273,7 +276,7 @@ int main() {
                                         cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                         break;
                                     case 2:
-                                        goto run;
+                                        goto rerun_bmi;
                                         break;
                                 }
                                 break;
@@ -295,11 +298,14 @@ int main() {
                                         cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                         break;
                                     case 2:
-                                        goto run;
+                                        goto rerun_bmi;
                                         break;
                                 }
                                 break;
                         }
+                        break;
+                    case 2:
+                        goto rerun_bmi;
                         break;
                     case 3:
                         cout << "\n\n\t\t\t";
@@ -355,7 +361,7 @@ int main() {
                                         cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                         break;
                                     case 2:
-                                        goto run;
+                                        goto rerun_bmi;
                                         break;
                                 }
                                 break;
@@ -377,11 +383,14 @@ int main() {
                                         cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                         break;
                                     case 2:
-                                        goto run;
+                                        goto rerun_bmi;
                                         break;
                                 }
                                 break;
                         }
+                        break;
+                    case 2:
+                        goto rerun_bmi;
                         break;
                     case 3:
                         cout << "\n\n\t\t\t";
@@ -400,9 +409,9 @@ int main() {
                 cout << "\n\t\t\t";
                 cout << "1. DIET PLAN";
                 cout << "\n\t\t\t";
-                cout << "2. EXIT";
+                cout << "2. RUN AGAIN";
                 cout << "\n\t\t\t";
-                cout << "3. RUN AGAIN";
+                cout << "3. EXIT";
                 cout << "\n\n\t\t\t";
                 cout << "Choice = ";
                 cin >> a;
@@ -439,7 +448,7 @@ int main() {
                                         cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                         break;
                                     case 2:
-                                        goto run;
+                                        goto rerun_bmi;
                                         break;
                                 }
                                 break;
@@ -461,11 +470,14 @@ int main() {
                                         cout << "THANK YOU!!\n\n\n\n\n\n\n";
                                         break;
                                     case 2:
-                                        goto run;
+                                        goto rerun_bmi;
                                         break;
                                 }
                                 break;
                         }
+                        break;
+                    case 2:
+                        goto rerun_bmi;
                         break;
                     case 3:
                         cout << "\n\n\t\t\t";
@@ -477,7 +489,6 @@ int main() {
             break;
 
         case 2:
-        rerunbmi:
             cout << "\n\n\t\t\t\t\t\t";
             SetConsoleTextAttribute(color, 14);
             cout << "    BMI REFERENCE TABLE";
@@ -502,7 +513,7 @@ int main() {
             cin >> p;
             switch (p) {
                 case 1:
-                    goto rerunbmi;
+                    goto rerun_bmi;
                     break;
                 case 2:
                     cout << "\n\n\t\t\t";
