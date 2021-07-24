@@ -2,6 +2,7 @@
 #include <windows.h>
 #include <iomanip>
 
+
 using namespace std;
 COORD coord = {0, 0};
 
