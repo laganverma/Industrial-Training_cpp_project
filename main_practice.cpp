@@ -11,7 +11,7 @@ void gotoxy(int x, int y) {
     coord.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
-
+HANDLE color=GetStdHandle(STD_OUTPUT_HANDLE);
 class BP {
     long sys, dia;
 public:
@@ -83,6 +83,7 @@ int main() {
 
     switch (main) {
         case 1:
+            SetConsoleTextAttribute(color, 14);
             gotoxy(25, 17);
             cout << "---------------------------------------------------------------------------";
             gotoxy(45, 18);
@@ -90,6 +91,7 @@ int main() {
             gotoxy(25, 19);
             cout << "---------------------------------------------------------------------------";
             gotoxy(44, 21);
+            SetConsoleTextAttribute(color, 15);
             cout << "******Welcome to Bp Calculator******";
             BP user;
             user.Input();
@@ -155,7 +157,7 @@ int main() {
                             gotoxy(25, 41);
                             cout << "2.Feet and Inches";
                             gotoxy(25, 42);
-                            cout << "3. Exit";
+                            cout << "3.Exit";
                             gotoxy(25, 43);
                             cout << "Choice = ";
                             cin >> s_1;
@@ -238,8 +240,8 @@ int main() {
 
                     // OBESE
                     if (bmi > 30) {
-                        gotoxy(25, 49);
-                        cout << "_Obese_";
+                        gotoxy(25, 48);
+                        cout << "Your B.M.I IS IN _Obese_ RANGE";
                         int a;
                         gotoxy(25, 51);
                         cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN BELOW:";
@@ -319,8 +321,8 @@ int main() {
                     }
                         // OVERWEIGHT
                     else if (bmi < 30 && bmi > 25) {
-                        gotoxy(25, 49);
-                        cout << "_Overweight_";
+                        gotoxy(25, 48);
+                        cout << "Your B.M.I IS IN _Overweight_ RANGE";
                         int a;
                         gotoxy(25, 51);
                         cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN BELOW:";
@@ -402,8 +404,8 @@ int main() {
                     }
                         // OPTIMAL
                     else if (bmi < 25 && bmi > 18.5) {
-                        gotoxy(25, 49);
-                        cout << "_Optimal_";
+                        gotoxy(25, 48);
+                        cout << "Your B.M.I IS IN _Optimal_ RANGE";
                         int a;
                         gotoxy(25, 51);
                         cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN BELOW:";
@@ -483,8 +485,8 @@ int main() {
                     }
                         // UNDERWEIGHT
                     else {
-                        gotoxy(25, 49);
-                        cout << "_Underweight_";
+                        gotoxy(25, 48);
+                        cout << "Your B.M.I IS IN _Underweight_ RANGE";
                         int a;
                         gotoxy(25, 51);
                         cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN BELOW:";
@@ -590,12 +592,14 @@ int main() {
             break;
         case 4:
             gotoxy(25, 17);
+            SetConsoleTextAttribute(color, 14);
             cout << "---------------------------------------------------------------------------";
             gotoxy(52, 18);
             cout << "COVID-19 SYMPTOMS";
             gotoxy(25, 19);
             cout << "---------------------------------------------------------------------------";
             gotoxy(25, 22);
+            SetConsoleTextAttribute(color, 15);
             cout << "-- Most common symptoms:";
             gotoxy(25, 23);
             cout << "   * FEVER";
@@ -682,12 +686,14 @@ int main() {
         hospital_rerun:
             cout << "\n\n";
             cout << "\n\t\t\t";
+            SetConsoleTextAttribute(color, 14);
             cout << "---------------------------------------------------------------------------";
             cout << "\n\t\t\t\t\t\t";
             cout << "     HOSPITAL LOCATOR";
             cout << "\n\t\t\t";
             cout << "---------------------------------------------------------------------------";
             cout << "\n\n\t\t\t\t\t";
+            SetConsoleTextAttribute(color, 15);
             cout << "   ******Welcome to Hospital Locator******";
             cout << "\n\n\t\t\t";
             cout << "Choose Your State";
@@ -1705,6 +1711,8 @@ int main() {
                     cout << "THANK YOU\n\n\n\n\n\n\n";
                     exit(0);
                     break;
+                case 14:
+                    goto retry;
                 default:
                     cout << "\n\n\n\t\t\t";
                     cout << "INVALID INPUT ";
