@@ -132,9 +132,6 @@ int main() {
             cout << "\n\n\t\t\t\t\t";
             SetConsoleTextAttribute(color, 14);
         bmi_calculator_menu:
-            cout << "\n\n\n\t\t\t";
-            SetConsoleTextAttribute(color, 14);
-            cout << "\t\t\t";
             cout << "    ******Welcome to Bmi Calculator******";
             cout << "\n\n\n\t\t\t";
             SetConsoleTextAttribute(color, 15);
@@ -258,13 +255,9 @@ int main() {
                         cout << "\n\t\t\t";
                         cout << "1. DIET PLAN";
                         cout << "\n\t\t\t";
-                        cout << "2. CALCULATE YOUR B.M.I AGAIN";
+                        cout << "2. RUN AGAIN";
                         cout << "\n\t\t\t";
-                        cout << "3. RETURN TO B.M.I MENU";
-                        cout << "\n\t\t\t";
-                        cout << "4. RETURN TO MAIN MENU";
-                        cout << "\n\t\t\t";
-                        cout << "5. EXIT";
+                        cout << "3. EXIT";
                         cout << "\n\n\t\t\t";
                         cout << "Choice = ";
                         cin >> a;
@@ -328,21 +321,13 @@ int main() {
                                 }
                                 break;
                             case 2:
-                                goto calculate_your_bmi_again;
+                                goto rerun_bmi;
                                 break;
                             case 3:
-                                goto bmi_calculator_menu;
-                                break;
-                            case 4:
-                                cout << "\n\n\n\t\t\t";
-                                SetConsoleTextAttribute(color, 14);
-                                cout << "   ******MAIN MENU******\n\n\n\n";
-                                SetConsoleTextAttribute(color, 15);
-                                goto exit;
-                            case 5:
-                                cout << "\n\t\t\t";
-                                cout << "THANK YOU\n\n\n\n\n\n";
+                                cout << "\n\n\t\t\t";
+                                cout << "THANK YOU\n\n\n\n";
                                 exit(0);
+                                break;
                         }
                     }
                         // OVERWEIGHT
@@ -357,13 +342,9 @@ int main() {
                         cout << "\n\t\t\t";
                         cout << "1. DIET PLAN";
                         cout << "\n\t\t\t";
-                        cout << "2. CALCULATE YOUR B.M.I AGAIN";
+                        cout << "2. RUN AGAIN";
                         cout << "\n\t\t\t";
-                        cout << "3. RETURN TO B.M.I MENU";
-                        cout << "\n\t\t\t";
-                        cout << "4. RETURN TO MAIN MENU";
-                        cout << "\n\t\t\t";
-                        cout << "5. EXIT";
+                        cout << "3. EXIT";
                         cout << "\n\n\t\t\t";
                         cout << "Choice = ";
                         cin >> a;
@@ -429,21 +410,13 @@ int main() {
                                 }
                                 break;
                             case 2:
-                                goto calculate_your_bmi_again;
+                                goto rerun_bmi;
                                 break;
                             case 3:
-                                goto bmi_calculator_menu;
-                                break;
-                            case 4:
-                                cout << "\n\n\n\t\t\t";
-                                SetConsoleTextAttribute(color, 14);
-                                cout << "   ******MAIN MENU******\n\n\n\n";
-                                SetConsoleTextAttribute(color, 15);
-                                goto exit;
-                            case 5:
-                                cout << "\n\t\t\t";
-                                cout << "THANK YOU\n\n\n\n\n\n";
+                                cout << "\n\n\t\t\t";
+                                cout << "THANK YOU\n\n\n\n";
                                 exit(0);
+                                break;
 
                         }
                     }
@@ -459,13 +432,9 @@ int main() {
                         cout << "\n\t\t\t";
                         cout << "1. DIET PLAN";
                         cout << "\n\t\t\t";
-                        cout << "2. CALCULATE YOUR B.M.I AGAIN";
+                        cout << "2. RUN AGAIN";
                         cout << "\n\t\t\t";
-                        cout << "3. RETURN TO B.M.I MENU";
-                        cout << "\n\t\t\t";
-                        cout << "4. RETURN TO MAIN MENU";
-                        cout << "\n\t\t\t";
-                        cout << "5. EXIT";
+                        cout << "3. EXIT";
                         cout << "\n\n\t\t\t";
                         cout << "Choice = ";
                         cin >> a;
@@ -529,21 +498,13 @@ int main() {
                                 }
                                 break;
                             case 2:
-                                goto calculate_your_bmi_again;
+                                goto rerun_bmi;
                                 break;
                             case 3:
-                                goto bmi_calculator_menu;
-                                break;
-                            case 4:
-                                cout << "\n\n\n\t\t\t";
-                                SetConsoleTextAttribute(color, 14);
-                                cout << "   ******MAIN MENU******\n\n\n\n";
-                                SetConsoleTextAttribute(color, 15);
-                                goto exit;
-                            case 5:
-                                cout << "\n\t\t\t";
-                                cout << "THANK YOU\n\n\n\n\n\n";
+                                cout << "\n\n\t\t\t";
+                                cout << "THANK YOU\n\n\n\n";
                                 exit(0);
+                                break;
                         }
                     }
                         // UNDERWEIGHT
@@ -552,7 +513,7 @@ int main() {
                         SetConsoleTextAttribute(color, 14);
                         cout << "_Underweight_";
                         SetConsoleTextAttribute(color, 15);
-                        int a;
+                        int a;fdh
                         cout << "\n\n\n\t\t\t";
                         cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN BELOW:";
                         cout << "\n\t\t\t";
