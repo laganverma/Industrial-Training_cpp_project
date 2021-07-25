@@ -84,8 +84,6 @@ int main() {
     cout << "\n\n\t\t\t";
     cout << "ENTER YOUR CHOICE = ";
     cin >> main;
-
-
     switch (main) {
         case 1:
             SetConsoleTextAttribute(color, 15);
@@ -132,9 +130,9 @@ int main() {
             cout << "\n\n\t\t\t\t\t";
             SetConsoleTextAttribute(color, 14);
         bmi_calculator_menu:
-            cout << "\n\n\n\t\t\t";
+            cout << "\n\n\t\t\t";
             SetConsoleTextAttribute(color, 14);
-            cout << "\t\t\t";
+            cout << "\t\t";
             cout << "    ******Welcome to Bmi Calculator******";
             cout << "\n\n\n\t\t\t";
             SetConsoleTextAttribute(color, 15);
@@ -249,7 +247,7 @@ int main() {
                     // OBESE
                     if (bmi > 30) {
                         cout << "\n\t\t\t";
-                        SetConsoleTextAttribute(color, 14);
+                        SetConsoleTextAttribute(color, 12);
                         cout << "_Obese_";
                         SetConsoleTextAttribute(color, 15);
                         int a;
@@ -287,42 +285,64 @@ int main() {
                                         cout << "\n\t\t\t";
                                         cout << "https://bit.ly/3qP1lvH";
                                         cout << "\n\n\t\t\t";
-                                        cout << "1. EXIT";
+                                        cout << "1. CALCULATE YOUR B.M.I AGAIN";
                                         cout << "\n\t\t\t";
-                                        cout << "2. CALCULATE AGAIN";
+                                        cout << "2. RETURN TO B.M.I MENU";
+                                        cout << "\n\t\t\t";
+                                        cout << "3. RETURN TO MAIN MENU";
+                                        cout << "\n\t\t\t";
+                                        cout << "4. EXIT";
                                         cout << "\n\n\t\t\t";
                                         cout << "Choice = ";
                                         cin >> ex;
                                         switch (ex) {
                                             case 1:
-                                                cout << "\n\n\t\t\t";
-                                                cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                                goto calculate_your_bmi_again;
                                                 break;
                                             case 2:
-                                                goto rerun_bmi;
+                                                goto bmi_calculator_menu;
                                                 break;
+                                            case 3:
+                                                cout << "\n\n\n\t\t\t";
+                                                SetConsoleTextAttribute(color, 14);
+                                                cout << "   ******MAIN MENU******\n\n\n\n";
+                                                SetConsoleTextAttribute(color, 15);
+                                                goto exit;
+                                            case 4:
+                                                cout << "\n\t\t\t";
+                                                cout << "THANK YOU\n\n\n\n\n\n";
+                                                exit(0);
                                         }
                                         break;
                                     case 2:
                                         cout << "\n\n\t\t\t";
-                                        cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
+                                        cout << "1. CALCULATE YOUR B.M.I AGAIN";
                                         cout << "\n\t\t\t";
-                                        cout << "https://bit.ly/3qP1lvH";
-                                        cout << "\n\n\t\t\t";
-                                        cout << "1. EXIT";
+                                        cout << "2. RETURN TO B.M.I MENU";
                                         cout << "\n\t\t\t";
-                                        cout << "2. CALCULATE AGAIN";
+                                        cout << "3. RETURN TO MAIN MENU";
+                                        cout << "\n\t\t\t";
+                                        cout << "4. EXIT";
                                         cout << "\n\n\t\t\t";
                                         cout << "Choice = ";
                                         cin >> ex;
                                         switch (ex) {
                                             case 1:
-                                                cout << "\n\n\t\t\t";
-                                                cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                                goto calculate_your_bmi_again;
                                                 break;
                                             case 2:
-                                                goto rerun_bmi;
+                                                goto bmi_calculator_menu;
                                                 break;
+                                            case 3:
+                                                cout << "\n\n\n\t\t\t";
+                                                SetConsoleTextAttribute(color, 14);
+                                                cout << "   ******MAIN MENU******\n\n\n\n";
+                                                SetConsoleTextAttribute(color, 15);
+                                                goto exit;
+                                            case 4:
+                                                cout << "\n\t\t\t";
+                                                cout << "THANK YOU\n\n\n\n\n\n";
+                                                exit(0);
                                         }
                                         break;
                                 }
@@ -348,7 +368,7 @@ int main() {
                         // OVERWEIGHT
                     else if (bmi < 30 && bmi > 25) {
                         cout << "\n\t\t\t";
-                        SetConsoleTextAttribute(color, 14);
+                        SetConsoleTextAttribute(color, 3);
                         cout << "_Overweight_";
                         SetConsoleTextAttribute(color, 15);
                         int a;
@@ -450,7 +470,7 @@ int main() {
                         // OPTIMAL
                     else if (bmi < 25 && bmi > 18.5) {
                         cout << "\n\t\t\t";
-                        SetConsoleTextAttribute(color, 14);
+                        SetConsoleTextAttribute(color, 10);
                         cout << "_Optimal_";
                         SetConsoleTextAttribute(color, 15);
                         int a;
@@ -549,7 +569,7 @@ int main() {
                         // UNDERWEIGHT
                     else {
                         cout << "\n\t\t\t";
-                        SetConsoleTextAttribute(color, 14);
+                        SetConsoleTextAttribute(color, 12);
                         cout << "_Underweight_";
                         SetConsoleTextAttribute(color, 15);
                         int a;
@@ -719,8 +739,7 @@ int main() {
             cout << "---------------------------------------------------------------------------";
             SetConsoleTextAttribute(color, 14);
             cout << "\n\n\t\t\t\t\t";
-            cout << "   ******Welcome to Bp Calculator******";
-
+            cout << "      ******COVID-19 Symptoms******";
             SetConsoleTextAttribute(color, 15);
             cout << "\n\n\n\t\t\t";
             cout << "-- Most common symptoms:";
@@ -770,11 +789,9 @@ int main() {
             cout << "\n\t\t\t";
             cout << "1. YES";
             cout << "\n\t\t\t";
-            cout << "2. NO";
+            cout << "2. RETURN TO MAIN MENU";
             cout << "\n\t\t\t";
-            cout << "3. RETURN TO MAIN MENU";
-            cout << "\n\t\t\t";
-            cout << "4. EXIT";
+            cout << "3. EXIT";
             cout << "\n\n\t\t\t";
             cout << "CHOICE = ";
             int yes_no;
@@ -784,17 +801,12 @@ int main() {
                     goto label1;
                     break;
                 case 2:
-                    cout << "\n\t\t\t";
-                    cout << "THANK YOU\n\n\n\n\n\n\n";
-                    exit(0);
-                    break;
-                case 3:
                     cout << "\n\n\n\t\t\t";
                     SetConsoleTextAttribute(color, 14);
                     cout << "   ******MAIN MENU******\n\n\n\n";
                     SetConsoleTextAttribute(color, 15);
                     goto exit;
-                case 4:
+                case 3:
                     cout << "\n\t\t\t";
                     cout << "THANK YOU\n\n\n\n\n\n";
                     exit(0);
