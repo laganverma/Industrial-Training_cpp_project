@@ -1,6 +1,10 @@
 #include <iostream>
 #include <windows.h>
 #include <iomanip>
+#include <cstdlib>
+#include <unistd.h>
+#include <chrono>
+#include <thread>
 
 
 using namespace std;
@@ -156,7 +160,7 @@ public:
     void Input() {
         SetConsoleTextAttribute(color, 15);
         cout << "\n\n\t\t\t";
-        cout << "ENTER SYSTOLIC PRESSURE VALUES (TOP NUMBER) = ";
+        cout << "ENTER YOUR SpO2 (Blood Oxygen Level) Percentage = ";
         cin >> SpO2;
 
     }
@@ -228,17 +232,16 @@ public:
 int main() {
     int main;
     default_1:
-    cout << "\n\n\n\t\t\t"
-            "Loading....\n\t\t\t";
-    char x = 219;
-
-    for (int i = 0; i < 50; i++) {
-        {
-            _sleep(50);
-
-            cout << x;
-        }
-    }
+//    cout << "\n\n\n\t\t\t"
+//            "Loading....\n\t\t\t";
+//    char x = 219;
+//
+//    for (int i = 0; i < 50; i++) {
+//        {
+//            this_thread::sleep_for(chrono::milliseconds(50));
+//            cout << x;
+//        }
+//    }
 
     cout << "\n\n\n\n";
     exit:
@@ -411,6 +414,7 @@ int main() {
                                 case 3:
                                     cout << "\n\t\t\t";
                                     cout << "THANK YOU\n\n\n\n\n\n";
+
                                     exit(0);
                                     break;
                             }
@@ -465,6 +469,13 @@ int main() {
                     cout << "\n\t\t\t";
                     cout << "THANK YOU\n\n\n\n\n\n";
                     exit(0);
+                default:
+                    cout << "\n\n\t\t\t";
+                    cout << "INNVALID INPUT ";
+                    cout << "\n\t\t\t";
+                    cout << "TRY AGAIN";
+                    goto bprerun;
+                    break;
             }
             break;
 
@@ -601,6 +612,7 @@ int main() {
                     exit(0);
                     break;
                 default:
+                    goto Spo2rerun;
                     break;
             }
             break;
@@ -3355,6 +3367,116 @@ int main() {
             }
             break;
         case 6:
+            cout << "\n\n\n\t\t\t";
+            cout << "---------------------------------------------------------------------------";
+            cout << "\n\t\t\t\t\t";
+            SetConsoleTextAttribute(color, 14);
+            cout << "     VACCINE REALTED QUERIES AND FAQ";
+            cout << "\n\t\t\t";
+            SetConsoleTextAttribute(color, 15);
+            cout << "---------------------------------------------------------------------------";
+            cout << "\n\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 15);
+            cout << "Get Yourself Vaccinate ";
+            cout << "\n\t\t\t";
+            cout << "(COWIN PORTAL) = https://www.cowin.gov.in/";
+            cout << "\n\n\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 13);
+            cout << "How to register for Covid vaccine on the CoWIN platform ?";
+            cout << "\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 15);
+            cout << "Step 1 : In the CoWIN platform, provide your phone number.";
+            cout << "\n\n\t\t\t";
+            cout << "Step 2 : Enter the OTP, which you receive on this number and click on proceed.";
+            cout << "\n\n\t\t\t";
+            cout << "Step 3 : You will be directed to the registration page where you will have to upload a\n\t\t\t";
+            cout << "         valid photo ID proof, and fill in your details.";
+            cout << "\n\n\t\t\t";
+            cout << "Step 4 : Once you are registered, you can add up to three more people to get \n\t\t\t";
+            cout << "         vaccinated with the same mobile number.";
+            cout << "\n\n\t\t\t";
+            cout << "Step 5 : Then you just have to schedule an appointment at a Vaccination Centre\n\t\t\t";
+            cout << "         close to your location and book it during any available time slot.";
+            cout << "\n\n\t\t\t";
+            cout << "Step 6 : You will get a message with your confirmation details, and that’s it\n\t\t\t";
+            cout << "         You have successfully booked an appointment, all that is left is to go and get the jab.";
+
+            // 2nd ques
+            cout << "\n\n\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 13);
+            cout << "Which COVID-19 vaccines are licensed in India? ";
+            cout << "\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 15);
+            cout << "Two vaccines were granted emergency use authorization by the Central Drugs Standard";
+            cout << "\n\t\t\t";
+            cout << "Control Organization (CDSCO) in India, Covishield® (AstraZeneca's vaccine manufactured";
+            cout << "\n\t\t\t";
+            cout << "by Serum Institute of India) and Covaxin® (manufactured by Bharat Biotech Limited).";
+            cout << "\n\t\t\t";
+            cout << "Sputnik - V has been granted EUA in the month of April 2021.";
+
+            // 3rd ques
+            cout << "\n\n\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 13);
+            cout << "Who is eligible to get a COVID-19 vaccine in India? ";
+            cout << "\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 15);
+            cout << "COVID vaccination in the country commenced with vaccination to all Health Care Workers.";
+            cout << "\n\t\t\t";
+            cout << "The program was expanded with time to include vaccination of Front Line Workers, citizens";
+            cout << "\n\t\t\t";
+            cout << "more than 60 years of age, citizens more than 45 years of age and eventually citizens more";
+            cout << "\n\t\t\t";
+            cout << "than 18 years of age.";
+
+            // 4th ques
+            cout << "\n\n\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 13);
+            cout << "Is the COVID-19 vaccine in use in India effective? ";
+            cout << "\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 15);
+            cout << "Yes, the COVID-19 vaccine introduced in India will be as effective as any vaccine developed";
+            cout << "\n\t\t\t";
+            cout << "by other countries. Various phases of vaccine trials are undertaken to ensure its safety and";
+            cout << "\n\t\t\t";
+            cout << "efficacy.";
+
+            // 5th ques
+            cout << "\n\n\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 13);
+            cout << "Can you get COVID-19 after being vaccinated? ";
+            cout << "\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 15);
+            cout << "However, no vaccine is 100% effective and, though rare, fully vaccinated people can";
+            cout << "\n\t\t\t";
+            cout << "contract coronavirus. These cases, known as breakthrough infections, can cause COVID-";
+            cout << "\n\t\t\t";
+            cout << "like symptoms — or no symptoms at all.";
+
+
+            int vaccine_exit;
+            cout << "\n\n\n\t\t\t";
+            cout << "1. RETURN TO MAIN MENU";
+            cout << "\n\t\t\t";
+            cout << "2. EXIT";
+            cout << "\n\t\t\t";
+            cout << "CHOICE = ";
+            cin >> vaccine_exit;
+            switch (vaccine_exit) {
+                case 1:
+                    cout << "\n\n\n\t\t\t";
+                    SetConsoleTextAttribute(color, 14);
+                    cout << "   ******MAIN MENU******\n\n\n\n";
+                    SetConsoleTextAttribute(color, 15);
+                    goto exit;
+                    break;
+                case 2:
+                    cout << "\n\t\t\t";
+                    cout << "THANK YOU\n\n\n\n\n\n";
+                    exit(0);
+                    break;
+            }
+
             break;
         case 7:
             cout << "\n\n\n\t\t\t";
@@ -3367,6 +3489,5 @@ int main() {
             cout << "TRY AGAIN";
             goto default_1;
     }
-
     return 0;
 }
