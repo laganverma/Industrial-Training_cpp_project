@@ -4,46 +4,53 @@
 
 
 using namespace std;
-COORD coord = {0, 0};
-
-void gotoxy(int x, int y) {
-    COORD coord;
-    coord.X = x;
-    coord.Y = y;
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-}
-
 HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
 
 class BP {
     long sys, dia;
 public:
     void Input() {
-        gotoxy(25, 23);
+        cout << "\n\n\t\t\t";
         cout << "ENTER SYSTOLIC PRESSURE VALUES (TOP NUMBER) = ";
         cin >> sys;
-        gotoxy(25, 24);
+        cout << "\n\t\t\t";
         cout << "ENTER DIASTOLIC PRESSURE VALUES (BOTTOM NUMBER) = ";
         cin >> dia;
     }
 
     void High() const {
         if (sys <= 120 && dia <= 80) {
-            gotoxy(44, 26);
+            cout << "\n\n\t\t\t";
             cout << "YOUR BP IS IN NORMAL RANGE" << endl;
         } else if (sys <= 129 && dia < 80) {
-            gotoxy(44, 26);
+            cout << "\n\n\t\t\t";
             cout << "YOUR BP IS ELEVATED" << endl;
         } else if (sys <= 139 && dia <= 89) {
-            gotoxy(44, 26);
+            cout << "\n\n\t\t\t";
             cout << "YOUR BP IS HIGH (HYPERTENSION STAGE 1)" << endl;
         } else if (sys <= 179 && dia <= 119) {
-            gotoxy(44, 26);
+            cout << "\n\n\t\t\t";
             cout << "YOUR BP IS HIGH (HYPERTENSION STAGE 2)" << endl;
         } else if (sys >= 180 && dia >= 120) {
-            gotoxy(44, 26);
+            cout << "\n\n\t\t\t";
             cout << "YOUR BP IS VERY HIGH" << endl;
         }
+    }
+
+    void facts() {
+        cout << "Blood pressure categories\n"
+                "The five blood pressure ranges as recognized by the American Heart Association are:\n"
+                "Normal\n"
+                "Blood pressure numbers of less than 120/80 mm Hg are considered within the normal range. If your results fall into this category, stick with heart-healthy habits like following a balanced diet and getting regular exercise.\n"
+                "Elevated\n"
+                "Elevated blood pressure is when readings consistently range from 120-129 systolic and less than 80 mm Hg diastolic. People with elevated blood pressure are likely to develop high blood pressure unless steps are taken to control the condition.\n"
+                "Hypertension Stage 1\n"
+                "Hypertension Stage 1 is when blood pressure consistently ranges from 130-139 systolic or 80-89 mm Hg diastolic. At this stage of high blood pressure, doctors are likely to prescribe lifestyle changes and may consider adding blood pressure medication based on your risk of atherosclerotic cardiovascular disease (ASCVD), such as heart attack or stroke.\n"
+                "Hypertension Stage 2\n"
+                "Hypertension Stage 2 is when blood pressure consistently ranges at 140/90 mm Hg or higher. At this stage of high blood pressure, doctors are likely to prescribe a combination of blood pressure medications and lifestyle changes.\n"
+                "Hypertensive crisis\n"
+                "This stage of high blood pressure requires medical attention. If your blood pressure readings suddenly exceed 180/120 mm Hg, wait five minutes and then test your blood pressure again. If your readings are still unusually high, contact your doctor immediately. You could be experiencing a hypertensive crisis.\n"
+                "If your blood pressure is higher than 180/120 mm Hg and you are experiencing signs of possible organ damage such as chest pain, shortness of breath, back pain, numbness/weakness, change in vision or difficulty speaking, do not wait to see if your pressure comes down on its own. Call 911.";
     }
 };
 
@@ -51,7 +58,6 @@ public:
 int main() {
     int main;
     default_1:
-//    gotoxy(25, 0);
 //    cout << "\n\n\n\t\t\t"
 //            "Loading....\n\t\t\t";
 //    char x = 219;
@@ -87,29 +93,101 @@ int main() {
     switch (main) {
         case 1:
             SetConsoleTextAttribute(color, 15);
-            gotoxy(25, 17);
+            cout << "\n\n\n\t\t\t";
             cout << "---------------------------------------------------------------------------";
-            gotoxy(45, 18);
+            cout << "\n\t\t\t\t\t";
             SetConsoleTextAttribute(color, 14);
-            cout << "BP (BLOOD PRESSURE) - CALCULATOR";
-            gotoxy(25, 19);
+            cout << "  BP (BLOOD PRESSURE) - CALCULATOR";
+            cout << "\n\t\t\t";
             SetConsoleTextAttribute(color, 15);
             cout << "---------------------------------------------------------------------------";
-            gotoxy(44, 21);
+            cout << "\n\n\t\t\t\t\t";
             SetConsoleTextAttribute(color, 14);
             cout << "******Welcome to Bp Calculator******";
             SetConsoleTextAttribute(color, 15);
+            cout << "\n\n\t\t\t";
+            cout << "1. CALCULATE YOUR BP";
+            cout << "\n\t\t\t";
+            cout << "2. BP REFERENCE TABLE";
+            cout << "\n\t\t\t";
+            cout << "3. FACTS";
+            cout << "\n\t\t\t";
+            cout << "4. RETURN TO MAIN MENU";
+            cout << "\n\t\t\t";
+            cout << "5. EXIT";
+            cout << "\n\t\t\t";
+            cout << "ENTER YOUR CHOICE : ";
             BP user;
-            user.Input();
-            user.High();
+            int bp;
+            cin >> bp;
+            switch (bp) {
+                case 1:
+                    user.Input();
+                    user.High();
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+                    user.facts();
+                    break;
+                case 4:
+                    cout << "\n\n\n\t\t\t";
+                    SetConsoleTextAttribute(color, 14);
+                    cout << "   ******MAIN MENU******\n\n\n\n";
+                    SetConsoleTextAttribute(color, 15);
+                    goto exit;
+                case 5:
+                    cout << "\n\t\t\t";
+                    cout << "THANK YOU\n\n\n\n\n\n";
+                    exit(0);
+            }
             break;
-        case 2:
-            gotoxy(25, 16);
-            cout << "OXYGEN CALCULATOR";
-            break;
+
+
+            {
+//        case 2:
+//            SetConsoleTextAttribute(color, 15);
+//            cout << "\n\n\n\t\t\t";
+//            cout << "---------------------------------------------------------------------------";
+//            cout << "\n\t\t\t";
+//            SetConsoleTextAttribute(color, 14);
+//            cout << "BP (BLOOD PRESSURE) - CALCULATOR";
+//            cout << "\n\t\t\t";
+//            SetConsoleTextAttribute(color, 15);
+//            cout << "---------------------------------------------------------------------------";
+//            cout << "\n\t\t\t";
+//            SetConsoleTextAttribute(color, 14);
+//            cout << "******Welcome to Oxygen Calculator******";
+//            SetConsoleTextAttribute(color, 15);
+//            cout << "\n\n\n\t\t\t";
+//            int spo2;
+//            cout << "ENTER YOUR SpO2 VALUES  = ";
+//            cin>>spo2;
+//            if (spo2 >= 94 ) {
+//                cout << "NORMAL - HEALTHY " << endl;
+//            } else if (spo2 <= 92 && spo2 >= 88) {
+//
+//                cout << "NORMAL - COPD" << endl;
+////            } else if (sys <=  && dia <= 89) {
+////
+////                cout << "YOUR BP IS HIGH (HYPERTENSION STAGE 1)" << endl;
+////            } else if (sys <= 179 && dia <= 119) {
+////
+////                cout << "YOUR BP IS HIGH (HYPERTENSION STAGE 2)" << endl;
+////            } else if (sys >= 180 && dia >= 120) {
+////
+////                cout << "YOUR BP IS VERY HIGH" << endl;
+////            }
+////
+//            }
+//            break;
+            }
+
+
         case 3:
         rerun_bmi:
-            int main;
+            //int main;
             float bmi, w, h;//weight and height
             int s;
             int s_1, s_2;
@@ -127,7 +205,6 @@ int main() {
             cout << "\n\t\t\t";
             SetConsoleTextAttribute(color, 15);
             cout << "---------------------------------------------------------------------------";
-            cout << "\n\n\t\t\t\t\t";
             SetConsoleTextAttribute(color, 14);
         bmi_calculator_menu:
             cout << "\n\n\t\t\t";
@@ -308,10 +385,12 @@ int main() {
                                                 cout << "   ******MAIN MENU******\n\n\n\n";
                                                 SetConsoleTextAttribute(color, 15);
                                                 goto exit;
+                                                break;
                                             case 4:
                                                 cout << "\n\t\t\t";
                                                 cout << "THANK YOU\n\n\n\n\n\n";
                                                 exit(0);
+                                                break;
                                         }
                                         break;
                                     case 2:
@@ -651,10 +730,8 @@ int main() {
                                 break;
                             case 2:
                                 goto calculate_your_bmi_again;
-                                break;
                             case 3:
                                 goto bmi_calculator_menu;
-                                break;
                             case 4:
                                 cout << "\n\n\n\t\t\t";
                                 SetConsoleTextAttribute(color, 14);
@@ -728,13 +805,13 @@ int main() {
             }
             break;
         case 4:
-            gotoxy(25, 17);
+            cout << "\n\n\n\t\t\t";
             SetConsoleTextAttribute(color, 15);
             cout << "---------------------------------------------------------------------------";
-            gotoxy(52, 18);
+            cout << "\n\t\t\t\t\t\t";
             SetConsoleTextAttribute(color, 14);
-            cout << "COVID-19 SYMPTOMS";
-            gotoxy(25, 19);
+            cout << "   COVID-19 SYMPTOMS";
+            cout << "\n\t\t\t";
             SetConsoleTextAttribute(color, 15);
             cout << "---------------------------------------------------------------------------";
             SetConsoleTextAttribute(color, 14);
@@ -831,7 +908,6 @@ int main() {
             int West_Bengal;
             int Punjab;
             int Rajasthan;
-
         hospital_rerun:
             cout << "\n\n";
             cout << "\n\t\t\t";
@@ -2833,7 +2909,7 @@ int main() {
         case 6:
             break;
         case 7:
-            gotoxy(25, 17);
+            cout << "\n\n\n\t\t\t";
             cout << "THANK YOU\n\n\n\n\n\n\n";
             exit(0);
         default:
@@ -2845,5 +2921,4 @@ int main() {
     }
 
     return 0;
-
 }
