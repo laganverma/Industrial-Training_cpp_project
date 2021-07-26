@@ -4,55 +4,60 @@
 
 
 using namespace std;
-COORD coord = {0, 0};
-
-void gotoxy(int x, int y) {
-    COORD coord;
-    coord.X = x;
-    coord.Y = y;
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-}
-
 HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
 
 class BP {
     long sys, dia;
 public:
     void Input() {
-        gotoxy(25, 23);
+        cout << "\n\n\t\t\t";
         cout << "ENTER SYSTOLIC PRESSURE VALUES (TOP NUMBER) = ";
         cin >> sys;
-        gotoxy(25, 24);
+        cout << "\n\t\t\t";
         cout << "ENTER DIASTOLIC PRESSURE VALUES (BOTTOM NUMBER) = ";
         cin >> dia;
     }
 
     void High() const {
         if (sys <= 120 && dia <= 80) {
-            gotoxy(44, 26);
+            cout << "\n\n\t\t\t";
             cout << "YOUR BP IS IN NORMAL RANGE" << endl;
         } else if (sys <= 129 && dia < 80) {
-            gotoxy(44, 26);
+            cout << "\n\n\t\t\t";
             cout << "YOUR BP IS ELEVATED" << endl;
         } else if (sys <= 139 && dia <= 89) {
-            gotoxy(44, 26);
+            cout << "\n\n\t\t\t";
             cout << "YOUR BP IS HIGH (HYPERTENSION STAGE 1)" << endl;
         } else if (sys <= 179 && dia <= 119) {
-            gotoxy(44, 26);
+            cout << "\n\n\t\t\t";
             cout << "YOUR BP IS HIGH (HYPERTENSION STAGE 2)" << endl;
         } else if (sys >= 180 && dia >= 120) {
-            gotoxy(44, 26);
+            cout << "\n\n\t\t\t";
             cout << "YOUR BP IS VERY HIGH" << endl;
         }
+    }
+
+    void facts() {
+        cout << "Blood pressure categories\n"
+                "The five blood pressure ranges as recognized by the American Heart Association are:\n"
+                "Normal\n"
+                "Blood pressure numbers of less than 120/80 mm Hg are considered within the normal range. If your results fall into this category, stick with heart-healthy habits like following a balanced diet and getting regular exercise.\n"
+                "Elevated\n"
+                "Elevated blood pressure is when readings consistently range from 120-129 systolic and less than 80 mm Hg diastolic. People with elevated blood pressure are likely to develop high blood pressure unless steps are taken to control the condition.\n"
+                "Hypertension Stage 1\n"
+                "Hypertension Stage 1 is when blood pressure consistently ranges from 130-139 systolic or 80-89 mm Hg diastolic. At this stage of high blood pressure, doctors are likely to prescribe lifestyle changes and may consider adding blood pressure medication based on your risk of atherosclerotic cardiovascular disease (ASCVD), such as heart attack or stroke.\n"
+                "Hypertension Stage 2\n"
+                "Hypertension Stage 2 is when blood pressure consistently ranges at 140/90 mm Hg or higher. At this stage of high blood pressure, doctors are likely to prescribe a combination of blood pressure medications and lifestyle changes.\n"
+                "Hypertensive crisis\n"
+                "This stage of high blood pressure requires medical attention. If your blood pressure readings suddenly exceed 180/120 mm Hg, wait five minutes and then test your blood pressure again. If your readings are still unusually high, contact your doctor immediately. You could be experiencing a hypertensive crisis.\n"
+                "If your blood pressure is higher than 180/120 mm Hg and you are experiencing signs of possible organ damage such as chest pain, shortness of breath, back pain, numbness/weakness, change in vision or difficulty speaking, do not wait to see if your pressure comes down on its own. Call 911.";
     }
 };
 
 
 int main() {
     int main;
-
-
-//    gotoxy(25, 0);
+    default_1:
 //    cout << "\n\n\n\t\t\t"
 //            "Loading....\n\t\t\t";
 //    char x = 219;
@@ -64,6 +69,7 @@ int main() {
 //            cout << x;
 //        }
 //    }
+
     cout << "\n\n\n\n";
     exit:
     SetConsoleTextAttribute(color, 15);
@@ -84,34 +90,104 @@ int main() {
     cout << "\n\n\t\t\t";
     cout << "ENTER YOUR CHOICE = ";
     cin >> main;
-
-
     switch (main) {
         case 1:
             SetConsoleTextAttribute(color, 15);
-            gotoxy(25, 17);
+            cout << "\n\n\n\t\t\t";
             cout << "---------------------------------------------------------------------------";
-            gotoxy(45, 18);
+            cout << "\n\t\t\t\t\t";
             SetConsoleTextAttribute(color, 14);
-            cout << "BP (BLOOD PRESSURE) - CALCULATOR";
-            gotoxy(25, 19);
+            cout << "  BP (BLOOD PRESSURE) - CALCULATOR";
+            cout << "\n\t\t\t";
             SetConsoleTextAttribute(color, 15);
             cout << "---------------------------------------------------------------------------";
-            gotoxy(44, 21);
+            cout << "\n\n\t\t\t\t\t";
             SetConsoleTextAttribute(color, 14);
             cout << "******Welcome to Bp Calculator******";
             SetConsoleTextAttribute(color, 15);
+            cout << "\n\n\t\t\t";
+            cout << "1. CALCULATE YOUR BP";
+            cout << "\n\t\t\t";
+            cout << "2. BP REFERENCE TABLE";
+            cout << "\n\t\t\t";
+            cout << "3. FACTS";
+            cout << "\n\t\t\t";
+            cout << "4. RETURN TO MAIN MENU";
+            cout << "\n\t\t\t";
+            cout << "5. EXIT";
+            cout << "\n\t\t\t";
+            cout << "ENTER YOUR CHOICE : ";
             BP user;
-            user.Input();
-            user.High();
+            int bp;
+            cin >> bp;
+            switch (bp) {
+                case 1:
+                    user.Input();
+                    user.High();
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+                    user.facts();
+                    break;
+                case 4:
+                    cout << "\n\n\n\t\t\t";
+                    SetConsoleTextAttribute(color, 14);
+                    cout << "   ******MAIN MENU******\n\n\n\n";
+                    SetConsoleTextAttribute(color, 15);
+                    goto exit;
+                case 5:
+                    cout << "\n\t\t\t";
+                    cout << "THANK YOU\n\n\n\n\n\n";
+                    exit(0);
+            }
             break;
-        case 2:
-            gotoxy(25, 16);
-            cout << "OXYGEN CALCULATOR";
-            break;
+
+
+            {
+//        case 2:
+//            SetConsoleTextAttribute(color, 15);
+//            cout << "\n\n\n\t\t\t";
+//            cout << "---------------------------------------------------------------------------";
+//            cout << "\n\t\t\t";
+//            SetConsoleTextAttribute(color, 14);
+//            cout << "BP (BLOOD PRESSURE) - CALCULATOR";
+//            cout << "\n\t\t\t";
+//            SetConsoleTextAttribute(color, 15);
+//            cout << "---------------------------------------------------------------------------";
+//            cout << "\n\t\t\t";
+//            SetConsoleTextAttribute(color, 14);
+//            cout << "******Welcome to Oxygen Calculator******";
+//            SetConsoleTextAttribute(color, 15);
+//            cout << "\n\n\n\t\t\t";
+//            int spo2;
+//            cout << "ENTER YOUR SpO2 VALUES  = ";
+//            cin>>spo2;
+//            if (spo2 >= 94 ) {
+//                cout << "NORMAL - HEALTHY " << endl;
+//            } else if (spo2 <= 92 && spo2 >= 88) {
+//
+//                cout << "NORMAL - COPD" << endl;
+////            } else if (sys <=  && dia <= 89) {
+////
+////                cout << "YOUR BP IS HIGH (HYPERTENSION STAGE 1)" << endl;
+////            } else if (sys <= 179 && dia <= 119) {
+////
+////                cout << "YOUR BP IS HIGH (HYPERTENSION STAGE 2)" << endl;
+////            } else if (sys >= 180 && dia >= 120) {
+////
+////                cout << "YOUR BP IS VERY HIGH" << endl;
+////            }
+////
+//            }
+//            break;
+            }
+
+
         case 3:
         rerun_bmi:
-            int main;
+            //int main;
             float bmi, w, h;//weight and height
             int s;
             int s_1, s_2;
@@ -129,9 +205,11 @@ int main() {
             cout << "\n\t\t\t";
             SetConsoleTextAttribute(color, 15);
             cout << "---------------------------------------------------------------------------";
-            cout << "\n\n\t\t\t\t\t";
             SetConsoleTextAttribute(color, 14);
         bmi_calculator_menu:
+            cout << "\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 14);
+            cout << "\t\t";
             cout << "    ******Welcome to Bmi Calculator******";
             cout << "\n\n\n\t\t\t";
             SetConsoleTextAttribute(color, 15);
@@ -246,7 +324,7 @@ int main() {
                     // OBESE
                     if (bmi > 30) {
                         cout << "\n\t\t\t";
-                        SetConsoleTextAttribute(color, 14);
+                        SetConsoleTextAttribute(color, 12);
                         cout << "_Obese_";
                         SetConsoleTextAttribute(color, 15);
                         int a;
@@ -255,9 +333,13 @@ int main() {
                         cout << "\n\t\t\t";
                         cout << "1. DIET PLAN";
                         cout << "\n\t\t\t";
-                        cout << "2. RUN AGAIN";
+                        cout << "2. CALCULATE YOUR B.M.I AGAIN";
                         cout << "\n\t\t\t";
-                        cout << "3. EXIT";
+                        cout << "3. RETURN TO B.M.I MENU";
+                        cout << "\n\t\t\t";
+                        cout << "4. RETURN TO MAIN MENU";
+                        cout << "\n\t\t\t";
+                        cout << "5. EXIT";
                         cout << "\n\n\t\t\t";
                         cout << "Choice = ";
                         cin >> a;
@@ -280,60 +362,92 @@ int main() {
                                         cout << "\n\t\t\t";
                                         cout << "https://bit.ly/3qP1lvH";
                                         cout << "\n\n\t\t\t";
-                                        cout << "1. EXIT";
+                                        cout << "1. CALCULATE YOUR B.M.I AGAIN";
                                         cout << "\n\t\t\t";
-                                        cout << "2. CALCULATE AGAIN";
+                                        cout << "2. RETURN TO B.M.I MENU";
+                                        cout << "\n\t\t\t";
+                                        cout << "3. RETURN TO MAIN MENU";
+                                        cout << "\n\t\t\t";
+                                        cout << "4. EXIT";
                                         cout << "\n\n\t\t\t";
                                         cout << "Choice = ";
                                         cin >> ex;
                                         switch (ex) {
                                             case 1:
-                                                cout << "\n\n\t\t\t";
-                                                cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                                goto calculate_your_bmi_again;
                                                 break;
                                             case 2:
-                                                goto rerun_bmi;
+                                                goto bmi_calculator_menu;
+                                                break;
+                                            case 3:
+                                                cout << "\n\n\n\t\t\t";
+                                                SetConsoleTextAttribute(color, 14);
+                                                cout << "   ******MAIN MENU******\n\n\n\n";
+                                                SetConsoleTextAttribute(color, 15);
+                                                goto exit;
+                                                break;
+                                            case 4:
+                                                cout << "\n\t\t\t";
+                                                cout << "THANK YOU\n\n\n\n\n\n";
+                                                exit(0);
                                                 break;
                                         }
                                         break;
                                     case 2:
                                         cout << "\n\n\t\t\t";
-                                        cout << "Plz Click On The Link For Non-Vegetarian Diet Plan";
+                                        cout << "1. CALCULATE YOUR B.M.I AGAIN";
                                         cout << "\n\t\t\t";
-                                        cout << "https://bit.ly/3qP1lvH";
-                                        cout << "\n\n\t\t\t";
-                                        cout << "1. EXIT";
+                                        cout << "2. RETURN TO B.M.I MENU";
                                         cout << "\n\t\t\t";
-                                        cout << "2. CALCULATE AGAIN";
+                                        cout << "3. RETURN TO MAIN MENU";
+                                        cout << "\n\t\t\t";
+                                        cout << "4. EXIT";
                                         cout << "\n\n\t\t\t";
                                         cout << "Choice = ";
                                         cin >> ex;
                                         switch (ex) {
                                             case 1:
-                                                cout << "\n\n\t\t\t";
-                                                cout << "THANK YOU!!\n\n\n\n\n\n\n";
+                                                goto calculate_your_bmi_again;
                                                 break;
                                             case 2:
-                                                goto rerun_bmi;
+                                                goto bmi_calculator_menu;
                                                 break;
+                                            case 3:
+                                                cout << "\n\n\n\t\t\t";
+                                                SetConsoleTextAttribute(color, 14);
+                                                cout << "   ******MAIN MENU******\n\n\n\n";
+                                                SetConsoleTextAttribute(color, 15);
+                                                goto exit;
+                                            case 4:
+                                                cout << "\n\t\t\t";
+                                                cout << "THANK YOU\n\n\n\n\n\n";
+                                                exit(0);
                                         }
                                         break;
                                 }
                                 break;
                             case 2:
-                                goto rerun_bmi;
+                                goto calculate_your_bmi_again;
                                 break;
                             case 3:
-                                cout << "\n\n\t\t\t";
-                                cout << "THANK YOU\n\n\n\n";
-                                exit(0);
+                                goto bmi_calculator_menu;
                                 break;
+                            case 4:
+                                cout << "\n\n\n\t\t\t";
+                                SetConsoleTextAttribute(color, 14);
+                                cout << "   ******MAIN MENU******\n\n\n\n";
+                                SetConsoleTextAttribute(color, 15);
+                                goto exit;
+                            case 5:
+                                cout << "\n\t\t\t";
+                                cout << "THANK YOU\n\n\n\n\n\n";
+                                exit(0);
                         }
                     }
                         // OVERWEIGHT
                     else if (bmi < 30 && bmi > 25) {
                         cout << "\n\t\t\t";
-                        SetConsoleTextAttribute(color, 14);
+                        SetConsoleTextAttribute(color, 3);
                         cout << "_Overweight_";
                         SetConsoleTextAttribute(color, 15);
                         int a;
@@ -342,9 +456,13 @@ int main() {
                         cout << "\n\t\t\t";
                         cout << "1. DIET PLAN";
                         cout << "\n\t\t\t";
-                        cout << "2. RUN AGAIN";
+                        cout << "2. CALCULATE YOUR B.M.I AGAIN";
                         cout << "\n\t\t\t";
-                        cout << "3. EXIT";
+                        cout << "3. RETURN TO B.M.I MENU";
+                        cout << "\n\t\t\t";
+                        cout << "4. RETURN TO MAIN MENU";
+                        cout << "\n\t\t\t";
+                        cout << "5. EXIT";
                         cout << "\n\n\t\t\t";
                         cout << "Choice = ";
                         cin >> a;
@@ -410,20 +528,28 @@ int main() {
                                 }
                                 break;
                             case 2:
-                                goto rerun_bmi;
+                                goto calculate_your_bmi_again;
                                 break;
                             case 3:
-                                cout << "\n\n\t\t\t";
-                                cout << "THANK YOU\n\n\n\n";
-                                exit(0);
+                                goto bmi_calculator_menu;
                                 break;
+                            case 4:
+                                cout << "\n\n\n\t\t\t";
+                                SetConsoleTextAttribute(color, 14);
+                                cout << "   ******MAIN MENU******\n\n\n\n";
+                                SetConsoleTextAttribute(color, 15);
+                                goto exit;
+                            case 5:
+                                cout << "\n\t\t\t";
+                                cout << "THANK YOU\n\n\n\n\n\n";
+                                exit(0);
 
                         }
                     }
                         // OPTIMAL
                     else if (bmi < 25 && bmi > 18.5) {
                         cout << "\n\t\t\t";
-                        SetConsoleTextAttribute(color, 14);
+                        SetConsoleTextAttribute(color, 10);
                         cout << "_Optimal_";
                         SetConsoleTextAttribute(color, 15);
                         int a;
@@ -432,9 +558,13 @@ int main() {
                         cout << "\n\t\t\t";
                         cout << "1. DIET PLAN";
                         cout << "\n\t\t\t";
-                        cout << "2. RUN AGAIN";
+                        cout << "2. CALCULATE YOUR B.M.I AGAIN";
                         cout << "\n\t\t\t";
-                        cout << "3. EXIT";
+                        cout << "3. RETURN TO B.M.I MENU";
+                        cout << "\n\t\t\t";
+                        cout << "4. RETURN TO MAIN MENU";
+                        cout << "\n\t\t\t";
+                        cout << "5. EXIT";
                         cout << "\n\n\t\t\t";
                         cout << "Choice = ";
                         cin >> a;
@@ -498,22 +628,30 @@ int main() {
                                 }
                                 break;
                             case 2:
-                                goto rerun_bmi;
+                                goto calculate_your_bmi_again;
                                 break;
                             case 3:
-                                cout << "\n\n\t\t\t";
-                                cout << "THANK YOU\n\n\n\n";
-                                exit(0);
+                                goto bmi_calculator_menu;
                                 break;
+                            case 4:
+                                cout << "\n\n\n\t\t\t";
+                                SetConsoleTextAttribute(color, 14);
+                                cout << "   ******MAIN MENU******\n\n\n\n";
+                                SetConsoleTextAttribute(color, 15);
+                                goto exit;
+                            case 5:
+                                cout << "\n\t\t\t";
+                                cout << "THANK YOU\n\n\n\n\n\n";
+                                exit(0);
                         }
                     }
                         // UNDERWEIGHT
                     else {
                         cout << "\n\t\t\t";
-                        SetConsoleTextAttribute(color, 14);
+                        SetConsoleTextAttribute(color, 12);
                         cout << "_Underweight_";
                         SetConsoleTextAttribute(color, 15);
-                        int a;fdh
+                        int a;
                         cout << "\n\n\n\t\t\t";
                         cout << "IF YOU WANT A DIET PLAN PLZ REFER TO OPTIONS DOWN BELOW:";
                         cout << "\n\t\t\t";
@@ -592,10 +730,8 @@ int main() {
                                 break;
                             case 2:
                                 goto calculate_your_bmi_again;
-                                break;
                             case 3:
                                 goto bmi_calculator_menu;
-                                break;
                             case 4:
                                 cout << "\n\n\n\t\t\t";
                                 SetConsoleTextAttribute(color, 14);
@@ -669,19 +805,18 @@ int main() {
             }
             break;
         case 4:
-            gotoxy(25, 17);
+            cout << "\n\n\n\t\t\t";
             SetConsoleTextAttribute(color, 15);
             cout << "---------------------------------------------------------------------------";
-            gotoxy(52, 18);
+            cout << "\n\t\t\t\t\t\t";
             SetConsoleTextAttribute(color, 14);
-            cout << "COVID-19 SYMPTOMS";
-            gotoxy(25, 19);
+            cout << "   COVID-19 SYMPTOMS";
+            cout << "\n\t\t\t";
             SetConsoleTextAttribute(color, 15);
             cout << "---------------------------------------------------------------------------";
             SetConsoleTextAttribute(color, 14);
             cout << "\n\n\t\t\t\t\t";
-            cout << "   ******Welcome to Bp Calculator******";
-
+            cout << "      ******COVID-19 Symptoms******";
             SetConsoleTextAttribute(color, 15);
             cout << "\n\n\n\t\t\t";
             cout << "-- Most common symptoms:";
@@ -731,11 +866,9 @@ int main() {
             cout << "\n\t\t\t";
             cout << "1. YES";
             cout << "\n\t\t\t";
-            cout << "2. NO";
+            cout << "2. RETURN TO MAIN MENU";
             cout << "\n\t\t\t";
-            cout << "3. RETURN TO MAIN MENU";
-            cout << "\n\t\t\t";
-            cout << "4. EXIT";
+            cout << "3. EXIT";
             cout << "\n\n\t\t\t";
             cout << "CHOICE = ";
             int yes_no;
@@ -745,17 +878,12 @@ int main() {
                     goto label1;
                     break;
                 case 2:
-                    cout << "\n\t\t\t";
-                    cout << "THANK YOU\n\n\n\n\n\n\n";
-                    exit(0);
-                    break;
-                case 3:
                     cout << "\n\n\n\t\t\t";
                     SetConsoleTextAttribute(color, 14);
                     cout << "   ******MAIN MENU******\n\n\n\n";
                     SetConsoleTextAttribute(color, 15);
                     goto exit;
-                case 4:
+                case 3:
                     cout << "\n\t\t\t";
                     cout << "THANK YOU\n\n\n\n\n\n";
                     exit(0);
@@ -780,7 +908,6 @@ int main() {
             int West_Bengal;
             int Punjab;
             int Rajasthan;
-
         hospital_rerun:
             cout << "\n\n";
             cout << "\n\t\t\t";
@@ -869,6 +996,41 @@ int main() {
                             cout << "     Address  - Dr. E Borges Road, Parel, Mumbai 400012";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91-22- 24177000, +91-22-24146750";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int mumb;
+                            cin >> mumb;
+                            switch (mumb) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+
+                            }
                             break;
                         case 2:
                             cout << "\n\n\t\t\t";
@@ -897,6 +1059,40 @@ int main() {
                                     << "     Address  - Salisbury Park, Post Box 1405, Market Yard, Gultekdi, Pune, Maharashtra 411037";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91-020 2452 6771";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int pune;
+                            cin >> pune;
+                            switch (pune) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 3:
                             cout << "\n\n\t\t\t";
@@ -921,6 +1117,40 @@ int main() {
                             cout << "     Address  - Gangapur Rd, Thatte Nagar, Nashik, Maharashtra 422005";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 253 231 5050";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int nas;
+                            cin >> nas;
+                            switch (nas) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 4:
                             cout << "\n\n\n\t\t\t";
@@ -974,6 +1204,40 @@ int main() {
                             cout << "     Address  - Pattom Palace , P. O, Thiruvananthapuram, Kerala - 695004";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 0471 407 7777, +91 0471 407 7888";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int thiru;
+                            cin >> thiru;
+                            switch (thiru) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 2:
                             cout << "\n\n\t\t\t";
@@ -997,6 +1261,40 @@ int main() {
                                     << "     Address  - Railway Station Rd, near Railway Station, Palayam, Kozhikode, Kerala 673002";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 0495 270 7222, +91 0495 270 7333";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int kozi;
+                            cin >> kozi;
+                            switch (kozi) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 3:
                             cout << "\n\n\t\t\t";
@@ -1022,6 +1320,40 @@ int main() {
                             cout << "                Kochi, Kerala 682012";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 0484 4125555, +91 0484 4121101";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int kochi;
+                            cin >> kochi;
+                            switch (kochi) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 4:
                             cout << "\n\n\n\t\t\t";
@@ -1073,6 +1405,40 @@ int main() {
                             cout << "                J. P. Nagar, Bengaluru, Karnataka 560078";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 080 4085 3500";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int bengaluru;
+                            cin >> bengaluru;
+                            switch (bengaluru) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 2:
                             cout << "\n\n\t\t\t";
@@ -1102,6 +1468,40 @@ int main() {
                             cout << "                Karnataka 570011";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 98446 98446";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int mysuru;
+                            cin >> mysuru;
+                            switch (mysuru) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 3:
                             cout << "\n\n\t\t\t";
@@ -1127,6 +1527,40 @@ int main() {
                             cout << "     Address  - Highlands, Falnir, Mangalore, Karnataka 575002";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 824 2222 227";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int mangalore;
+                            cin >> mangalore;
+                            switch (mangalore) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 4:
                             cout << "\n\n\n\t\t\t";
@@ -1176,6 +1610,40 @@ int main() {
                                     << "     Address  - No. 52, 1st Main Rd, Gandhi Nagar, Adyar, Chennai, Tamil Nadu 600020";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 444 289 2222";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int chennai;
+                            cin >> chennai;
+                            switch (chennai) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 2:
                             cout << "\n\n\t\t\t";
@@ -1202,6 +1670,40 @@ int main() {
                             cout << "     Address  - 1st St, Sivananda Colony, Tatabad, Coimbatore, Tamil Nadu 641012";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 422 249 6989";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int coimba;
+                            cin >> coimba;
+                            switch (coimba) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 3:
                             cout << "\n\n\t\t\t";
@@ -1225,6 +1727,40 @@ int main() {
                             cout << "     Address  - H80 Feet Rd, KK Nagar, Tamil Nadu 625020";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 452 258 0892";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int madurai;
+                            cin >> madurai;
+                            switch (madurai) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 4:
                             cout << "\n\n\n\t\t\t";
@@ -1278,6 +1814,40 @@ int main() {
                             cout << "                Visakhapatnam, AP 530002 ";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91-891-2727272";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int vizag;
+                            cin >> vizag;
+                            switch (vizag) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 2:
                             cout << "\n\n\t\t\t";
@@ -1307,6 +1877,40 @@ int main() {
                             cout << "                Vijayawada, Andhra Pradesh 521225";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 866 241 7577";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int vijay;
+                            cin >> vijay;
+                            switch (vijay) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 3:
                             cout << "\n\n\t\t\t";
@@ -1333,6 +1937,40 @@ int main() {
                             cout << "     Address  - Pattabhipuram Rd, Pattabhipuram, Guntur, Andhra Pradesh 522006";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 863 223 1564";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int guntur;
+                            cin >> guntur;
+                            switch (guntur) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 4:
                             cout << "\n\n\n\t\t\t";
@@ -1383,6 +2021,40 @@ int main() {
                                     << "     Address  - 363, near Tatmil Chauraha, Harris Ganj, Kanpur, Uttar Pradesh 208004";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 84003 00216";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int kanpur;
+                            cin >> kanpur;
+                            switch (kanpur) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 2:
                             cout << "\n\n\t\t\t";
@@ -1413,6 +2085,40 @@ int main() {
                             cout << "                Balaganj, Lucknow - 226003";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 522 240 5450";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int lucknow;
+                            cin >> lucknow;
+                            switch (lucknow) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 3:
                             cout << "\n\n\t\t\t";
@@ -1439,6 +2145,40 @@ int main() {
                             cout << "     Address  - Dharmapala Rd, Sarnath, Varanasi, Uttar Pradesh 221007";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 542 258 5380";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int varanasi;
+                            cin >> varanasi;
+                            switch (varanasi) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 4:
                             cout << "\n\n\n\t\t\t";
@@ -1496,6 +2236,40 @@ int main() {
                             cout << "                West Bengal 700094";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 33 4011 1222";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int kolkata;
+                            cin >> kolkata;
+                            switch (kolkata) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 2:
                             cout << "\n\n\t\t\t";
@@ -1518,6 +2292,40 @@ int main() {
                             cout << "     Address  - Shristinagar, Asansol, West Bengal 713305";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 341 225 5225";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int asansol;
+                            cin >> asansol;
+                            switch (asansol) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 3:
                             cout << "\n\n\t\t\t";
@@ -1540,6 +2348,40 @@ int main() {
                             cout << "     Address  - Fulbari Truck Terminus, Dist, Siliguri, West Bengal 734015";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - 1800 212 111 222";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int siliguri;
+                            cin >> siliguri;
+                            switch (siliguri) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 4:
                             cout << "\n\n\n\t\t\t";
@@ -1595,6 +2437,40 @@ int main() {
                             << "     Address  - Indraprastha Apollo Hospita, Mathura Rd, Jasola Vihar, New Delhi, Delhi 110076";
                     cout << "\n\t\t\t";
                     cout << "     Contact  - +91 11 7179 1090";
+                    cout << "\n\n\n\n\t\t\t";
+                    cout << "1. RETURN TO HOSPITAL LOCATOR";
+                    cout << "\n\t\t\t";
+                    cout << "2. RETURN TO MAIN MENU";
+                    cout << "\n\t\t\t";
+                    cout << "3. EXIT";
+                    cout << "\n\n\t\t\t";
+                    cout << "CHOICE = ";
+                    int delhi;
+                    cin >> delhi;
+                    switch (delhi) {
+                        case 1:
+                            goto hospital_rerun;
+                            break;
+                        case 2:
+                            cout << "\n\n\n\t\t\t";
+                            SetConsoleTextAttribute(color, 14);
+                            cout << "   ******MAIN MENU******\n\n\n\n";
+                            SetConsoleTextAttribute(color, 15);
+                            goto exit;
+                            break;
+                        case 3:
+                            cout << "\n\t\t\t";
+                            cout << "THANK YOU\n\n\n\n\n\n";
+                            exit(0);
+                            break;
+                        default:
+                            cout << "\n\n\n\t\t\t";
+                            cout << "INVALID INPUT ";
+                            cout << "\n\t\t\t";
+                            cout << "TRY AGAIN";
+                            goto hospital_rerun;
+                            break;
+                    }
                     break;
                 case 9:
                     cout << "\n\n\t\t\t";
@@ -1635,6 +2511,40 @@ int main() {
                             cout << "     Address  - Madhya Marg, Sector 16 A, Sector 16, Chandigarh, 160015";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 172 275 2042";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int chd;
+                            cin >> chd;
+                            switch (chd) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 2:
                             cout << "\n\n\t\t\t";
@@ -1657,6 +2567,40 @@ int main() {
                             cout << "     Address  - Bhupindra Road, Near 22 No. Phatak, Patiala, Punjab 147001";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 175 500 0222";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int patiala;
+                            cin >> patiala;
+                            switch (patiala) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 3:
                             cout << "\n\n\t\t\t";
@@ -1684,6 +2628,40 @@ int main() {
                             cout << "     Address  - Ferozepur Rd, Near Octroi Post, Lalbagh, Ludhiana, Punjab 141012";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 161 255 3095";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int ludhiana;
+                            cin >> ludhiana;
+                            switch (ludhiana) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 4:
                             cout << "\n\n\n\t\t\t";
@@ -1739,6 +2717,40 @@ int main() {
                             cout << "                Jaipur, Rajasthan 302017";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 141 410 1111";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int jaipur;
+                            cin >> jaipur;
+                            switch (jaipur) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 2:
                             cout << "\n\n\t\t\t";
@@ -1762,6 +2774,40 @@ int main() {
                             cout << "     Address  - Olympic Road, Gate Circle, Jalori Bari, Jodhpur, Rajasthan 342001";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 291 263 6441";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int jodhpur;
+                            cin >> jodhpur;
+                            switch (jodhpur) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 3:
                             cout << "\n\n\t\t\t";
@@ -1790,6 +2836,40 @@ int main() {
                             cout << "     Address  - Pratap Nagar, Dadabari, Kota, Rajasthan 324009";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 744 250 4501 ";
+                            cout << "\n\n\n\n\t\t\t";
+                            cout << "1. RETURN TO HOSPITAL LOCATOR";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "CHOICE = ";
+                            int kota;
+                            cin >> kota;
+                            switch (kota) {
+                                case 1:
+                                    goto hospital_rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                    break;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                                default:
+                                    cout << "\n\n\n\t\t\t";
+                                    cout << "INVALID INPUT ";
+                                    cout << "\n\t\t\t";
+                                    cout << "TRY AGAIN";
+                                    goto hospital_rerun;
+                                    break;
+                            }
                             break;
                         case 4:
                             cout << "\n\n\n\t\t\t";
@@ -1829,9 +2909,15 @@ int main() {
         case 6:
             break;
         case 7:
-            gotoxy(25, 17);
+            cout << "\n\n\n\t\t\t";
             cout << "THANK YOU\n\n\n\n\n\n\n";
             exit(0);
+        default:
+            cout << "\n\n\n\t\t\t";
+            cout << "INVALID INPUT ";
+            cout << "\n\t\t\t";
+            cout << "TRY AGAIN";
+            goto default_1;
     }
 
     return 0;

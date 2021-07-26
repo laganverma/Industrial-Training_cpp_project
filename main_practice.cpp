@@ -23,24 +23,39 @@ public:
         SetConsoleTextAttribute(color, 15);
         if (sys <= 120 && dia <= 80) {
             cout << "\n\n\t\t\t";
-            cout << "YOUR BP IS IN" << SetConsoleTextAttribute(color, 2) << "NORMAL RANGE"
-                 << SetConsoleTextAttribute(color, 15) << endl;
+            cout << "YOUR BP IS ";
+            SetConsoleTextAttribute(color, 2);
+            cout << "NORMAL RANGE";
+            SetConsoleTextAttribute(color, 15);
+            cout << endl;
         } else if (sys <= 129 && dia < 80) {
             cout << "\n\n\t\t\t";
-            cout << "YOUR BP IS" << SetConsoleTextAttribute(color, 6) << "ELEVATED"
-                 << SetConsoleTextAttribute(color, 15) << endl;
-        } else if (sys <= 139 && dia <= 89) {
+            cout << "YOUR BP IS ";
+            SetConsoleTextAttribute(color, 6);
+            cout << "ELEVATED";
+            SetConsoleTextAttribute(color, 15);
+            cout << endl;
+        } else if (sys <= 139 || dia <= 89) {
             cout << "\n\n\t\t\t";
-            cout << "YOUR BP IS " << SetConsoleTextAttribute(color, 14) << "HIGH (HYPERTENSION STAGE 1)"
-                 << SetConsoleTextAttribute(color, 15) << endl;
-        } else if (sys <= 179 && dia <= 119) {
+            cout << "YOUR BP IS ";
+            SetConsoleTextAttribute(color, 14);
+            cout << "HIGH (HYPERTENSION STAGE 1)";
+            SetConsoleTextAttribute(color, 15);
+            cout << endl;
+        } else if (sys <= 179 || dia <= 119) {
             cout << "\n\n\t\t\t";
-            cout << "YOUR BP IS " << SetConsoleTextAttribute(color, 4) << "HIGH (HYPERTENSION STAGE 2)"
-                 << SetConsoleTextAttribute(color, 15) << endl;
+            cout << "YOUR BP IS ";
+            SetConsoleTextAttribute(color, 4);
+            cout << "HIGH (HYPERTENSION STAGE 2)";
+            SetConsoleTextAttribute(color, 15);
+            cout << endl;
         } else if (sys >= 180 && dia >= 120) {
             cout << "\n\n\t\t\t";
-            cout << "YOUR BP IS" << SetConsoleTextAttribute(color, 12) << "VERY HIGH"
-                 << SetConsoleTextAttribute(color, 15) << endl;
+            cout << "YOUR BP IS ";
+            SetConsoleTextAttribute(color, 12);
+            cout << "VERY HIGH";
+            SetConsoleTextAttribute(color, 15);
+            cout << endl;
         }
     }
 
@@ -132,6 +147,81 @@ public:
                 "shortness of breath, back pain, numbness/weakness, change in vision\n\t\t\t"
                 "or difficulty speaking, do not wait to see if your\n\t\t\t"
                 "pressure comes down on its own.";
+    }
+};
+
+class SPO2 {
+    long SpO2;
+public:
+    void Input() {
+        SetConsoleTextAttribute(color, 15);
+        cout << "\n\n\t\t\t";
+        cout << "ENTER SYSTOLIC PRESSURE VALUES (TOP NUMBER) = ";
+        cin >> SpO2;
+
+    }
+
+    void High() const {
+        SetConsoleTextAttribute(color, 15);
+        if ((95 <= SpO2) && (SpO2 < 100)) {
+            cout << "\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 2);
+            cout << "NORMAL";
+            SetConsoleTextAttribute(color, 15);
+            cout << "BLOOD OXYGEN LEVELS ";
+            cout << endl;
+        } else if ((91 <= SpO2) && (SpO2 < 94)) {
+            cout << "\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 6);
+            cout << "CONCERNING";
+            SetConsoleTextAttribute(color, 15);
+            cout << "BLOOD OXYGEN LEVELS";
+            cout << endl;
+        } else if ((86 <= SpO2) && (SpO2 < 90)) {
+            cout << "\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 14);
+            cout << "LOW";
+            SetConsoleTextAttribute(color, 15);
+            cout << "HYPOXIC BLOOD OXYGEN LEVELS";
+            cout << endl;
+        } else if ((80 <= SpO2) && (SpO2 < 85)) {
+            cout << "\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 4);
+            cout << "LOW OXYGEN SATURATION AFFECTS YOUR BRAIN";
+            SetConsoleTextAttribute(color, 15);
+            cout << endl;
+        } else if (SpO2 <= 67) {
+            cout << "\n\n\t\t\t";
+            SetConsoleTextAttribute(color, 12);
+            cout << "CYANOSIS";
+            SetConsoleTextAttribute(color, 15);
+            cout << endl;
+        }
+    }
+
+    void table() {
+        cout << "\n\n\t\t\t\t";
+        SetConsoleTextAttribute(color, 14);
+        cout << "         OXYGEN REFERENCE TABLE";
+        SetConsoleTextAttribute(color, 15);
+        cout << "\n\n\t\t\t";
+        cout << "OXYGEN CATEGORY" << "\t\t\t\t" << "   SpO2" << endl << endl;
+        cout << "\n\n\t\t\t";
+        SetConsoleTextAttribute(color, 2);
+        cout << "1. NORMAL - HEALTHY" << "\t\t\t" << "95% to 100% " << endl;
+        cout << "\n\n\t\t\t";
+        SetConsoleTextAttribute(color, 6);
+        cout << "2. NORMAL - COPD" << "\t\t\t" << "90% to 95% " << endl;
+        cout << "\n\n\t\t\t";
+        SetConsoleTextAttribute(color, 14);
+        cout << "3. HYPOXIC" << "\t\t\t" << "        88% to 83% " << endl;
+        cout << "\n\n\t\t\t";
+        SetConsoleTextAttribute(color, 4);
+        cout << "4. SEVERELY HYPOXIC" << "\t\t" << "       LESS THAN 83% " << endl;
+        cout << "\n\n\t\t\t";
+        SetConsoleTextAttribute(color, 12);
+        cout << "5. CYANOSIS" << "\t\t\t" << "       LESS THAN 79%" << endl;
+        SetConsoleTextAttribute(color, 15);
     }
 };
 
@@ -379,45 +469,141 @@ int main() {
             break;
 
 
-            {
-//        case 2:
-//            SetConsoleTextAttribute(color, 15);
-//            cout << "\n\n\n\t\t\t";
-//            cout << "---------------------------------------------------------------------------";
-//            cout << "\n\t\t\t";
-//            SetConsoleTextAttribute(color, 14);
-//            cout << "BP (BLOOD PRESSURE) - CALCULATOR";
-//            cout << "\n\t\t\t";
-//            SetConsoleTextAttribute(color, 15);
-//            cout << "---------------------------------------------------------------------------";
-//            cout << "\n\t\t\t";
-//            SetConsoleTextAttribute(color, 14);
-//            cout << "******Welcome to Oxygen Calculator******";
-//            SetConsoleTextAttribute(color, 15);
-//            cout << "\n\n\n\t\t\t";
-//            int spo2;
-//            cout << "ENTER YOUR SpO2 VALUES  = ";
-//            cin>>spo2;
-//            if (spo2 >= 94 ) {
-//                cout << "NORMAL - HEALTHY " << endl;
-//            } else if (spo2 <= 92 && spo2 >= 88) {
-//
-//                cout << "NORMAL - COPD" << endl;
-////            } else if (sys <=  && dia <= 89) {
-////
-////                cout << "YOUR BP IS HIGH (HYPERTENSION STAGE 1)" << endl;
-////            } else if (sys <= 179 && dia <= 119) {
-////
-////                cout << "YOUR BP IS HIGH (HYPERTENSION STAGE 2)" << endl;
-////            } else if (sys >= 180 && dia >= 120) {
-////
-////                cout << "YOUR BP IS VERY HIGH" << endl;
-////            }
-////
-//            }
-//            break;
-            }
+        case 2:
+            SetConsoleTextAttribute(color, 15);
+            cout << "\n\n\n\t\t\t";
+            cout << "---------------------------------------------------------------------------";
+            cout << "\n\t\t\t\t\t\t";
+            SetConsoleTextAttribute(color, 14);
+            cout << "  OXYGEN - CALCULATOR";
+            cout << "\n\t\t\t";
+            SetConsoleTextAttribute(color, 15);
+            cout << "---------------------------------------------------------------------------";
+        Spo2rerun:
+            cout << "\n\n\t\t\t\t\t";
+            SetConsoleTextAttribute(color, 14);
+            cout << "******Welcome to Oxygen Calculator******";
+            SetConsoleTextAttribute(color, 15);
+            cout << "\n\n\t\t\t";
+            cout << "1. CALCULATE YOUR SpO2 (blood oxygen levels) ";
+            cout << "\n\t\t\t";
+            cout << "2. Sp02 REFERENCE TABLE";
+            cout << "\n\t\t\t";
+            cout << "3. RETURN TO MAIN MENU";
+            cout << "\n\t\t\t";
+            cout << "4. EXIT";
+            cout << "\n\n\t\t\t";
+            cout << "ENTER YOUR CHOICE : ";
+            SPO2 user_1;
+            int SpO2_calci;
+            cin >> SpO2_calci;
+            switch (SpO2_calci) {
+                case 1:
+                    user_1.Input();
+                    user_1.High();
+                    cout << "\n\n\n\t\t\t";
+                    cout << "1. GO TO BP REFERENCE TABLE";
+                    cout << "\n\t\t\t";
+                    cout << "2. RETURN TO SpO2 MENU";
+                    cout << "\n\t\t\t";
+                    cout << "3. RETURN TO MAIN MENU";
+                    cout << "\n\t\t\t";
+                    cout << "4. EXIT";
+                    cout << "\n\n\t\t\t";
+                    cout << "ENTER YOUR CHOICE : ";
+                    int SpO2_calci_readings;
+                    cin >> SpO2_calci_readings;
+                    switch (SpO2_calci_readings) {
+                        case 1:
+                            user_1.table();
+                            cout << "\n";
+                            cout << "\n\t\t\t";
+                            cout << "1. RETURN TO SpO2 MENU";
+                            cout << "\n\t\t\t";
+                            cout << "2. RETURN TO MAIN MENU";
+                            cout << "\n\t\t\t";
+                            cout << "3. EXIT";
+                            cout << "\n\n\t\t\t";
+                            cout << "ENTER YOUR CHOICE : ";
+                            int SpO2_calci_reference_table;
+                            cin >> SpO2_calci_reference_table;
+                            switch (SpO2_calci_reference_table) {
+                                case 1:
+                                    goto Spo2rerun;
+                                    break;
+                                case 2:
+                                    cout << "\n\n\n\t\t\t";
+                                    SetConsoleTextAttribute(color, 14);
+                                    cout << "   ******MAIN MENU******\n\n\n\n";
+                                    SetConsoleTextAttribute(color, 15);
+                                    goto exit;
+                                case 3:
+                                    cout << "\n\t\t\t";
+                                    cout << "THANK YOU\n\n\n\n\n\n";
+                                    exit(0);
+                                    break;
+                            }
 
+                            break;
+                        case 2:
+                            goto Spo2rerun;
+                            break;
+                        case 3:
+                            cout << "\n\n\n\t\t\t";
+                            SetConsoleTextAttribute(color, 14);
+                            cout << "   ******MAIN MENU******\n\n\n\n";
+                            SetConsoleTextAttribute(color, 15);
+                            goto exit;
+                        case 4:
+                            cout << "\n\t\t\t";
+                            cout << "THANK YOU\n\n\n\n\n\n";
+                            exit(0);
+                    }
+                    break;
+                case 2:
+                    user_1.table();
+                    cout << "\n";
+                    cout << "\n\t\t\t";
+                    cout << "1. RETURN TO SpO2 MENU";
+                    cout << "\n\t\t\t";
+                    cout << "2. RETURN TO MAIN MENU";
+                    cout << "\n\t\t\t";
+                    cout << "3. EXIT";
+                    cout << "\n\n\t\t\t";
+                    cout << "ENTER YOUR CHOICE : ";
+                    int SpO2_calci_reference_table;
+                    cin >> SpO2_calci_reference_table;
+                    switch (SpO2_calci_reference_table) {
+                        case 1:
+                            goto Spo2rerun;
+                            break;
+                        case 2:
+                            cout << "\n\n\n\t\t\t";
+                            SetConsoleTextAttribute(color, 14);
+                            cout << "   ******MAIN MENU******\n\n\n\n";
+                            SetConsoleTextAttribute(color, 15);
+                            goto exit;
+                        case 3:
+                            cout << "\n\t\t\t";
+                            cout << "THANK YOU\n\n\n\n\n\n";
+                            exit(0);
+                            break;
+                    }
+                case 3:
+                    cout << "\n\n\n\t\t\t";
+                    SetConsoleTextAttribute(color, 14);
+                    cout << "   ******MAIN MENU******\n\n\n\n";
+                    SetConsoleTextAttribute(color, 15);
+                    goto exit;
+                case 4:
+                    cout << "\n\t\t\t";
+                    cout << "THANK YOU\n\n\n\n\n\n";
+                    exit(0);
+                    break;
+                default:
+                    break;
+            }
+            break;
 
         case 3:
         rerun_bmi:
@@ -989,17 +1175,20 @@ int main() {
                     cout << "\n\n\t\t\t";
                     cout << "   _B.M.I_" << "\t\t\t\t\t" << "    _WEIGHT STATUS_" << endl << endl;
                     cout << "\n\t\t\t";
-                    cout << "1. BELOW 18.5     " << "\t" << "    <---------------> " << "\t" << "    UNDER_WEIGHT"
+                    cout << "1. BELOW 18.5     " << "\t" << "    <---------------> " << "\t"
+                         << "    UNDER_WEIGHT"
                          << endl;
                     cout << "\n\t\t\t";
                     cout << "2. 18.5 - 24.9     " << "\t" << "    <---------------> " << "\t"
                          << "    NORMAL OR HEALTHY_WEIGHT"
                          << endl;
                     cout << "\n\t\t\t";
-                    cout << "3. 25.0 - 29.9     " << "\t" << "    <---------------> " << "\t" << "    OVER_WEIGHT"
+                    cout << "3. 25.0 - 29.9     " << "\t" << "    <---------------> " << "\t"
+                         << "    OVER_WEIGHT"
                          << endl;
                     cout << "\n\t\t\t";
-                    cout << "4. 30.0 AND ABOVE" << "\t" << "    <---------------> " << "\t" << "    OBESE" << endl
+                    cout << "4. 30.0 AND ABOVE" << "\t" << "    <---------------> " << "\t" << "    OBESE"
+                         << endl
                          << endl;
                     cout << "\n\n\n\t\t\t";
                     cout << "1. RETURN TO B.M.I CALCULATOR";
@@ -1085,13 +1274,15 @@ int main() {
             cout << "\n\t\t\t";
             cout << "   * LOSS OF SPEECH OR MOVEMENT";
             cout << "\n\n\n\n\t\t\t";
-            cout << "Seek immediate medical attention if you have serious symptoms.Always call before visiting your ";
+            cout
+                    << "Seek immediate medical attention if you have serious symptoms.Always call before visiting your ";
             cout << "\n\t\t\t";
             cout << "doctor or health facility.";
             cout << "\n\n\t\t\t";
             cout << "People with mild symptoms who are otherwise healthy should manage their symptoms at home.";
             cout << "\n\n\t\t\t";
-            cout << "On average it takes 5 to 6 days from when someone is infected with the virus for symptoms to";
+            cout
+                    << "On average it takes 5 to 6 days from when someone is infected with the virus for symptoms to";
             cout << "\n\t\t\t";
             cout << "show,4 however it can take up to 14 days.";
         tryyes_no:
@@ -1221,7 +1412,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(ii) Hospital - Fortis Hospital Mulund";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - Mulund Goregaon Link Road, Industrial Area,Mulund West, Mumbai";
+                            cout
+                                    << "     Address  - Mulund Goregaon Link Road, Industrial Area,Mulund West, Mumbai";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 22 4111 4111, +91 9606 047 050";
                             cout << "\n\n\t\t\t";
@@ -1281,7 +1473,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(ii) Hospital - Jehangir Hospital";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - 32, Sasoon Rd, Opposite Railway Station, Central Excise Colony, ";
+                            cout
+                                    << "     Address  - 32, Sasoon Rd, Opposite Railway Station, Central Excise Colony, ";
                             cout << "\n\t\t\t";
                             cout << "                Sangamvadi, Pune, Maharashtra 411001";
                             cout << "\n\t\t\t";
@@ -1477,7 +1670,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "B)KOZHIKODE";
                             cout << "\n\n\t\t\t";
-                            cout << "(i)  Hospital - Aster Malabar Institute of Medical Sciences (MIMS Hospital)";
+                            cout
+                                    << "(i)  Hospital - Aster Malabar Institute of Medical Sciences (MIMS Hospital)";
                             cout << "\n\t\t\t";
                             cout << "     Address  - Mini Bypass Rd, Govindapuram, Kozhikode, Kerala 673016";
                             cout << "\n\t\t\t";
@@ -1485,7 +1679,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(ii) Hospital - Baby Memorial Hospital";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - Indira Gandhi Rd, Arayidathupalam, Kozhikode, Kerala 673004";
+                            cout
+                                    << "     Address  - Indira Gandhi Rd, Arayidathupalam, Kozhikode, Kerala 673004";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 495 272 3272 , +91 495 277 7777";
                             cout << "\n\n\t\t\t";
@@ -1536,7 +1731,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(i)  Hospital - Rajagiri Hospital";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - Near GTN Junction, Chunangamvely Aluva, Kochi, Kerala 683112";
+                            cout
+                                    << "     Address  - Near GTN Junction, Chunangamvely Aluva, Kochi, Kerala 683112";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 0484 290 5000";
                             cout << "\n\n\t\t\t";
@@ -1627,7 +1823,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(ii) Hospital - Bangalore Baptist Hospital";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - Bellary Rd, Vinayakanagar, Hebbal, Bengaluru, Karnataka 560024";
+                            cout
+                                    << "     Address  - Bellary Rd, Vinayakanagar, Hebbal, Bengaluru, Karnataka 560024";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 080 2202 4700";
                             cout << "\n\n\t\t\t";
@@ -1743,7 +1940,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(i)  Hospital - E.S.I. HOSPITAL KADRI MANGALORE";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - 3rd Cross Rd, Shivabagh, Kadri, Mangalore, Karnataka 575002";
+                            cout
+                                    << "     Address  - 3rd Cross Rd, Shivabagh, Kadri, Mangalore, Karnataka 575002";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 824 221 8630";
                             cout << "\n\n\t\t\t";
@@ -1901,7 +2099,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(iii)Hospital - Sathya medical Centre & Hospital";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - 1st St, Sivananda Colony, Tatabad, Coimbatore, Tamil Nadu 641012";
+                            cout
+                                    << "     Address  - 1st St, Sivananda Colony, Tatabad, Coimbatore, Tamil Nadu 641012";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 422 249 6989";
                             cout << "\n\n\n\n\t\t\t";
@@ -1952,7 +2151,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(ii) Hospital - Vadamalayan Hospitals";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - Chockikulam, 15/1, Vallabh Bhai Rd, Madurai, Tamil Nadu 625002";
+                            cout
+                                    << "     Address  - Chockikulam, 15/1, Vallabh Bhai Rd, Madurai, Tamil Nadu 625002";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 452 254 5400";
                             cout << "\n\n\t\t\t";
@@ -2089,7 +2289,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(i)  Hospital - KAMINENI HOSPITALS";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - 100 Feet New Autonagar Road, Main, Road, Tadigadapa, Vijayawada,";
+                            cout
+                                    << "     Address  - 100 Feet New Autonagar Road, Main, Road, Tadigadapa, Vijayawada,";
                             cout << "\n\t\t\t";
                             cout << "                Andhra Pradesh 521137";
                             cout << "\n\t\t\t";
@@ -2106,7 +2307,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(iii)Hospital - Andhra Hospitals";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - ZP High School, Moulangar Masjid Rd Opp, Bhavanipuram, Gollapudi,";
+                            cout
+                                    << "     Address  - ZP High School, Moulangar Masjid Rd Opp, Bhavanipuram, Gollapudi,";
                             cout << "\n\t\t\t";
                             cout << "                Vijayawada, Andhra Pradesh 521225";
                             cout << "\n\t\t\t";
@@ -2160,7 +2362,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(ii) Hospital - Tulasi Multi Speciality Hospital";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - 5th Lane, GV Thota, Gunturvari Thota, Christian Pet, Kothapeta,";
+                            cout
+                                    << "     Address  - 5th Lane, GV Thota, Gunturvari Thota, Christian Pet, Kothapeta,";
                             cout << "\n\t\t\t";
                             cout << "                Guntur, Andhra Pradesh 522001";
                             cout << "\n\t\t\t";
@@ -2168,7 +2371,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(iii)Hospital - Hyma Hospitals";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - Pattabhipuram Rd, Pattabhipuram, Guntur, Andhra Pradesh 522006";
+                            cout
+                                    << "     Address  - Pattabhipuram Rd, Pattabhipuram, Guntur, Andhra Pradesh 522006";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 863 223 1564";
                             cout << "\n\n\n\n\t\t\t";
@@ -2296,7 +2500,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(i)  Hospital - Medanta Lucknow Hospital";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - Amar Shaheed Path, Golf City, Pocket - 1, Sector A, Lucknow,";
+                            cout
+                                    << "     Address  - Amar Shaheed Path, Golf City, Pocket - 1, Sector A, Lucknow,";
                             cout << "\n\t\t\t";
                             cout << "                Uttar Pradesh 226030";
                             cout << "\n\t\t\t";
@@ -2579,7 +2784,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(iii)Hospital - Maharaja Agrasen Hospital";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - Fulbari Truck Terminus, Dist, Siliguri, West Bengal 734015";
+                            cout
+                                    << "     Address  - Fulbari Truck Terminus, Dist, Siliguri, West Bengal 734015";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - 1800 212 111 222";
                             cout << "\n\n\n\n\t\t\t";
@@ -2638,7 +2844,8 @@ int main() {
                     cout << "\n\n\t\t\t";
                     cout << "(ii) Hospital - Safdarjung Hospitals";
                     cout << "\n\t\t\t";
-                    cout << "     Address  - Ansari Nagar East, near to AIIMS Metro Station, New Delhi, Delhi 110029";
+                    cout
+                            << "     Address  - Ansari Nagar East, near to AIIMS Metro Station, New Delhi, Delhi 110029";
                     cout << "\n\t\t\t";
                     cout << "     Contact  - +91 11 2673 0000";
                     cout << "\n\n\t\t\t";
@@ -2661,7 +2868,8 @@ int main() {
                     cout << "\n\n\t\t\t";
                     cout << "(v)  Hospital - BLK-Max Super Speciality Hospital";
                     cout << "\n\t\t\t";
-                    cout << "     Address  - Pusa Rd, Radha Soami Satsang, Rajendra Place, New Delhi, Delhi 110005";
+                    cout
+                            << "     Address  - Pusa Rd, Radha Soami Satsang, Rajendra Place, New Delhi, Delhi 110005";
                     cout << "\n\t\t\t";
                     cout << "     Contact  - +91 11 3040 3040";
                     cout << "\n\n\t\t\t";
@@ -2736,7 +2944,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(ii) Hospital - Government Medical College & Hospital";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - Chandi Path, Sector 32B, 32B, Sector 32, Chandigarh, 160047";
+                            cout
+                                    << "     Address  - Chandi Path, Sector 32B, 32B, Sector 32, Chandigarh, 160047";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 172 260 1023";
                             cout << "\n\n\t\t\t";
@@ -2798,7 +3007,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(iii)Hospital - Columbia Asia Hospital - Patiala";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - Bhupindra Road, Near 22 No. Phatak, Patiala, Punjab 147001";
+                            cout
+                                    << "     Address  - Bhupindra Road, Near 22 No. Phatak, Patiala, Punjab 147001";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 175 500 0222";
                             cout << "\n\n\n\n\t\t\t";
@@ -2859,7 +3069,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(iii)Hospital - Global Heart & Super Speciality Hospital";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - Ferozepur Rd, Near Octroi Post, Lalbagh, Ludhiana, Punjab 141012";
+                            cout
+                                    << "     Address  - Ferozepur Rd, Near Octroi Post, Lalbagh, Ludhiana, Punjab 141012";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 161 255 3095";
                             cout << "\n\n\n\n\t\t\t";
@@ -2937,7 +3148,8 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(ii) Hospital - Rungta Hospital";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - Calgiri Marg, near Police Station, Jhalana Gram, Malviya Nagar,";
+                            cout
+                                    << "     Address  - Calgiri Marg, near Police Station, Jhalana Gram, Malviya Nagar,";
                             cout << "\n\t\t\t";
                             cout << "                Jaipur, Rajasthan 302017";
                             cout << "\n\t\t\t";
@@ -2999,13 +3211,15 @@ int main() {
                             cout << "\n\n\t\t\t";
                             cout << "(ii) Hospital - Mathuradas Mathur Hospital";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - Main Road, Sector-C, Shastri Nagar, Jodhpur, Rajasthan 342003";
+                            cout
+                                    << "     Address  - Main Road, Sector-C, Shastri Nagar, Jodhpur, Rajasthan 342003";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 291 243 8655";
                             cout << "\n\n\t\t\t";
                             cout << "(iii)Hospital - Mahatma Gandhi Hospital";
                             cout << "\n\t\t\t";
-                            cout << "     Address  - Olympic Road, Gate Circle, Jalori Bari, Jodhpur, Rajasthan 342001";
+                            cout
+                                    << "     Address  - Olympic Road, Gate Circle, Jalori Bari, Jodhpur, Rajasthan 342001";
                             cout << "\n\t\t\t";
                             cout << "     Contact  - +91 291 263 6441";
                             cout << "\n\n\n\n\t\t\t";
