@@ -3398,7 +3398,7 @@ int main() {
             cout << "Step 5 : Then you just have to schedule an appointment at a Vaccination Centre\n\t\t\t";
             cout << "         close to your location and book it during any available time slot.";
             cout << "\n\n\t\t\t";
-            cout << "Step 6 : You will get a message with your confirmation details, and that’s it\n\t\t\t";
+            cout << "Step 6 : You will get a message with your confirmation details, and thats it\n\t\t\t";
             cout << "         You have successfully booked an appointment, all that is left is to go and get the jab.";
 
             // 2nd ques
@@ -3409,9 +3409,9 @@ int main() {
             SetConsoleTextAttribute(color, 15);
             cout << "Two vaccines were granted emergency use authorization by the Central Drugs Standard";
             cout << "\n\t\t\t";
-            cout << "Control Organization (CDSCO) in India, Covishield® (AstraZeneca's vaccine manufactured";
+            cout << "Control Organization (CDSCO) in India, Covishield (AstraZeneca's vaccine manufactured";
             cout << "\n\t\t\t";
-            cout << "by Serum Institute of India) and Covaxin® (manufactured by Bharat Biotech Limited).";
+            cout << "by Serum Institute of India) and Covaxin (manufactured by Bharat Biotech Limited).";
             cout << "\n\t\t\t";
             cout << "Sputnik - V has been granted EUA in the month of April 2021.";
 
