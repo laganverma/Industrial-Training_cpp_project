@@ -253,9 +253,9 @@ int main() {
     cout << "\n\t\t\t";
     cout << "3.BMI(BODY MASS INDEX) - CALCULATOR";
     cout << "\n\t\t\t";
-    cout << "4.COVID SYMPTOMS";
+    cout << "4.COVID-19 SYMPTOMS";
     cout << "\n\t\t\t";
-    cout << "5.COVID HOSPITALS";
+    cout << "5.COVID-19 HOSPITALS";
     cout << "\n\t\t\t";
     cout << "6.INFORMATION REGARDING COVID-19 VACCINE IN INDIA";
     cout << "\n\t\t\t";
