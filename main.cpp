@@ -4,7 +4,6 @@ COMPLETED
 #include <iostream>
 #include <windows.h>
 #include <iomanip>
-#include <unistd.h>
 #include <chrono>
 #include <thread>
 
@@ -515,7 +514,7 @@ int main() {
                     user_1.Input();
                     user_1.High();
                     cout << "\n\n\n\t\t\t";
-                    cout << "1. GO TO BP REFERENCE TABLE";
+                    cout << "1. GO TO SpO2 REFERENCE TABLE";
                     cout << "\n\t\t\t";
                     cout << "2. RETURN TO SpO2 MENU";
                     cout << "\n\t\t\t";
