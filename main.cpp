@@ -555,7 +555,6 @@ int main() {
                                     exit(0);
                                     break;
                             }
-
                             break;
                         case 2:
                             goto Spo2rerun;
